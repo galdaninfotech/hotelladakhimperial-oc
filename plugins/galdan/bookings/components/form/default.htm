@@ -1,0 +1,81 @@
+
+{% set tours = form.tours %}
+
+<form 
+	id="booking-form" 
+	data-request="onBooking" 
+	data-request-success="
+		$('#booking-form').fadeOut();
+		$('.col-md-9 h1').html('Thank You!');
+		$('.col-md-9').append('<p>Congratulation '+$('#name').val()+'!</p>');
+		$('.col-md-9').append('<p>Your booking has been sent. You will shortly receive mail with booking information.</p>');
+		console.log('{{ text_messages }}');
+	">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="other2">
+    <tbody>
+    <tr>
+      <td height="25" align="left" valign="middle">Name :&nbsp;&nbsp;<font color="#FF3300">*</font></td>
+      <td height="25" align="left" valign="middle">
+        <div align="left">
+            <input name="name" type="text" id="name" value="" class="form-control" required="required">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td height="25" align="left" valign="middle">Email :&nbsp;&nbsp;<font color="#FF3300">*</font></td>
+      <td height="25" align="left" valign="middle">
+        <div align="left">
+            <input name="email" type="email" id="email" value="" size="30" class="form-control" required="required">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td height="25" align="left" valign="middle">Contact No. : &nbsp;&nbsp; <font color="#FF3300">*</font></td>
+      <td height="25" align="left" valign="middle">
+      <div align="left">
+        <input name="phone" type="text" id="phone" value="" class="form-control" required="required">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td height="25" align="left" valign="middle">Check-In :</td>
+      <td height="25" align="left" valign="middle">
+        <div align="left">
+          <input name="checkin" id="checkin" class="required form-control" placeholder="Check-In" type="date" value="">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td height="25" align="left" valign="middle">Check-Out :</td>
+      <td height="25" align="left" valign="middle">
+        <div align="left">
+          <input name="checkout" id="checkout" class="required form-control" placeholder="Check-Out" type="date" value="">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td height="25" align="left" valign="middle">Total No. of Persons :</td>
+      <td height="25" align="left" valign="middle">
+        <div align="left">
+            <input name="num_persons" type="number" min="1" id="num_persons" value="" size="2" class="form-control" style="width:100px;">
+        </div>
+       </td>
+    </tr>
+    <tr>
+      <td height="25" align="left" valign="middle">Your Requirements :&nbsp;&nbsp;</td>
+      <td height="25" align="left" valign="middle">
+        <div align="left">
+            <textarea name="message" id="message" class="form-control" rows="10"></textarea>
+        </div>
+      </td>
+    </tr>              
+    <tr>
+      <td height="40" align="left" valign="middle">&nbsp;</td>
+      <td height="40" align="right" valign="middle">
+        <input type="submit" name="submit_book_now_form" value="Submit" class="button medium orange">
+        <input type="hidden" name="Submit" value="Submit">
+      </td>
+    </tr>
+  </tbody>
+</table>
+</form>

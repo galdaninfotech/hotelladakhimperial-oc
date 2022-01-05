@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Bike
+
+# Model Form Field configuration
+form: $/galdan/bikes/models/bike/fields.yaml
+
+# Model Class name
+modelClass: Galdan\Bikes\Models\Bike
+
+# Default redirect location
+defaultRedirect: galdan/bikes/bikes
+
+# Create page
+create:
+    title: Create Bike
+    redirect: galdan/bikes/bikes/update/:id
+    redirectClose: galdan/bikes/bikes
+
+# Update page
+update:
+    title: Edit Bike
+    redirect: galdan/bikes/bikes
+    redirectClose: galdan/bikes/bikes
+
+# Preview page
+preview:
+    title: Preview Bike

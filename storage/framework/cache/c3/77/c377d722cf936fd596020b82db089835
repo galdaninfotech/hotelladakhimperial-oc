@@ -1,0 +1,86 @@
+1546667821a:1:{s:32:"company/terms-and-conditions.htm";a:11:{s:8:"fileName";s:32:"company/terms-and-conditions.htm";s:7:"content";s:2927:"title = "Terms & Conditions"
+url = "/terms-and-conditions"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+==
+<div id="hli-content-wrapper-terms">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h1 class="centre">{{this.page.title }}</h1>
+                    <h2>General Policies</h2>
+                    <ul class="terms-and-conditions-list">
+                        <li>Check-Out Time: Upto 09.00 AM</li>
+                        <li>Check-in time: 11:00 AM (Early check-in subject to room availability).</li>
+                        <li>Rooms are booked subject to final confirmation.</li>
+                        <li>For confirmed booking 50% of the total room charge for the booked period has to be deposited in advance in our bank account.</li>
+                        <li>Meal Plan will start from first day breakfast due to early Check-in / Check-out time. (Last day breakfast will be an extra service and chargeable).</li>
+                        <li>Service voucher must be dispatch by or before the arrival of the guest.</li>
+                        <li>All rates are subject to change without notice.</li>
+                        <li>Taxes will be extra as applicable.</li>
+                    </ul>
+            
+                    <h2>Child Policies</h2>
+                    <ul class="terms-and-conditions-list">
+                        <li>Child under 05 years of age is allowed to stay free with parents.</li>
+                        <li>Child of 05 years and above age sharing parent's room & bed (without extra bed) will be charged for meals & other hotel services.</li>
+                        <li>Child of over 10 years of age will be treated as extra person and charged for extra bed / person.</li>
+                    </ul>
+            
+            
+                    <h2>Cancellation Policies</h2>
+                    <ul class="terms-and-conditions-list">
+                        <li>Cancellation before 7 days of arrival dates : 01 full day retention to be charged.</li>
+                        <li>Cancellation before 3 days of arrival date : 50% of the total of booking charge / bill.</li>
+                        <li>Cancellation less than 03 days from arrival date : 100 % of the total room bill will be charged.</li>
+                        <li>For Group booking, cancellation will cost 01 full day room charge if done 30 days before arrival date.</li>
+                        <li>No refund for unexpected or sudden departures.</li>
+                    </ul>
+                </div> <!-- end hli-main-content -->
+            </div>
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-terms  -->
+";s:5:"mtime";i:1517601479;s:6:"markup";s:2766:"<div id="hli-content-wrapper-terms">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h1 class="centre">{{this.page.title }}</h1>
+                    <h2>General Policies</h2>
+                    <ul class="terms-and-conditions-list">
+                        <li>Check-Out Time: Upto 09.00 AM</li>
+                        <li>Check-in time: 11:00 AM (Early check-in subject to room availability).</li>
+                        <li>Rooms are booked subject to final confirmation.</li>
+                        <li>For confirmed booking 50% of the total room charge for the booked period has to be deposited in advance in our bank account.</li>
+                        <li>Meal Plan will start from first day breakfast due to early Check-in / Check-out time. (Last day breakfast will be an extra service and chargeable).</li>
+                        <li>Service voucher must be dispatch by or before the arrival of the guest.</li>
+                        <li>All rates are subject to change without notice.</li>
+                        <li>Taxes will be extra as applicable.</li>
+                    </ul>
+            
+                    <h2>Child Policies</h2>
+                    <ul class="terms-and-conditions-list">
+                        <li>Child under 05 years of age is allowed to stay free with parents.</li>
+                        <li>Child of 05 years and above age sharing parent's room & bed (without extra bed) will be charged for meals & other hotel services.</li>
+                        <li>Child of over 10 years of age will be treated as extra person and charged for extra bed / person.</li>
+                    </ul>
+            
+            
+                    <h2>Cancellation Policies</h2>
+                    <ul class="terms-and-conditions-list">
+                        <li>Cancellation before 7 days of arrival dates : 01 full day retention to be charged.</li>
+                        <li>Cancellation before 3 days of arrival date : 50% of the total of booking charge / bill.</li>
+                        <li>Cancellation less than 03 days from arrival date : 100 % of the total room bill will be charged.</li>
+                        <li>For Group booking, cancellation will cost 01 full day room charge if done 30 days before arrival date.</li>
+                        <li>No refund for unexpected or sudden departures.</li>
+                    </ul>
+                </div> <!-- end hli-main-content -->
+            </div>
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-terms  -->";s:4:"code";N;s:5:"title";s:18:"Terms & Conditions";s:3:"url";s:21:"/terms-and-conditions";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

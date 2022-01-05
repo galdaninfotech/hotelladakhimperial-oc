@@ -1,0 +1,4 @@
+1.0.1:
+    - Initialize plugin.
+    - create_bikes_table.php
+    - create_types_table.php

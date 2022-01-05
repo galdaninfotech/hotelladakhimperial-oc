@@ -1,0 +1,48 @@
+{% set slideshows = __SELF__.slideshow %}
+
+{% set image_count=1 %}
+{% for slideshow in slideshows %}
+    <div class="carousel slide" id="myCarousel" data-ride="carousel">
+  <ol class="carousel-indicators">
+    {% if slideshow.featured_images.count %}
+        {% for image in slideshow.featured_images %}
+          <li data-target="#myCarousel" data-slide-to="{{image_count}}"></li>
+          {% set image_count = image_count + 1 %}
+        {% endfor %}
+  {% endif %}
+  </ol>
+  <div class="carousel-inner">
+    {% if slideshow.featured_images.count %}
+        {% for image in slideshow.featured_images %}
+          {% if loop.first %}
+            <div class="item active">
+            <img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%"
+                    class="img img-responsive d-block img-fluid" />
+          </div>
+          {% else %}
+            <div class="item">
+              <img
+                      data-src="{{ image.filename }}"
+                      src="{{ image.path }}"
+                      alt="{{ image.description }}"
+                      style="max-width: 100%" 
+                      class="img img-responsive d-block img-fluid" />
+            </div>
+          {% endif %}
+          
+        {% endfor %}
+  {% endif %}
+  </div>
+  <a href="#myCarousel" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a>
+  <a href="#myCarousel" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
+</div>
+{% endfor %}
+
+{% set slideshow = __SELF__.slideshow %}
+
+<div style="background-color: green;"></div> 
+

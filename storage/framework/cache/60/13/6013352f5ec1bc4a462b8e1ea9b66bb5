@@ -1,0 +1,72 @@
+1517585882a:1:{s:24:"company/our-services.htm";a:14:{s:8:"fileName";s:24:"company/our-services.htm";s:7:"content";s:1199:"title = "Our Services"
+url = "/company-services"
+layout = "default"
+meta_title = "Our Services Us"
+meta_description = "Our Services Us"
+is_hidden = 0
+seo_keywords = "Our Services"
+robot_index = "index"
+robot_follow = "follow"
+
+
+==
+<div id="hli-content-wrapper-services">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h1 class="centre">{{this.page.title }}</h1>
+					<ul>
+						<li>Airport pick up and drop service (on request)</li>
+						<li>In House Laundry Service</li>
+						<li>Ample Car Parking Space</li>
+						<li>LED TV in all room with digital connection</li>
+						<li>Running hot & cold water</li>\
+						<li>Cultural Evening With Folk Dancers (on request)</li>
+						<li>Wi-Fi Broadband Internet</li>
+						<li>24 hour Room Service</li>
+						<li>DTH Cable connection</li>
+						<li>Doctor on call</li>
+						<li>Buffet Meals</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-services  -->
+
+
+
+
+
+
+
+
+
+
+
+
+";s:5:"mtime";i:1515880458;s:6:"markup";s:930:"<div id="hli-content-wrapper-services">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h1 class="centre">{{this.page.title }}</h1>
+					<ul>
+						<li>Airport pick up and drop service (on request)</li>
+						<li>In House Laundry Service</li>
+						<li>Ample Car Parking Space</li>
+						<li>LED TV in all room with digital connection</li>
+						<li>Running hot & cold water</li>\
+						<li>Cultural Evening With Folk Dancers (on request)</li>
+						<li>Wi-Fi Broadband Internet</li>
+						<li>24 hour Room Service</li>
+						<li>DTH Cable connection</li>
+						<li>Doctor on call</li>
+						<li>Buffet Meals</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-services  -->";s:4:"code";N;s:5:"title";s:12:"Our Services";s:3:"url";s:17:"/company-services";s:6:"layout";s:7:"default";s:10:"meta_title";s:15:"Our Services Us";s:16:"meta_description";s:15:"Our Services Us";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:12:"Our Services";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

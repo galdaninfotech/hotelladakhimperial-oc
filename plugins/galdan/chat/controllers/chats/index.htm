@@ -1,0 +1,26 @@
+<iframe id="chat-dashboard" width="100%" height="200%" src="https://dashboard.tawk.to/#/dashboard"></iframe>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+
+$('#feeds-section').hide();
+
+
+
+$('iframe#chat-dashboard').load( function() {
+    $('iframe#chat-dashboard').contents().find("head")
+      .append($("<style type='text/css'>  .#feeds-section article{display:none;}  </style>"));
+});
+
+
+
+
+
+
+
+});
+
+</script>

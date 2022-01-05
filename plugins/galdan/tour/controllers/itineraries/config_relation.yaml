@@ -1,0 +1,19 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+# category:
+#     label: Days
+#     view:
+#         list: $/galdan/tour/models/category/columns.yaml
+#         toolbarButtons: create|delete
+#     manage:
+#         form: $/galdan/tour/models/category/fields.yaml
+days:
+    label: Days
+    view:
+        list: $/galdan/tour/models/day/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/galdan/tour/models/day/fields.yaml
+

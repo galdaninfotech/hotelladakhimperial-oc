@@ -1,0 +1,61 @@
+1514183189a:1:{s:14:"tours/post.htm";a:15:{s:8:"fileName";s:14:"tours/post.htm";s:7:"content";s:1017:"title = "Tour Post"
+url = "/tour/post/:slug"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[tourPost]
+slug = "{{ :slug }}"
+categoryPage = "tours/category"
+
+[tourCategories]
+slug = "{{:slug}}"
+displayEmpty = 0
+categoryPage = "tours/category"
+
+[SeoTourPost]
+post = "post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blog-category"
+==
+<?php
+function onEnd(){
+
+}
+?>
+==
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+        	{% component 'tourPost' %}
+        	{% component 'SeoTourPost' data=post %}
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+            <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        	{% partial 'site/right1' %}
+    	</div>
+    </div>
+</div>";s:5:"mtime";i:1500257712;s:6:"markup";s:555:"<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+        	{% component 'tourPost' %}
+        	{% component 'SeoTourPost' data=post %}
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+            <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        	{% partial 'site/right1' %}
+    	</div>
+    </div>
+</div>";s:4:"code";s:22:"function onEnd(){
+
+}";s:5:"title";s:9:"Tour Post";s:3:"url";s:16:"/tour/post/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:8:"tourPost";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:14:"tours/category";}s:14:"tourCategories";a:3:{s:4:"slug";s:9:"{{:slug}}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:14:"tours/category";}s:11:"SeoTourPost";a:1:{s:4:"post";s:4:"post";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:18:"blog/blog-category";}}}

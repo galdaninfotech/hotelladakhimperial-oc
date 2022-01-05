@@ -1,0 +1,228 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+tabs:
+  fields:
+      name:
+          label: Name
+          searchable: true
+          tab: Edit
+
+      description:
+        label: Description
+        tab: Edit
+        type: textarea
+        size: small
+
+      vendor:
+        label: Company
+        tab: Edit
+
+      engine_type:
+          label: Engine Type
+          searchable: true
+          tab: Engine
+          span: left
+
+      displacement:
+        label: Displacement
+        searchable: true
+        tab: Engine
+        span: right
+
+      bore_stroke:
+        label: Bore x Stroke
+        searchable: true
+        tab: Engine
+        span: left
+
+      compression_ratio:
+        label: Compression Ratio
+        searchable: true
+        tab: Engine
+        span: right
+
+      maximum_power:
+        label: Maximum Power
+        searchable: true
+        tab: Engine
+        span: left
+
+      maximum_torque:
+        label: Maximum Torque
+        searchable: true
+        tab: Engine
+        span: right
+
+      ignition_system:
+        label: Ignition System
+        searchable: true
+        tab: Engine
+        span: left
+
+      clutch:
+        label: Clutch
+        searchable: true
+        tab: Engine
+        span: right
+
+      gearbox:
+        label: Gearbox
+        searchable: true
+        tab: Engine
+        span: left
+
+      lubrication:
+        label: Lubrication
+        searchable: true
+        tab: Engine
+        span: right
+
+      engine_oil:
+        label: Engine Oil
+        searchable: true
+        tab: Engine
+        span: left
+
+      fuel_supply:
+        label: Fuel Supply
+        searchable: true
+        tab: Engine
+        span: right
+
+      air_cleaner:
+        label: Air Cleaner
+        searchable: true
+        tab: Engine
+        span: left
+
+      engine_start:
+        label: Engine Start
+        searchable: true
+        tab: Engine
+        span: right
+
+
+
+      body_type:
+        label: Body Type
+        searchable: true
+        tab: Body
+
+      front_suspension:
+        label: Front Suspension
+        searchable: true
+        tab: Body
+        span: left
+
+      rear_suspension:
+        label: Rear Suspension
+        searchable: true
+        tab: Body
+        span: right
+
+
+      wheelbase:
+        label: Wheelbase
+        searchable: true
+        tab: Dimensions
+        span: left
+
+      ground_clearance:
+        label: Ground Cclearance
+        searchable: true
+        tab: Dimensions
+        span: right
+
+      length:
+        label: Length
+        searchable: true
+        tab: Dimensions
+        span: left
+
+      width:
+        label: Width
+        searchable: true
+        tab: Dimensions
+        span: right
+
+      height:
+        label: Height
+        searchable: true
+        tab: Dimensions
+        span: left
+
+      seat_height:
+        label: Seat Height
+        searchable: true
+        tab: Dimensions
+        span: right
+
+      kerb_weight:
+        label: Kerb Weight
+        searchable: true
+        tab: Dimensions
+        span: left
+
+      fuel_capacity:
+        label: Fuel Capacity
+        searchable: true
+        tab: Dimensions
+        span: right
+
+
+
+      tyres_front:
+        label: Tyres Front
+        searchable: true
+        tab: Break & Tyres
+        span: left
+
+      tyres_rear:
+        label: Tyres Rear
+        searchable: true
+        tab: Break & Tyres
+        span: right
+
+      brakes_front:
+        label: Break Front
+        searchable: true
+        tab: Break & Tyres
+        span: left
+
+      brakes_rear:
+        label: Break Rear
+        searchable: true
+        tab: Break & Tyres
+        span: right
+
+
+
+      electrical_system:
+        label: Electrical System
+        searchable: true
+        tab: Electricals
+        span: left
+
+      battery:
+        label: Battery
+        searchable: true
+        tab: Electricals
+        span: right
+
+      head_lamp:
+        label: Head Lamp
+        searchable: true
+        tab: Electricals
+        span: left
+
+      tail_lamp:
+        label: Tail Lamp
+        searchable: true
+        tab: Electricals
+        span: right
+
+      turn_signal_lamp:
+        label: Turn Signal Lamp
+        searchable: true
+        tab: Electricals

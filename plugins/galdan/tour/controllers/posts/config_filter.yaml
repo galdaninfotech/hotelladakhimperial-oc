@@ -1,0 +1,79 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+
+    category:
+
+        # Filter name
+        label: galdan.tour::lang.posts.filter_category
+
+        # Model Class name
+        modelClass: Galdan\Tour\Models\Category
+
+        # Model attribute to display for the name
+        nameFrom: name
+
+        # Apply query scope
+        scope: FilterCategory
+
+    itinerary:
+
+        # Filter name
+        label: galdan.tour::lang.posts.filter_itinerary
+
+        # Model Class name
+        modelClass: Galdan\Tour\Models\Itinerary
+
+        # Model attribute to display for the name
+        nameFrom: name
+
+        # Apply query scope
+        scope: FilterItinerary
+
+    start:
+
+        # Filter name
+        label: galdan.tour::lang.posts.filter_start_date
+
+        # Filter type
+        type: daterange
+
+        # SQL Conditions
+        conditions: start >= ':after' AND start <= ':before'
+
+    end:
+
+        # Filter name
+        label: galdan.tour::lang.posts.filter_end_date
+
+        # Filter type
+        type: daterange
+
+        # SQL Conditions
+        conditions: end >= ':after' AND end <= ':before'
+
+    published:
+
+        # Filter name
+        label: galdan.tour::lang.posts.filter_published
+
+        # Filter type
+        type: switch
+
+        # SQL Conditions
+        conditions:
+            - published <> '1'
+            - published = '1'
+
+    published_date:
+
+        # Filter name
+        label: galdan.tour::lang.posts.filter_publish_date
+
+        # Filter type
+        type: daterange
+
+        # SQL Conditions
+        conditions: published_at >= ':after' AND published_at <= ':before'

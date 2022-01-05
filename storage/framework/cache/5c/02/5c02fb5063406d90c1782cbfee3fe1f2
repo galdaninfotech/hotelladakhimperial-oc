@@ -1,0 +1,137 @@
+1517890203a:1:{s:17:"accommodation.htm";a:15:{s:8:"fileName";s:17:"accommodation.htm";s:7:"content";s:4067:"title = "Accommodation"
+url = "/accommodation"
+layout = "default"
+meta_title = "Unmatched staying Experiences"
+meta_description = "Accommodation - Hotel Ladakh Imperial"
+is_hidden = 0
+seo_keywords = "Accommodation - Hotel Ladakh Imperial"
+robot_index = "index"
+robot_follow = "follow"
+
+[quickform]
+==
+
+<div id="hli-content-wrapper-accommodation">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h4 class="center">{{ this.page.title }}</h4>
+                    <div class="collapse" id="single">
+                        <div class="card card-body">
+                            <h5>Ladakh Imperial Single Room</h5>
+                            The Single Rooms at Ladakh Imperial are well designed and luxuriously appointed with contemporary fittings like double glazing, centrally controlled air conditioning and heating, LED Satellite TV, in-room electronic safe and spacious en suite bathrooms. These rooms have large picture windows and offer uninterrupted views of the snowcapped Stok Kangri Mountains, or Khardung La pass, Leh Palace and Shanti Stupa.
+                        </div>
+                    </div>
+                    <div class="collapse" id="double">
+                        <div class="card card-body">
+                            <h5>Ladakh Imperial Double Room</h5>
+                            Tastefully bedecked with exquisite artifacts that portray the rich culture and tradition of Ladakh such as Ladakhi ceilings and teak wood cornices & flooring, the lavish Premier Heritage Room of the hotel is an idyllic zone for you to unwind. The extravagant room, equipped with central air conditioning and floor heating throughout the room, is embedded with all the facilities to make your stay comfortable.
+                        </div>
+                    </div>
+                    <div class="collapse" id="suite">
+                        <div class="card card-body">
+                            <h5>Ladakh Imperial Double Suite</h5>
+                            Carefully adorned with numerous cherry picked elements which reflect Ladakhi culture, our Suites which extend over 350 sq. ft. have all the state of the art facilities and amenities that a traveler can need on his vacation. Elegant teak ceilings, artistic walls depicting the authentic jewelry of the region, intricate furnishings having the‘Koshen’ motif of the region comprising of air purifiers, central air conditioning, and washroom-floor heating, the room has all the amenities to make the stay comfortable.
+                        </div>
+                    </div>
+
+                    <ul class="accommodation">
+                        <li><a class="btn btn-primary" data-toggle="collapse" href="#single" role="button" aria-expanded="false" aria-controls="single">Single</a></li>
+                        <li><a class="btn btn-primary" data-toggle="collapse" href="#double" role="button" aria-expanded="false" aria-controls="double">Double</a></li>
+                        <li><a class="btn btn-primary" data-toggle="collapse" href="#suite" role="button" aria-expanded="false" aria-controls="suite">Suite</a></li>
+                    </ul> <!--  .accommodation --
+
+                </div><!-- hli-main-content  -->
+            </div><!-- cols  -->
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-accommodation  -->
+
+<style type="text/css">
+    ul.accommodation {
+        display: flex;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+    ul.accommodation li {
+        -webkit-flex-grow: 1;
+                flex-grow: 1;
+        margin-right: 1px;
+    }
+    ul.accommodation li a {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+";s:5:"mtime";i:1517601473;s:6:"markup";s:3694:"<div id="hli-content-wrapper-accommodation">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h4 class="center">{{ this.page.title }}</h4>
+                    <div class="collapse" id="single">
+                        <div class="card card-body">
+                            <h5>Ladakh Imperial Single Room</h5>
+                            The Single Rooms at Ladakh Imperial are well designed and luxuriously appointed with contemporary fittings like double glazing, centrally controlled air conditioning and heating, LED Satellite TV, in-room electronic safe and spacious en suite bathrooms. These rooms have large picture windows and offer uninterrupted views of the snowcapped Stok Kangri Mountains, or Khardung La pass, Leh Palace and Shanti Stupa.
+                        </div>
+                    </div>
+                    <div class="collapse" id="double">
+                        <div class="card card-body">
+                            <h5>Ladakh Imperial Double Room</h5>
+                            Tastefully bedecked with exquisite artifacts that portray the rich culture and tradition of Ladakh such as Ladakhi ceilings and teak wood cornices & flooring, the lavish Premier Heritage Room of the hotel is an idyllic zone for you to unwind. The extravagant room, equipped with central air conditioning and floor heating throughout the room, is embedded with all the facilities to make your stay comfortable.
+                        </div>
+                    </div>
+                    <div class="collapse" id="suite">
+                        <div class="card card-body">
+                            <h5>Ladakh Imperial Double Suite</h5>
+                            Carefully adorned with numerous cherry picked elements which reflect Ladakhi culture, our Suites which extend over 350 sq. ft. have all the state of the art facilities and amenities that a traveler can need on his vacation. Elegant teak ceilings, artistic walls depicting the authentic jewelry of the region, intricate furnishings having the‘Koshen’ motif of the region comprising of air purifiers, central air conditioning, and washroom-floor heating, the room has all the amenities to make the stay comfortable.
+                        </div>
+                    </div>
+
+                    <ul class="accommodation">
+                        <li><a class="btn btn-primary" data-toggle="collapse" href="#single" role="button" aria-expanded="false" aria-controls="single">Single</a></li>
+                        <li><a class="btn btn-primary" data-toggle="collapse" href="#double" role="button" aria-expanded="false" aria-controls="double">Double</a></li>
+                        <li><a class="btn btn-primary" data-toggle="collapse" href="#suite" role="button" aria-expanded="false" aria-controls="suite">Suite</a></li>
+                    </ul> <!--  .accommodation --
+
+                </div><!-- hli-main-content  -->
+            </div><!-- cols  -->
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-accommodation  -->
+
+<style type="text/css">
+    ul.accommodation {
+        display: flex;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+    ul.accommodation li {
+        -webkit-flex-grow: 1;
+                flex-grow: 1;
+        margin-right: 1px;
+    }
+    ul.accommodation li a {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+</style>";s:4:"code";N;s:5:"title";s:13:"Accommodation";s:3:"url";s:14:"/accommodation";s:6:"layout";s:7:"default";s:10:"meta_title";s:29:"Unmatched staying Experiences";s:16:"meta_description";s:37:"Accommodation - Hotel Ladakh Imperial";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:37:"Accommodation - Hotel Ladakh Imperial";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:9:"quickform";a:0:{}}}

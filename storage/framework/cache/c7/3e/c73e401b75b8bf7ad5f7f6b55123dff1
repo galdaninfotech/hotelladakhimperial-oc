@@ -1,0 +1,241 @@
+1640578545a:1:{s:18:"company/tariff.htm";a:14:{s:8:"fileName";s:18:"company/tariff.htm";s:7:"content";s:2666:"title = "Tariff"
+
+url = "/company/tariff"
+
+layout = "default"
+
+meta_title = "Tariff"
+
+meta_description = "Tariff"
+
+is_hidden = 0
+
+seo_keywords = "Tariff"
+
+robot_index = "index"
+
+robot_follow = "follow"
+
+
+
+
+
+==
+
+
+
+
+
+<div id="hli-content-wrapper-tariff">
+
+    <div  id="hli-content-wrapper" class="container 401d3d">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+                <div class="hli-main-content">
+
+                    <h1 class="centre">Tariff</h1>
+
+                    <div class="table-responsive">
+
+                    <table class="table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th></th>
+
+                                <th>AP</th>
+
+                                <th>MAP</th>
+
+                                <th>CP</th>
+
+                                <th>EP</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>Double</td>
+
+                                <td>Rs. 6200/-</td>
+
+                                <td>Rs. 5500/-</td>
+
+                                <td>Rs. 4900/-</td>
+
+                                <td>Rs. 4300/-</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Single</td>
+
+                                <td>Rs. 5100/-</td>
+
+                                <td>Rs. 4700/-</td>
+
+                                <td>Rs. 4100/-</td>
+
+                                <td>Rs. 3800/-</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Extra Bed</td>
+
+                                <td>Rs. 2200/-</td>
+
+                                <td>Rs. 1950/-</td>
+
+                                <td>Rs. 1750/-</td>
+
+                                <td>Rs. 1550/-</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Child without Bed</td>
+
+                                <td>Rs. 1050/-</td>
+
+                                <td>Rs. 850/-</td>
+
+                                <td>Rs. 650/-</td>
+
+                                <td>Rs. 500/-</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div> <!-- #hli-content-wrapper-tariff  -->";s:5:"mtime";i:1523369328;s:6:"markup";s:2423:"<div id="hli-content-wrapper-tariff">
+
+    <div  id="hli-content-wrapper" class="container 401d3d">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+                <div class="hli-main-content">
+
+                    <h1 class="centre">Tariff</h1>
+
+                    <div class="table-responsive">
+
+                    <table class="table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th></th>
+
+                                <th>AP</th>
+
+                                <th>MAP</th>
+
+                                <th>CP</th>
+
+                                <th>EP</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>Double</td>
+
+                                <td>Rs. 6200/-</td>
+
+                                <td>Rs. 5500/-</td>
+
+                                <td>Rs. 4900/-</td>
+
+                                <td>Rs. 4300/-</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Single</td>
+
+                                <td>Rs. 5100/-</td>
+
+                                <td>Rs. 4700/-</td>
+
+                                <td>Rs. 4100/-</td>
+
+                                <td>Rs. 3800/-</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Extra Bed</td>
+
+                                <td>Rs. 2200/-</td>
+
+                                <td>Rs. 1950/-</td>
+
+                                <td>Rs. 1750/-</td>
+
+                                <td>Rs. 1550/-</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Child without Bed</td>
+
+                                <td>Rs. 1050/-</td>
+
+                                <td>Rs. 850/-</td>
+
+                                <td>Rs. 650/-</td>
+
+                                <td>Rs. 500/-</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div> <!-- #hli-content-wrapper-tariff  -->";s:4:"code";N;s:5:"title";s:6:"Tariff";s:3:"url";s:15:"/company/tariff";s:6:"layout";s:7:"default";s:10:"meta_title";s:6:"Tariff";s:16:"meta_description";s:6:"Tariff";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:6:"Tariff";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

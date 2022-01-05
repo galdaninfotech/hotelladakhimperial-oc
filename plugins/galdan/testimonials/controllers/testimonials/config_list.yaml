@@ -1,0 +1,25 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: galdan.testimonials::lang.menu.testimonials
+list: ~/plugins/galdan/testimonials/models/testimonials/columns.yaml
+
+modelClass: Galdan\Testimonials\Models\Testimonials
+recordUrl: galdan/testimonials/testimonials/update/:id
+noRecordsMessage: backend::lang.list.no_records
+
+recordsPerPage: 15
+showCheckboxes: true
+showSetup: true
+
+defaultSort:
+    column: created_at
+    direction: desc
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt
+
+filter: config_filter.yaml

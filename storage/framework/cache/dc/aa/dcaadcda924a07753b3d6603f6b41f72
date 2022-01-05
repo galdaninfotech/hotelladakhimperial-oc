@@ -1,0 +1,9 @@
+1546667833a:1:{s:18:"site/slideshow.htm";a:5:{s:8:"fileName";s:18:"site/slideshow.htm";s:7:"content";s:137:"<div id="hli-slideshow">
+
+	<img class="" src="{{ url('assets/images/carousel/slide1.jpg'|theme) }}">
+
+</div> <!-- #hli-slideshow  -->";s:5:"mtime";i:1546657295;s:6:"markup";s:137:"<div id="hli-slideshow">
+
+	<img class="" src="{{ url('assets/images/carousel/slide1.jpg'|theme) }}">
+
+</div> <!-- #hli-slideshow  -->";s:4:"code";N;}}

@@ -1,0 +1,277 @@
+<?php $user = BackendAuth::getUser()->email; ?>
+<div id="mainscreen">
+
+    <h1 class="voice">Email :: Compose</h1>
+<?= Form::open(['url' => Backend::url('galdan/email/emails/sendnewmail'), 'name' => 'form']) ?>
+    <!-- toolbar -->
+    <h2 id="aria-label-toolbar" class="voice">Application toolbar</h2>
+    <div id="messagetoolbar" class="toolbar fullwidth" role="toolbar" aria-labelledby="aria-label-toolbar">
+        <a class="button back" tabindex="2" id="rcmbtn106" role="button" data-tabindex="2" aria-disabled="false" href="<?= Backend::url('galdan/email/emails/index/Inbox') ?>" onclick="return rcmail.command('list','',this,event)">Cancel</a>
+
+        <span class="spacer"></span>
+        
+        <input id="send-mail" type="submit" value="" title="Send message" tabindex="2" id="rcmbtn107" role="button" data-tabindex="2" aria-disabled="false">
+        <span id="send-text">Send</span>
+    
+        
+        <a data-request="onDraftNew" 
+            onclick="
+                var mail = [];
+                mail[0] = $('#_from').val();
+                mail[1] = $('#_to').val();
+                mail[2] = $('#compose-subject').val();
+                mail[3] = $('#composebody').val();
+                $(this).data('request-data', {
+                    mail: mail
+                })" 
+            class="button savedraft" 
+            title="Save as draft" 
+            id="rcmbtn111" role="button" tabindex="2" aria-disabled="true" 
+            href="#">Save
+        </a>
+
+        <span class="spacer"></span>
+        <span class="dropbutton">
+			<a class="button spellcheck" title="Check spelling" tabindex="2" id="rcmbtn109" role="button" data-tabindex="2" aria-disabled="false" href="#" onclick="return rcmail.command('spellcheck','',this,event)">Spell</a>
+			<a href="#languages" class="dropbuttontip" id="spellmenulink" onclick="UI.toggle_popup('spellmenu',event);return false" aria-haspopup="true" aria-expanded="false" tabindex="2">Select Spell Language</a>
+		</span>
+        <a class="button attach" title="Attach a file" onclick="UI.show_uploadform(event);return false" aria-haspopup="true" aria-expanded="false" tabindex="2" id="rcmbtn110" role="button" href="#">Attach</a>
+        <a class="button insertsig disabled" title="Insert signature" tabindex="-1" id="rcmbtn111" role="button" data-tabindex="2" aria-disabled="true" href="#" onclick="return rcmail.command('insert-sig','',this,event)">Signature</a>
+        <a href="#responses" class="button responses" label="responses" title="Insert a response" id="responsesmenulink" unselectable="on" onmousedown="return false" onclick="UI.toggle_popup('responsesmenu',event);return false" tabindex="2" aria-haspopup="true" aria-expanded="false" aria-owns="textresponsesmenu">Responses</a>
+        <a class="button encrypt disabled" title="Encrypt message with Mailvelope" tabindex="-1" style="display:none" id="rcmbtn112" role="button" data-tabindex="2" aria-disabled="true" href="#" onclick="return rcmail.command('compose-encrypted','',this,event)">Encrypt</a>
+
+    </div>
+
+    <div id="mainscreencontent">
+
+        <div id="composeview-left" style="width: 200px;">
+
+            <!-- inline address book -->
+            <div id="compose-contacts" class="uibox listbox" role="region" aria-labelledby="aria-label-composecontacts">
+                <h2 id="aria-label-composecontacts" class="boxtitle">Contacts</h2>
+                <div class="listsearchbox" role="search" aria-labelledby="aria-label-composequicksearch">
+                    <h3 id="aria-label-composequicksearch" class="voice">Contacts search form</h3>
+                    <div class="searchbox">
+                        <label for="contactsearchbox" class="voice">Contact search input</label>
+                        <form name="rcmqsearchform" onsubmit="rcmail.command('search'); return false" style="display:inline" action="./?_task=mail" method="get">
+                            <input name="_q" id="contactsearchbox" type="text">
+                        </form>
+
+                        <a id="searchmenulink" class="iconbutton searchicon"> </a>
+                        <a class="iconbutton reset" title="Reset search" id="rcmbtn113" role="button" href="#" onclick="return rcmail.command('reset-search','',this,event)" tabindex="0" aria-disabled="false"> </a>
+                    </div>
+                </div>
+                <ul id="directorylist" class="treelist listing">
+                    <li id="rcmliMA" class="addressbook"><a href="#list" rel="0" onclick="return rcmail.command('list-addresses','0',this)">Personal Addresses</a></li>
+                </ul>
+
+                <div class="scroller withfooter" tabindex="-1" style="top: 99px;">
+                    <table id="contacts-table" class="listing iconized" role="listbox" aria-multiselectable="true" tabindex="0">
+                        <tbody></tbody>
+                    </table>
+
+                </div>
+                <div class="boxfooter">
+                    <a title="To" class="listbutton addto disabled" id="rcmbtn114" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('add-recipient','to',this,event)"><span class="inner">To+</span></a><a title="Cc" class="listbutton addcc disabled" id="rcmbtn115" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('add-recipient','cc',this,event)"><span class="inner">Cc+</span></a><a title="Bcc" class="listbutton addbcc disabled" id="rcmbtn116" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('add-recipient','bcc',this,event)"><span class="inner">Bcc+</span></a>
+                </div>
+                <div class="boxpagenav">
+                    <a class="icon firstpage disabled" title="Show first page" id="rcmbtn117" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('firstpage','',this,event)">First</a>
+                    <a class="icon prevpage disabled" title="Show previous page" id="rcmbtn118" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('previouspage','',this,event)">Previous</a>
+                    <a class="icon nextpage disabled" title="Show next page" id="rcmbtn119" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('nextpage','',this,event)">Next</a>
+                    <a class="icon lastpage disabled" title="Show last page" id="rcmbtn120" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('lastpage','',this,event)">Last</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="composeview-right" role="main" style="left: 212px;">
+
+            
+
+                <!-- message headers -->
+                <div id="composeheaders" role="region" aria-labelledby="aria-label-composeheaders">
+                    <h2 id="aria-label-composeheaders" class="voice">Message headers</h2>
+
+                    <a href="#options" id="composeoptionstoggle" class="moreheaderstoggle remove" title="Toggle composition options" aria-expanded="true" style="cursor: pointer;"><span class="iconlink"></span></a>
+
+                    <table class="headers-table compose-headers">
+                        <tbody>
+                            <tr>
+                                <td class="title">
+                                    <label for="_from">From</label>
+                                </td>
+                                <td class="editfield">
+                                    <input type="hidden" name="_task" value="mail">
+                                    <input type="submit" name="_action" value="send">
+                                    <input type="hidden" name="_id" value="1386184232593e2424258fe">
+                                    <input type="hidden" name="_attachments">
+                                    <select name="_from" id="_from" tabindex="1" onchange="rcmail.change_identity(this)">
+                                        <option value="<?php echo $user; ?>" selected="selected"><?php echo $user; ?></option>
+                                    </select>
+                                    <a href="#identities" onclick="return rcmail.command('identities')" class="iconlink edit" tabindex="0">Edit identities</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title top">
+                                    <label for="_to">To</label>
+                                </td>
+                                <td class="editfield">
+                                    <textarea name="_to" spellcheck="false" id="_to" 
+                                        cols="70" rows="1" tabindex="1" 
+                                        autocomplete="off" 
+                                        aria-autocomplete="list" 
+                                        aria-expanded="false" 
+                                        role="combobox" 
+                                        style="height: 25px;"><?php if(isset($email)) {echo($email[0]->EmailFrom);} ?></textarea>
+                                </td>
+                            </tr>
+                            <tr id="compose-cc">
+                                <td class="title top">
+                                    <label for="_cc">Cc</label>
+                                    <a href="#cc" onclick="return UI.hide_header_row('cc');" class="iconbutton cancel" title="Delete" tabindex="3">Delete Cc</a>
+                                </td>
+                                <td class="editfield">
+                                    <textarea name="_cc" spellcheck="false" id="_cc" cols="70" rows="1" tabindex="1" autocomplete="off" aria-autocomplete="list" aria-expanded="false" role="combobox" style="height: 14px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr id="compose-bcc">
+                                <td class="title top">
+                                    <label for="_bcc">Bcc</label>
+                                    <a href="#bcc" onclick="return UI.hide_header_row('bcc');" class="iconbutton cancel" title="Delete" tabindex="3">Delete Bcc</a>
+                                </td>
+                                <td class="editfield">
+                                    <textarea name="_bcc" spellcheck="false" id="_bcc" cols="70" rows="1" tabindex="1" autocomplete="off" aria-autocomplete="list" aria-expanded="false" role="combobox" style="height: 14px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr id="compose-replyto">
+                                <td class="title top">
+                                    <label for="_replyto">Reply-To</label>
+                                    <a href="#replyto" onclick="return UI.hide_header_row('replyto');" class="iconbutton cancel" title="Delete" tabindex="3">Delete Reply-To</a>
+                                </td>
+                                <td class="editfield">
+                                    <input name="_replyto" spellcheck="false" id="_replyto" size="70" tabindex="1" value="" type="text" autocomplete="off" aria-autocomplete="list" aria-expanded="false" role="combobox">
+                                </td>
+                            </tr>
+                            <tr id="compose-followupto">
+                                <td class="title top">
+                                    <label for="_followupto">Followup-To</label>
+                                    <a href="#followupto" onclick="return UI.hide_header_row('followupto');" class="iconbutton cancel" title="Delete" tabindex="3">Delete Followup-To</a>
+                                </td>
+                                <td class="editfield">
+                                    <input name="_followupto" spellcheck="false" id="_followupto" size="70" tabindex="1" value="" type="text" autocomplete="off" aria-autocomplete="list" aria-expanded="false" role="combobox">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="formlinks">
+                                    <a href="#cc" onclick="return UI.show_header_row('cc')" id="cc-link" class="iconlink add" tabindex="3">Add Cc</a>
+                                    <a href="#bcc" onclick="return UI.show_header_row('bcc')" id="bcc-link" class="iconlink add" tabindex="3">Add Bcc</a>
+                                    <a href="#reply-to" onclick="return UI.show_header_row('replyto')" id="replyto-link" class="iconlink add" tabindex="3">Add Reply-To</a>
+                                    <a href="#followup-to" onclick="return UI.show_header_row('followupto')" id="followupto-link" class="iconlink add" tabindex="3">Add Followup-To</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    <label for="compose-subject">Subject</label>
+                                </td>
+                                <td class="editfield">
+                                    <input name="_subject" id="compose-subject" tabindex="1" spellcheck="true" value="<?php 
+            						if(isset($email)) { 
+            							if($action == 'reply') {
+            								echo 'Re: '.$email[0]->Subject;
+            							} else if($action == 'forward'){
+                                            echo 'Fwd: '.$email[0]->Subject;
+                                        }
+                                        else {
+            								echo $email[0]->Subject;
+            							}
+            						} ?>" 
+                                    type="text">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div id="composebuttons" class="formbuttons">
+                        <a class="button extwin" title="Open in new window" id="rcmbtn121" role="button" href="#" onclick="return rcmail.command('extwin','',this,event)" tabindex="0" aria-disabled="false"><span class="icon">Open in new window</span></a>
+                    </div>
+
+                    <!-- (collapsable) message options -->
+                    <div id="composeoptions" role="region" aria-labelledby="aria-label-composeoptions" style="display: block;">
+                        <h2 id="aria-label-composeoptions" class="voice">Composition options</h2>
+                        <span class="composeoption">
+				<label>Editor type
+					<select name="editorSelector" tabindex="4" onchange="return rcmail.command('toggle-editor', {id: 'composebody', html: this.value == 'html'}, '', event)">
+		<option value="html">HTML</option>
+		<option value="plain" selected="selected">Plain text</option>
+		</select>
+		</label>
+			</span>
+                        <span class="composeoption">
+				<label for="rcmcomposepriority">Priority
+					<select name="_priority" id="rcmcomposepriority" tabindex="4">
+		<option value="5">Lowest</option>
+		<option value="4">Low</option>
+		<option value="0" selected="selected">Normal</option>
+		<option value="2">High</option>
+		<option value="1">Highest</option>
+		</select>
+		</label>
+			</span>
+                        <span class="composeoption">
+				<label><input name="_mdn" id="rcmcomposereceipt" tabindex="4" value="1" type="checkbox"> Return receipt</label>
+			</span>
+                        <span class="composeoption">
+				<label>Save sent message in <select name="_store_target" style="max-width:12em" tabindex="4">
+		<option value="">- don't save -</option>
+		<option value="INBOX">Inbox</option>
+		<option value="Sent" selected="selected">Sent</option>
+		</select>
+		</label>
+			</span>
+
+                    </div>
+
+                </div>
+<?php  //dd($action); ?>
+                <!-- message compose body -->
+                <div id="composeview-bottom" style="height: 300px;">
+                    <div id="composebodycontainer">
+                        <label for="composebody" class="voice">Message Body</label>
+                        <input type="hidden" name="_draft_saveid">
+                        <input type="hidden" name="_draft" value="yes">
+                        <input type="hidden" name="_is_html" value="0">
+                        <input type="hidden" name="_framed" value="1">
+                        <textarea name="_message" id="composebody" cols="70" rows="20" tabindex="1" style="width: 850px; height: 292px; white-space: pre-line;" wrap="hard"><?php 
+                                 
+							?></textarea>
+                        <iframe name="savetarget" src="program/resources/blank.gif" style="width:0;height:0;border:none;visibility:hidden;" aria-hidden="true"></iframe>
+                    </div>
+                    <div id="compose-attachments" class="rightcol droptarget" role="region" aria-labelledby="aria-label-composeattachments">
+                        <h2 id="aria-label-composeattachments" class="voice">Attachments</h2>
+                        <div style="text-align:center; margin-bottom:20px">
+                            <input type="button" class="button" onclick="UI.show_uploadform(event);return false" tabindex="1" id="rcmbtn122" value="Attach a file">
+                        </div>
+                        <ul id="attachment-list" class="attachmentslist" data-tabindex="1">
+                        </ul>
+
+                    </div>
+
+                    <!-- <div id="composeformbuttons" class="footerleft formbuttons floating">
+                        <input type="button" class="button mainaction" tabindex="11" id="rcmbtn123" onclick="return rcmail.command('send','',this,event)" value="Send message">
+                        <input type="button" class="button" tabindex="12" id="rcmbtn124" onclick="return rcmail.command('savedraft','',this,event)" value="Save as draft">
+                        <input type="button" class="button" tabindex="13" id="rcmbtn125" onclick="return rcmail.command('list','',this,event)" value="Cancel">
+                    </div> -->
+
+                </div>
+
+                </form>
+
+        </div>
+        <!-- end mailview-right -->
+
+        <div id="composesplitterv" unselectable="on" role="presentation" class="splitter splitter-v" style="left: 203px; top: 0px;"></div>
+    </div>
+    <!-- end mainscreencontent -->
+
+</div>

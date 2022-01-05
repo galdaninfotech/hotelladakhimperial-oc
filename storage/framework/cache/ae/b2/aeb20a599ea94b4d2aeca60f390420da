@@ -1,0 +1,61 @@
+1514089538a:1:{s:23:"ladakh/about-ladakh.htm";a:16:{s:8:"fileName";s:23:"ladakh/about-ladakh.htm";s:7:"content";s:3053:"title = "About Ladakh"
+url = "/ladakh/about-ladakh"
+layout = "default"
+meta_title = "About Ladakh"
+meta_description = "About Ladakh"
+is_hidden = 0
+seo_keywords = "About Ladakh"
+robot_index = "index"
+robot_follow = "follow"
+
+[tourCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "tours/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blog-category"
+==
+<div class="container" id="main-content-wrapper">
+  <div class="row">
+    <div class="col-md-9 main-content">
+        <h1>{{ this.page.title }}</h1>
+        <img src="{{'assets/images/about-ladakh_img.jpg'|theme}}" title="This is about Ladakh title" alt="This is about Ladakh images 1" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;">
+        <p> Ladakh, a word which means "Land of passes", is a mountainous region in northwest Jammu &amp; Kashmir, in North India and in the area known as Trans-Himalaya. The settled population lives at an altitude between 2700m and 4500m, and nomadic encampments even higher. The temperature hardly gets any warmer than 27Degree Celsius while in winter they may plummet to minus 20 degree celcius . Buddhism culture dominates in Ladakh.</p>
+        <p>&nbsp;“Little Tibet”, “ Heaven of Adventure”,  “The Moon Land” are the words Ladakh is often associated with. The well preserved Tibetan culture is a main attraction in Ladakh. It has an amazing history too. The land is mysterious enough and it’s several monasteries and local stories intrigue the listeners even more. This land holds and preserves an ancient civilization for numerous years.</p>
+        <p>A hill station and a cold desert, Ladakh is one of those places with unparalled beauty. This Land of mountains, its picturesque location of monasteries, monks, the traditional folk songs and folk dance that come down the age almost unchanged, the colorful masked dances of the monastic festivals, the grandeur of snow-capped mountains around small and narrow mountain abode of man, a great attraction for tourist of all categories.</p>
+        <p>Ladakh is not only home to some of the most beautiful and serene monasteries you'll ever see, but it also a land of rich natural beauty - and it's this natural beauty that hits you so hard, because it's a barren beauty. Many travelers find themselves at a loss to understand how something so barren can yet be so beautiful. Be respectful, these are holy places and active monks in most of them. So come and explore the Treasure-Trove of Mystic Ladakh. Touring this place will surely leave you spell-bounded. </p>
+
+    </div><!-- Main Content -->
+
+    <div class="col-md-3">
+        <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        {% partial 'site/right1' %}
+    </div>
+    </div>
+</div>";s:5:"mtime";i:1510437890;s:6:"markup";s:2627:"<div class="container" id="main-content-wrapper">
+  <div class="row">
+    <div class="col-md-9 main-content">
+        <h1>{{ this.page.title }}</h1>
+        <img src="{{'assets/images/about-ladakh_img.jpg'|theme}}" title="This is about Ladakh title" alt="This is about Ladakh images 1" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;">
+        <p> Ladakh, a word which means "Land of passes", is a mountainous region in northwest Jammu &amp; Kashmir, in North India and in the area known as Trans-Himalaya. The settled population lives at an altitude between 2700m and 4500m, and nomadic encampments even higher. The temperature hardly gets any warmer than 27Degree Celsius while in winter they may plummet to minus 20 degree celcius . Buddhism culture dominates in Ladakh.</p>
+        <p>&nbsp;“Little Tibet”, “ Heaven of Adventure”,  “The Moon Land” are the words Ladakh is often associated with. The well preserved Tibetan culture is a main attraction in Ladakh. It has an amazing history too. The land is mysterious enough and it’s several monasteries and local stories intrigue the listeners even more. This land holds and preserves an ancient civilization for numerous years.</p>
+        <p>A hill station and a cold desert, Ladakh is one of those places with unparalled beauty. This Land of mountains, its picturesque location of monasteries, monks, the traditional folk songs and folk dance that come down the age almost unchanged, the colorful masked dances of the monastic festivals, the grandeur of snow-capped mountains around small and narrow mountain abode of man, a great attraction for tourist of all categories.</p>
+        <p>Ladakh is not only home to some of the most beautiful and serene monasteries you'll ever see, but it also a land of rich natural beauty - and it's this natural beauty that hits you so hard, because it's a barren beauty. Many travelers find themselves at a loss to understand how something so barren can yet be so beautiful. Be respectful, these are holy places and active monks in most of them. So come and explore the Treasure-Trove of Mystic Ladakh. Touring this place will surely leave you spell-bounded. </p>
+
+    </div><!-- Main Content -->
+
+    <div class="col-md-3">
+        <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        {% partial 'site/right1' %}
+    </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:12:"About Ladakh";s:3:"url";s:20:"/ladakh/about-ladakh";s:6:"layout";s:7:"default";s:10:"meta_title";s:12:"About Ladakh";s:16:"meta_description";s:12:"About Ladakh";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:12:"About Ladakh";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:14:"tourCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:14:"tours/category";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:18:"blog/blog-category";}}}

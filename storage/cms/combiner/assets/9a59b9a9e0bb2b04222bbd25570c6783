@@ -1,0 +1,42 @@
+#home-portfolio-wrapper{margin:30px 0 0 0}
+#home-portfolio-wrapper .more-link{float:right;font-size:12px;font-weight:400;text-transform:uppercase;font-family:"Helvetica",Helvetica,sans-serif;padding:3px 0 0 5px;color:#163A5E}
+#home-portfolio-wrapper .more-link:focus,#home-portfolio-wrapper .more-link:active,#home-portfolio-wrapper .more-link:hover{color:#bca474}
+#home-portfolio{margin:0 0 0 -5px;width:980px;clear:both}
+#home-portfolio .hentry{width:236px;margin:0 0 5px 5px;float:left}
+.portfolio-thumbnail-medium{width:477px !important}
+#home-portfolio .post-thumbnail{margin:0;padding:0}
+#home-portfolio .entry-header{display:block;margin-bottom:4px;text-align:center;padding:0;border:none}
+.page-template-page-front-php .home-content p{margin:0}
+  .clearfix:after{clear:both;display:block;height:0;font-size:0;visibility:hidden;content:"."}
+* html .clearfix{zoom:1}
+*:first-child+html .clearfix{zoom:1}
+ #main{clear:both;padding:30px 0 0;max-width:959px;margin:0 auto}
+#primary{}
+.entry-header{border-bottom:1px solid #cfcfcf;padding:0 0 30px;margin:0 0 30px;text-align:left}
+.message-header a:focus,.message-header a:active,.message-header a:hover{background:#ccc}
+.entry-title a:hover,.entry-title a:focus,.entry-title a:active{color:#ababab}
+.sep{padding:0 2px;color:#cfcfcf}
+.entry-meta a:focus,.entry-meta a:active,.entry-meta a:hover{color:#111}
+.post-thumbnail{position:relative;margin:0 0 30px;padding:0 30px 0 0}
+.post-thumbnail a{display:block}
+.post-thumbnail img[class*="attachment-"]{float:left;-webkit-transition:all ease .2s;-moz-transition:all ease .2s;-o-transition:all ease .2s;-ms-transition:all ease .2s}
+.iOS a:hover .entry-view-wrapper{opacity:0}
+.portfolio-view-wrapper{position:absolute;top:0;left:0;background-color:rgba(245,245,245,.95);color:#111;width:100%;height:100%;text-align:center;opacity:0;filter:alpha(opacity=0);-webkit-transition:all ease .2s;-moz-transition:all ease .2s;-o-transition:all ease .2s;-ms-transition:all ease .2s;text-shadow:none;-webkit-tap-highlight-color:transparent}
+a:hover .portfolio-view-wrapper{opacity:.95}
+.portfolio-view{position:absolute;width:100%;height:100%;display:table;background-color :#f5f5f5;filter:alpha(opacity=0)}
+a:hover .portfolio-view{filter:alpha(opacity=95)}
+.portfolio-view-content{display:table-cell;vertical-align:middle;padding:20px;text-align:center}
+a:hover .portfolio-view-wrapper{opacity:1}
+.post-thumbnail h2{font-size:21px;font-weight:normal;line-height:30px;margin:0}
+.post-thumbnail hr{background-color:#777;width:50%;margin-bottom:10px}
+#cancel-comment-reply-link:focus,#cancel-comment-reply-link:active,#cancel-comment-reply-link:hover{background:#f7f6f7;background:-webkit-gradient(linear,left top,left bottom,from(#f7f6f7),to(#d4cdd2));background:-webkit-linear-gradient(#f7f6f7,#d4cdd2);background:-moz-linear-gradient(center top,#f7f6f7 0,#d4cdd2 100%);background:-moz-gradient(center top,#f7f6f7 0,#d4cdd2 100%);text-decoration:none}
+ .isotope,.isotope .isotope-item{-webkit-transition-duration:0.4s;-moz-transition-duration:0.4s;-ms-transition-duration:0.4s;-o-transition-duration:0.4s;transition-duration:0.4s}
+.isotope{-webkit-transition-property:height;-moz-transition-property:height;-ms-transition-property:height;-o-transition-property:height;transition-property:height}
+.isotope .isotope-item{-webkit-transition-property:-webkit-transform,opacity;-moz-transition-property:-moz-transform,opacity;-ms-transition-property:-ms-transform,opacity;-o-transition-property:top,left,opacity;transition-property:transform,opacity}
+.isotope-item{z-index:2;-webkit-backface-visibility:hidden}
+ #filters{padding:0;margin:0 0 14px;float:left;line-height:2.025}
+#content #filters a{margin:0;padding:0;color:#163A5E;text-decoration:underline;background:none;border:none;box-shadow:none;text-shadow:none;font-size:12px;font-family:"Helvetica",Helvetica,sans-serif;font-weight:normal;text-transform:uppercase}
+#filters .sep{padding:0 2px;color:#cfcfcf;vertical-align:5%}
+#filters a:first-child{margin-left:0}
+#content #filters a:focus,#content #filters a:active,#content #filters a:hover{color:#bca474}
+#content #filters a.selected{color:#bca474}

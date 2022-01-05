@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Itinerary
+
+# Model Form Field configuration
+form: $/galdan/tour/models/itinerary/fields.yaml
+
+# Model Class name
+modelClass: Galdan\Tour\Models\Itinerary
+
+# Default redirect location
+defaultRedirect: galdan/tour/itineraries
+
+# Create page
+create:
+    title: Create Itinerary
+    redirect: galdan/tour/itineraries/update/:id
+    redirectClose: galdan/tour/itineraries
+
+# Update page
+update:
+    title: Edit Itinerary
+    redirect: galdan/tour/itineraries
+    redirectClose: galdan/tour/itineraries
+
+# Preview page
+preview:
+    title: Preview Itinerary

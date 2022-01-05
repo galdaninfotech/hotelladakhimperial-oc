@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Task
+
+# Model Form Field configuration
+form: $/galdan/tour/models/task/fields.yaml
+
+# Model Class name
+modelClass: Galdan\Tour\Models\Task
+
+# Default redirect location
+defaultRedirect: galdan/tour/tasks
+
+# Create page
+create:
+    title: Create Task
+    redirect: galdan/tour/tasks/update/:id
+    redirectClose: galdan/tour/tasks
+
+# Update page
+update:
+    title: Edit Task
+    redirect: galdan/tour/tasks
+    redirectClose: galdan/tour/tasks
+
+# Preview page
+preview:
+    title: Preview Task

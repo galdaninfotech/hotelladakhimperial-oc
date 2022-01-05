@@ -1,0 +1,74 @@
+
+/* Gantt */
+#gantt * {
+    margin: 0;
+    padding: 0;
+}
+#gantt {
+    position: relative;
+    overflow-x: scroll;
+    margin-left: 200px;
+    white-space: nowrap;
+}
+
+input#gantt-start {
+    background: #888;
+    border: none;
+    height: 28px;
+}
+input[type="date"] {
+    line-height: 28px;
+}
+
+#gantt tr td {
+    width:12px; height: 30px; 
+}
+.gantt-day-in {
+    background-color: #034F62; border-right: none; border-bottom: 1px solid #001f27;
+}
+.gantt-day {
+    background-color: #002B36;
+    border-right: 1px solid #001f27;
+    border-bottom: 1px solid #001f27;
+    text-indent: -12000px;
+}
+.tour-name {
+    background-color: #002B36;
+    padding: 6px;
+    border-bottom: 1px solid #001f27;
+}
+.days-header {
+    font-size: 9px;
+    text-align: center;
+    color: #666;
+}
+aside {
+    float: left;
+    width: 18%;
+}
+aside table {
+    width: 100%;
+}
+tr.month, .days-header {
+    background-color: #002B36;
+    border-bottom: 1px solid #001f27;
+}
+.weekend-day {
+    background-color: #04313C;
+    border-right: 1px solid #001f27;
+    border-bottom: 1px solid #001f27;
+    font-size: 9px;
+    text-align: center;
+    color: #666;
+}
+
+td.tour-title {
+    padding: 22px;
+    background-color: #002B36;
+    border-right: 1px solid #001f27;
+    border-bottom: 1px solid #001f27;
+}
+.days-header span, .weekend-day span {
+    display: block;
+}
+

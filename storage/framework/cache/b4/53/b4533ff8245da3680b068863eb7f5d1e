@@ -1,0 +1,80 @@
+1514972953a:1:{s:15:"site/banner.htm";a:5:{s:8:"fileName";s:15:"site/banner.htm";s:7:"content";s:1961:"<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <div class="hli-banner">
+                <img src="{{ url('assets/images/banner/first.jpg'|theme) }}">
+                <div id="parallelogram"></div>
+                <div class="details">
+                    <h6>ITS TIME TO BOOK</h6>
+                    <p>Booking direct is guaranteed to save you <span id="discount">5% off</span> your next stay with us. Book by 31 Jan 2018</p>
+                    <div id="hli-banner-book-button"><span>Book Now</span><div id="triangle-right"></div></div>
+                </div>
+            </div> 
+        </div><!-- .col-xs-12 col-md-4  -->
+
+        <div class="col-xs-12 col-md-4">
+            <div class="hli-banner">
+                <img src="{{ url('assets/images/banner/second.jpg'|theme) }}">
+                <div id="parallelogram"></div>
+                <div class="details">
+                    <h6>Best Cuisine Available</h6>
+                    <p>We serve all kinds of veg and non-veg foods items.</p>
+                    <div id="hli-banner-book-button"><span>Book Now</span><div id="triangle-right"></div></div>
+                </div>
+            </div> 
+        </div><!-- .col-xs-12 col-md-4  -->
+
+        <div class="col-xs-12 col-md-4">
+            <div class="hli-banner">
+                <img src="{{ url('assets/images/banner/third.jpg'|theme) }}">
+                <div id="parallelogram"></div>
+                <div class="details">
+                    <h6>Wide Range Of Services</h6>
+                    <p>We have every kind of facilities and services which will make your stay here enjoyable.</p>
+                    <div id="hli-banner-book-button"><span>Book Now</span><div id="triangle-right"></div></div>
+                </div>
+            </div> 
+        </div><!-- .col-xs-12 col-md-4  -->
+    </div> <!-- .row  -->
+</div> <!-- .container  -->
+";s:5:"mtime";i:1514874496;s:6:"markup";s:1959:"<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <div class="hli-banner">
+                <img src="{{ url('assets/images/banner/first.jpg'|theme) }}">
+                <div id="parallelogram"></div>
+                <div class="details">
+                    <h6>ITS TIME TO BOOK</h6>
+                    <p>Booking direct is guaranteed to save you <span id="discount">5% off</span> your next stay with us. Book by 31 Jan 2018</p>
+                    <div id="hli-banner-book-button"><span>Book Now</span><div id="triangle-right"></div></div>
+                </div>
+            </div> 
+        </div><!-- .col-xs-12 col-md-4  -->
+
+        <div class="col-xs-12 col-md-4">
+            <div class="hli-banner">
+                <img src="{{ url('assets/images/banner/second.jpg'|theme) }}">
+                <div id="parallelogram"></div>
+                <div class="details">
+                    <h6>Best Cuisine Available</h6>
+                    <p>We serve all kinds of veg and non-veg foods items.</p>
+                    <div id="hli-banner-book-button"><span>Book Now</span><div id="triangle-right"></div></div>
+                </div>
+            </div> 
+        </div><!-- .col-xs-12 col-md-4  -->
+
+        <div class="col-xs-12 col-md-4">
+            <div class="hli-banner">
+                <img src="{{ url('assets/images/banner/third.jpg'|theme) }}">
+                <div id="parallelogram"></div>
+                <div class="details">
+                    <h6>Wide Range Of Services</h6>
+                    <p>We have every kind of facilities and services which will make your stay here enjoyable.</p>
+                    <div id="hli-banner-book-button"><span>Book Now</span><div id="triangle-right"></div></div>
+                </div>
+            </div> 
+        </div><!-- .col-xs-12 col-md-4  -->
+    </div> <!-- .row  -->
+</div> <!-- .container  -->";s:4:"code";N;}}

@@ -1,0 +1,83 @@
+1517890214a:1:{s:22:"site/quick-booking.htm";a:5:{s:8:"fileName";s:22:"site/quick-booking.htm";s:7:"content";s:2520:"<div class="container">
+    <div class="row">
+        <div id="booking-form-wrapper">
+            <form>
+                <div class="col-xs-12 col-md-3"><div class="form-group"><input type="date" class="form-control" id="checkin" name="checkin" placeholder="check-In"></div></div>
+                <div class="col-xs-12 col-md-3"><div class="form-group"><input type="date" class="form-control" id="checkout" name="checkout" placeholder="Check-Out"></div></div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="form-group">
+                        <select id="room" name="room" class="form-control">
+                            <option value="" disabled selected>Number Of Room</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>                   
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="form-group">
+                        <select id="person" name="person" class="form-control">
+                            <option value="" disabled selected>Number Of Person</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2"><div class="form-group"><input type="submit" class="btn btn-primary form-control" value="Book"></div></div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-md-2 visible-xs open-booking-form"><input type="button" class="btn btn-primary form-control" value="Book Now"></div>
+    </div>
+</div>";s:5:"mtime";i:1517601491;s:6:"markup";s:2520:"<div class="container">
+    <div class="row">
+        <div id="booking-form-wrapper">
+            <form>
+                <div class="col-xs-12 col-md-3"><div class="form-group"><input type="date" class="form-control" id="checkin" name="checkin" placeholder="check-In"></div></div>
+                <div class="col-xs-12 col-md-3"><div class="form-group"><input type="date" class="form-control" id="checkout" name="checkout" placeholder="Check-Out"></div></div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="form-group">
+                        <select id="room" name="room" class="form-control">
+                            <option value="" disabled selected>Number Of Room</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>                   
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="form-group">
+                        <select id="person" name="person" class="form-control">
+                            <option value="" disabled selected>Number Of Person</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2"><div class="form-group"><input type="submit" class="btn btn-primary form-control" value="Book"></div></div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-md-2 visible-xs open-booking-form"><input type="button" class="btn btn-primary form-control" value="Book Now"></div>
+    </div>
+</div>";s:4:"code";N;}}

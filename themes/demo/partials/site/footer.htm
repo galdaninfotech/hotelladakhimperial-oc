@@ -1,0 +1,33 @@
+[newsSubscribe Subscribe]
+==
+<footer>
+    <div class="container">  
+        <div class="col-md-12"><div class="dash-line gray"></div></div>
+
+        <div class="foot_bot row">
+            <div class="col-md-3">
+                <div id="payment-options">
+                    <ul class="footer-ul-link">
+                        <li><a href="{{ url('/') }}">Home</a></li>
+                        <li><a href="{{ url('/locate-us-on-map') }}">Locate Us On Map</a></li>
+                        <li><a href="{{ url('/terms-and-conditions') }}">Terms & Conditions</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div id="other">
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>Get In Touch</h5><br>
+                {% partial 'site/social' %}
+            </div>
+            <div class="col-md-3">
+                {% partial 'site/address' %}
+            </div>
+        </div>  
+    </div> <!-- container --> 
+
+ 
+</footer>

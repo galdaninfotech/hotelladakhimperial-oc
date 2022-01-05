@@ -1,0 +1,69 @@
+1514183187a:1:{s:18:"blog/blog-post.htm";a:17:{s:8:"fileName";s:18:"blog/blog-post.htm";s:7:"content";s:1200:"title = "Blog Post"
+url = "/blog-post/:slug"
+layout = "default"
+meta_title = "Blog Post"
+meta_description = "Blog Post"
+is_hidden = 0
+seo_keywords = "Blog Post"
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/blog-category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = "blog/blog-category"
+
+[tourCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "tours/category"
+==
+<?php
+function onEnd() {
+    $this->page->title = $this['post']->title;
+}
+?>
+==
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>{{this.page.title}}</h1>
+        	{% component 'blogPost' %}
+        	{% component 'SeoTourPost' data=post %}
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+            
+            <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+            
+        	{% partial 'site/right1' %}
+    	</div>
+    </div>
+</div>";s:5:"mtime";i:1500176720;s:6:"markup";s:631:"<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>{{this.page.title}}</h1>
+        	{% component 'blogPost' %}
+        	{% component 'SeoTourPost' data=post %}
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+            
+            <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+            
+        	{% partial 'site/right1' %}
+    	</div>
+    </div>
+</div>";s:4:"code";s:69:"function onEnd() {
+    $this->page->title = $this['post']->title;
+}";s:5:"title";s:9:"Blog Post";s:3:"url";s:16:"/blog-post/:slug";s:6:"layout";s:7:"default";s:10:"meta_title";s:9:"Blog Post";s:16:"meta_description";s:9:"Blog Post";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:9:"Blog Post";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:8:"blogPost";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:18:"blog/blog-category";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"1";s:12:"categoryPage";s:18:"blog/blog-category";}s:14:"tourCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:14:"tours/category";}}}

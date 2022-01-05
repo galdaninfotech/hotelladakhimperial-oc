@@ -1,0 +1,22 @@
+1517890203a:1:{s:17:"client/modify.htm";a:12:{s:8:"fileName";s:17:"client/modify.htm";s:7:"content";s:312:"title = "Modify"
+url = "/client-modify/:slug"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[modify]
+==
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        	{% component 'modify' %}
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1517601476;s:6:"markup";s:156:"<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        	{% component 'modify' %}
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:6:"Modify";s:3:"url";s:20:"/client-modify/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:6:"modify";a:0:{}}}

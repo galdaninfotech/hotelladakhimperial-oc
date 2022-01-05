@@ -1,0 +1,65 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: ID
+        searchable: true
+
+    title:
+        label: galdan.tour::lang.post.title
+        searchable: true
+
+    # author:
+    #   label: Author
+    #   relation: user
+    #   select: login
+    #   searchable: true
+
+    category:
+        label: galdan.tour::lang.post.category
+        relation: category
+        select: name
+        searchable: true
+        sortable: true
+    
+    itinerary:
+        label: galdan.tour::lang.post.itinerary
+        relation: itinerary
+        select: name
+        searchable: true
+        sortable: true
+        clickable: true
+
+    start:
+        label: galdan.tour::lang.post.start
+        type: date
+        searchable: true
+        sortable: true
+
+    end:
+        label: galdan.tour::lang.post.end
+        type: date
+        searchable: true
+        sortable: true
+
+    bookings:
+        label: Pax
+        relation: bookings
+        select: numperson
+
+    created_at:
+        label: galdan.tour::lang.post.created
+        type: date
+        invisible: true
+
+    updated_at:
+        label: galdan.tour::lang.post.updated
+        type: date
+        invisible: true
+
+    published_at:
+        label: galdan.tour::lang.post.published
+        type: date

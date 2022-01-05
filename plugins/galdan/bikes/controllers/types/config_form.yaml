@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Type
+
+# Model Form Field configuration
+form: $/galdan/bikes/models/type/fields.yaml
+
+# Model Class name
+modelClass: Galdan\Bikes\Models\Type
+
+# Default redirect location
+defaultRedirect: galdan/bikes/types
+
+# Create page
+create:
+    title: Create Type
+    redirect: galdan/bikes/types/update/:id
+    redirectClose: galdan/bikes/types
+
+# Update page
+update:
+    title: Edit Type
+    redirect: galdan/bikes/types
+    redirectClose: galdan/bikes/types
+
+# Preview page
+preview:
+    title: Preview Type

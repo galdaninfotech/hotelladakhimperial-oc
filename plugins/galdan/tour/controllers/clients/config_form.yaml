@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Client
+
+# Model Form Field configuration
+form: $/galdan/tour/models/client/fields.yaml
+
+# Model Class name
+modelClass: Galdan\Tour\Models\Client
+
+# Default redirect location
+defaultRedirect: galdan/tour/clients
+
+# Create page
+create:
+    title: Create Client
+    redirect: galdan/tour/clients/update/:id
+    redirectClose: galdan/tour/clients
+
+# Update page
+update:
+    title: Edit Client
+    redirect: galdan/tour/clients
+    redirectClose: galdan/tour/clients
+
+# Preview page
+preview:
+    title: Preview Client

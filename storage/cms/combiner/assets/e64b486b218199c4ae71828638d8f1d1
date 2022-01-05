@@ -1,0 +1,25 @@
+#booking-form-wrapper{position:fixed;bottom:0;z-index:9999}
+#booking-form-wrapper .form-group{margin:0}
+#booking-form-wrapper .form-control{margin-bottom:1px}
+#booking-form-wrapper ul li{height:40px;width:100%}
+#booking-form-wrapper ul li,#booking-form-wrapper ul li input,#booking-form-wrapper ul li select{background:#690122;border:0;text-align:center;padding-left:10px;color:#fff}
+  @media only screen and (min-width :320px){}
+ @media only screen and (min-width :480px){}
+ @media only screen and (min-width :768px){#booking-form-wrapper{position:relative;top:-50px}
+}
+ @media only screen and (min-width :992px){#booking-form-wrapper{position:relative;top:-50px}
+}
+ @media only screen and (min-width :1200px){ #booking-form-wrapper{position:relative;top:-50px}
+#booking-form-wrapper .col-md-3,#booking-form-wrapper .col-md-2{padding-left:0;padding-right:0}
+#booking-form-wrapper ul li{float:left;border-left:1px solid #fff;height:40px;width:214px}
+#booking-form-wrapper ul li,#booking-form-wrapper ul li input,#booking-form-wrapper ul li select{background:#690122;border:0;text-align:center;padding-left:10px;color:#fff}
+#booking-form-wrapper ul li select{height:40px}
+#booking-form-wrapper ul li{border-left:1px solid #fff}
+#booking-form-wrapper ul li:nth-child(1){border:0}
+#booking-form-wrapper ul li input[type="date"]:not(.has-value):before{color:lightgray;content:attr(placeholder)}
+#booking-form-wrapper ul li:last-child,#booking-form-wrapper ul li input[type="submit"]{background:green;padding:5px}
+#booking-form-wrapper ul li input:focus,#booking-form-wrapper ul li input:active,#booking-form-wrapper ul li select:focus,#booking-form-wrapper ul li select:active{outline:none}
+select:required:invalid{color:gray;text-align:center}
+option[value=""][disabled]{display:none}
+#booking-form-wrapper ul li select{appearance:none;-webkit-appearance:none;-moz-appearance:none;width:192px;margin-left:-30px;padding-left:10px}
+}

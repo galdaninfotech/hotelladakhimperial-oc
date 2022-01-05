@@ -1,0 +1,36 @@
+title = "Booking Form"
+url = "/company-booking/:slug"
+layout = "default"
+description = "Booking Form"
+meta_title = "Booking Form"
+meta_description = "Booking Form"
+is_hidden = 0
+seo_keywords = "Booking Form"
+robot_index = "index"
+robot_follow = "follow"
+
+[form]
+slug = "{{ :slug }}"
+
+==
+<?php
+function onStart()
+{
+    echo $this->page->getObjectTypeDirName();
+}
+?>
+==
+
+<div id="hli-content-wrapper-reservation">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h1>{{ this.page.title }}</h1>
+                    {% component 'form' %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-reservation  -->

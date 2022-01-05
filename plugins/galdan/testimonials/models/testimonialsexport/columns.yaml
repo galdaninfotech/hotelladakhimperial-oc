@@ -1,0 +1,14 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id: galdan.testimonials::lang.form.id
+    name: galdan.testimonials::lang.form.name
+    email: galdan.testimonials::lang.form.email
+    common: galdan.testimonials::lang.form.message
+    statistics: galdan.testimonials::lang.stat.mail
+    status: galdan.testimonials::lang.form.status
+    created_at: galdan.testimonials::lang.form.created
+    updated_at: galdan.testimonials::lang.form.updated

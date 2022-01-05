@@ -1,0 +1,10 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id: ID
+    name: Name
+    slug: galdan.tour::lang.post.slug
+

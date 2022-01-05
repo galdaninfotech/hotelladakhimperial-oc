@@ -1,0 +1,72 @@
+1511421355a:1:{s:23:"site/tour_slideshow.htm";a:5:{s:8:"fileName";s:23:"site/tour_slideshow.htm";s:7:"content";s:1355:"{% set post = __SELF__.post %}
+
+<div class="carousel slide" id="itinerary-slideshow" data-ride="carousel">
+  <ol class="carousel-indicators">
+    {% if post.featured_images.count %}
+        {% for image in post.featured_images %}
+        	<li data-target="#itinerary-slideshow" data-slide-to="{{image_count}}"></li>
+        	<?php image_count++; ?>
+        {% endfor %}
+	{% endif %}
+  </ol>
+  <div class="carousel-inner">
+    {% if post.featured_images.count %}
+        {% for image in post.featured_images %}
+        	{% if loop.first %}
+        		<div class="item active">
+        		<img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+        	</div>
+        	{% endif %}
+        	<div class="item">
+        		<img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+        	</div>
+        {% endfor %}
+	{% endif %}
+  </div>
+  <a href="#itinerary-slideshow" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a>
+  <a href="#itinerary-slideshow" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
+</div>
+";s:5:"mtime";i:1496516922;s:6:"markup";s:1354:"{% set post = __SELF__.post %}
+
+<div class="carousel slide" id="itinerary-slideshow" data-ride="carousel">
+  <ol class="carousel-indicators">
+    {% if post.featured_images.count %}
+        {% for image in post.featured_images %}
+        	<li data-target="#itinerary-slideshow" data-slide-to="{{image_count}}"></li>
+        	<?php image_count++; ?>
+        {% endfor %}
+	{% endif %}
+  </ol>
+  <div class="carousel-inner">
+    {% if post.featured_images.count %}
+        {% for image in post.featured_images %}
+        	{% if loop.first %}
+        		<div class="item active">
+        		<img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+        	</div>
+        	{% endif %}
+        	<div class="item">
+        		<img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+        	</div>
+        {% endfor %}
+	{% endif %}
+  </div>
+  <a href="#itinerary-slideshow" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a>
+  <a href="#itinerary-slideshow" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
+</div>";s:4:"code";N;}}

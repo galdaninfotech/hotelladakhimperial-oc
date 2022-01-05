@@ -1,0 +1,5 @@
+1.0.1:
+    - Initialize plugin.
+    - create_bookings_table.php
+    - create_statuses_table.php
+    - seed_all_tables.php

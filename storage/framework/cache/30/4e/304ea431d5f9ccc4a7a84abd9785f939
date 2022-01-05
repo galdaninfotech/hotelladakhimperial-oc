@@ -1,0 +1,59 @@
+1514089537a:1:{s:19:"company/booking.htm";a:18:{s:8:"fileName";s:19:"company/booking.htm";s:7:"content";s:986:"title = "Booking Form"
+url = "/company-booking/:slug"
+layout = "default"
+description = "Booking Form"
+meta_title = "Booking Form"
+meta_description = "Booking Form"
+is_hidden = 0
+seo_keywords = "Booking Form"
+robot_index = "index"
+robot_follow = "follow"
+
+[form]
+slug = "{{ :slug }}"
+
+[tourCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "tours/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blog-category"
+==
+<?php
+function onStart()
+{
+    echo $this->page->getObjectTypeDirName();
+}
+?>
+==
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>{{ this.page.title }}</h1>
+        	{% component 'form' %}
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        	{% partial 'site/right1' %}
+    	</div>
+    </div>
+</div>";s:5:"mtime";i:1500166972;s:6:"markup";s:408:"<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>{{ this.page.title }}</h1>
+        	{% component 'form' %}
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        	{% partial 'site/right1' %}
+    	</div>
+    </div>
+</div>";s:4:"code";s:71:"function onStart()
+{
+    echo $this->page->getObjectTypeDirName();
+}";s:5:"title";s:12:"Booking Form";s:3:"url";s:22:"/company-booking/:slug";s:6:"layout";s:7:"default";s:11:"description";s:12:"Booking Form";s:10:"meta_title";s:12:"Booking Form";s:16:"meta_description";s:12:"Booking Form";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:12:"Booking Form";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:4:"form";a:1:{s:4:"slug";s:11:"{{ :slug }}";}s:14:"tourCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:14:"tours/category";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:18:"blog/blog-category";}}}

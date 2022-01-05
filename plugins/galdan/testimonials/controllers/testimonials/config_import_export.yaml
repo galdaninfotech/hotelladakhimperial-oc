@@ -1,0 +1,18 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: galdan.testimonials::lang.menu.import
+    modelClass: Galdan\Testimonials\Models\TestimonialsImport
+    list: $/galdan/testimonials/models/testimonialsimport/columns.yaml
+    redirect: galdan/testimonials/testimonials
+    permissions: galdan.testimonials.import_export
+
+export:
+    title: galdan.testimonials::lang.menu.export
+    modelClass: Galdan\Testimonials\Models\TestimonialsExport
+    list: $/galdan/testimonials/models/testimonialsexport/columns.yaml
+    redirect: galdan/testimonials/testimonials
+    permissions: galdan.testimonials.import_export
+    filename: testimonials.csv

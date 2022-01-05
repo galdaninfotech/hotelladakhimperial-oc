@@ -1,0 +1,15 @@
+var JVMegaMenu=function(boxTimer,xOffset,yOffset,smartBoxSuffix,smartBoxClose,isub)
+{var smartBoxes=$(document.body).getElements('div[id$='+smartBoxSuffix+']');var closeElem=$(document.body).getElements('.'+smartBoxClose);var closeBoxes=function(){smartBoxes.setStyle('display','none');};closeElem.addEvent('click',function(){closeBoxes()}).setStyle('cursor','pointer');var closeBoxesTimer=0;smartBoxes.each(function(item)
+{smartBoxes.setStyle('display','none');var currentBox=item.getProperty('id');currentBox=currentBox.replace(''+smartBoxSuffix+'','');$(currentBox).addEvent('mouseleave',function(){closeBoxesTimer=closeBoxes.delay(boxTimer);});item.addEvent('mouseleave',function(){});$(currentBox).addEvent('mouseenter',function(){if($defined(closeBoxesTimer))$clear(closeBoxesTimer);});item.addEvent('mouseenter',function(){if($defined(closeBoxesTimer))$clear(closeBoxesTimer);});item.setStyle('margin','0');$(currentBox).addEvent('mouseenter',function()
+{smartBoxes.setStyle('display','none');item.setStyles({display:'block',position:'absolute'}).setStyle('z-index','1000000');var halfWindowY=window.getHeight()/2;var halfWindowX=window.getWidth()/2;var boxSize=item.getSize().size;var inputPOS=$(currentBox).getCoordinates();var inputCOOR=$(currentBox).getPosition();var inputSize=$(currentBox).getSize().size;var inputBottomPOS=inputPOS.top+inputSize.y;var inputBottomPOSAdjust=inputBottomPOS-window.getScrollHeight();var inputLeftPOS=inputPOS.left+xOffset;var inputRightPOS=inputPOS.right;var leftOffset=inputCOOR.x+xOffset;if(halfWindowY<inputBottomPOSAdjust)
+{if(!isub)
+{item.setStyle('top',inputPOS.top-boxSize.y-yOffset);if((boxSize.x+inputLeftPOS)<(2*halfWindowX)){item.setStyle('left',leftOffset);}
+else{item.setStyle('left',(inputPOS.right-boxSize.x)-xOffset);};}}
+else
+{if(!isub)
+{item.setStyle('top',inputBottomPOS+yOffset);if((boxSize.x+inputLeftPOS)<(2*halfWindowX-50)){item.setStyle('left',leftOffset);}
+else{item.setStyle('left',(inputPOS.right-boxSize.x)-xOffset);};}
+else
+{if((boxSize.x+inputLeftPOS)<(2*halfWindowX-50)){item.setStyle('left',inputSize.x);}
+else{item.setStyle('right',inputSize.x);}}};}).setStyle('cursor','pointer');});};window.addEvent('domready',function(){JVMegaMenu(200,0,0,'_megamenu','megamenu_close',false);var megas=$(document.body).getElements('div[class="menusub_mega"]');megas.each(function(mega,i){var id=mega.getProperty('id').split('_');if(id[2]!=null)
+{var smart='_'+id[1]+'_'+id[2];JVMegaMenu(100,0,0,smart,'megamenu_close',true);}});});

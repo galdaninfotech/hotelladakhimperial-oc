@@ -1,0 +1,18 @@
+#booking-form-wrapper{position:fixed;bottom:0;z-index:9999}
+#booking-form-wrapper .form-group{margin:0}
+#booking-form-wrapper .form-control{margin-bottom:1px}
+#booking-form-wrapper ul li{height:40px;width:100%}
+#booking-form-wrapper ul li,#booking-form-wrapper ul li input,#booking-form-wrapper ul li select{background:#690122;border:0;text-align:center;padding-left:10px;color:#fff}
+  @media only screen and (min-width :320px){}
+ @media only screen and (min-width :480px){}
+ @media only screen and (min-width :768px){}
+ @media only screen and (min-width :992px){}
+ @media only screen and (min-width :1200px){ #booking-form-wrapper{position:relative;top:-50px}
+#booking-form-wrapper div,#booking-form-wrapper .form-control{background:#690122}
+#booking-form-wrapper .col-md-3,#booking-form-wrapper .col-md-2{padding-left:0;padding-right:0;border-left:1px solid #fff;background:#690122}
+#booking-form-wrapper div:nth-child(1){border:0}
+#booking-form-wrapper ul li input:focus,#booking-form-wrapper ul li input:active,#booking-form-wrapper ul li select:focus,#booking-form-wrapper ul li select:active{outline:none}
+select:required:invalid{color:gray;text-align:center}
+option[value=""][disabled]{display:none}
+#booking-form-wrapper select{appearance:none;-webkit-appearance:none;-moz-appearance:none;width:100%;padding-left:10px}
+}

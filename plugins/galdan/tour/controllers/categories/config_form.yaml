@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: galdan.tour::lang.tour.create_category
+form: ~/plugins/galdan/tour/models/category/fields.yaml
+modelClass: Galdan\Tour\Models\Category
+defaultRedirect: galdan/tour/categories
+
+create:
+    redirect: galdan/tour/categories/update/:id
+    redirectClose: galdan/tour/categories
+
+update:
+    redirect: galdan/tour/categories
+    redirectClose: galdan/tour/categories

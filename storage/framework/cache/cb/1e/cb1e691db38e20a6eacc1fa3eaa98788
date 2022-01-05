@@ -1,0 +1,21 @@
+1517890215a:1:{s:16:"site/address.htm";a:5:{s:8:"fileName";s:16:"site/address.htm";s:7:"content";s:328:"<div class="foot_head">
+{{ company }}
+<span><small>(Registered under J&amp;K Tourism)</small></span>
+</div>
+<div id="foot_address">
+    Mobile : {{ mobile1 }} {{ mobile2 }} {{ mobile3 }}<br>
+    Phone : {{ phone }}<br>
+    E-mail:<a href="mailto: {{email1}}, ">{{email1}}</a></a>
+</div>
+
+<!-- Request::getBaseUrl() -->";s:5:"mtime";i:1517601495;s:6:"markup";s:328:"<div class="foot_head">
+{{ company }}
+<span><small>(Registered under J&amp;K Tourism)</small></span>
+</div>
+<div id="foot_address">
+    Mobile : {{ mobile1 }} {{ mobile2 }} {{ mobile3 }}<br>
+    Phone : {{ phone }}<br>
+    E-mail:<a href="mailto: {{email1}}, ">{{email1}}</a></a>
+</div>
+
+<!-- Request::getBaseUrl() -->";s:4:"code";N;}}

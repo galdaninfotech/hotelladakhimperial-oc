@@ -1,0 +1,35 @@
+
+<h1>Booking #Ref : {{ client_booking['id'] }}</h1><span class="pull-right">Hi <a href="account">{{user.name}}!</a></span>
+<a class="back-to-bookings" href="client-bookings">Back</a>
+<table id="preview-booking">
+    <tbody>
+        <tr>
+            <td>#Ref : </td>
+            <td>{{ client_booking['id'] }}</td>
+        </tr>
+        <tr>
+            <td>Contact No. : </td>
+            <td>{{ client_booking['contactno'] }}</td>
+        </tr>
+        <tr>
+            <td>Tour : </td>
+            <td>{{ client_booking['post'].title }}</td>
+        </tr>
+        <tr>
+            <td>Pax : </td>
+            <td>{{ client_booking['numperson'] }}</td>
+        </tr>
+        <tr>
+            <td>Arrival : </td>
+            <td>{{ client_booking['arrival'] }}</td>
+        </tr>
+        <tr>
+            <td>Status : </td>
+            <td>{{ client_booking['status'].name }}</td>
+        </tr>
+        <tr>
+            <td>Requirements : </td>
+            <td>{{ client_booking['requirements'] }}</td>
+        </tr>
+    </tbody>
+</table>

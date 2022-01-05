@@ -1,0 +1,221 @@
+
+{% set bike = __SELF__.bike %}
+
+<h1>{{ bike.name }}</h1>
+
+<div id="bike-wrapper">
+	{% if bike.featured_images.count %}
+        {% for image in bike.featured_images %}
+        	<div class="item">
+        		<img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+        	</div>
+        {% endfor %}
+	{% endif %}
+	
+	<br>
+	<br>
+
+    {{ bike.type.description }}
+
+
+
+	<br>
+	<br>
+   
+	<div class="specifications">
+	  <h2>Specifications</h2>
+	  <h3>engine</h3>
+	  <span id="cphContent_spComEngine">
+	     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	        <tbody>
+	           <tr>
+	              <td>Type : </td>
+	              <td>{{ bike.type.engine_type }}</td>
+	           </tr>
+	           <tr>
+	              <td>Displacement : </td>
+	              <td>{{ bike.type.displacement }}</td>
+	           </tr>
+	           <tr>
+	              <td>Bore x stroke : </td>
+	              <td>{{ bike.type.bore_stroke }}</td>
+	           </tr>
+	           <tr>
+	              <td>Compression Ratio : </td>
+	              <td>{{ bike.type.compression_ratio }}</td>
+	           </tr>
+	           <tr>
+	              <td>Maximum Power : </td>
+	              <td>{{ bike.type.maximum_power }}</td>
+	           </tr>
+	           <tr>
+	              <td>Maximum Torque : </td>
+	              <td>{{ bike.type.maximum_torque }}</td>
+	           </tr>
+	           <tr>
+	              <td>Ignition System : </td>
+	              <td>{{ bike.type.ignition_system }}</td>
+	           </tr>
+	           <tr>
+	              <td>Clutch : </td>
+	              <td>{{ bike.type.clutch }}</td>
+	           </tr>
+	           <tr>
+	              <td>Gearbox : </td>
+	              <td>{{ bike.type.gearbox }}</td>
+	           </tr>
+	           <tr>
+	              <td>Lubrication : </td>
+	              <td>{{ bike.type.lubrication }}</td>
+	           </tr>
+	           <tr>
+	              <td>Engine Oil : </td>
+	              <td>{{ bike.type.engine_oil }}</td>
+	           </tr>
+	           <tr>
+	              <td>Fuel Supply : </td>
+	              <td>{{ bike.type.fuel_supply }}</td>
+	           </tr>
+	           <tr>
+	              <td>Air Cleaner : </td>
+	              <td>{{ bike.type.air_cleaner }}</td>
+	           </tr>
+	           <tr>
+	              <td>Engine Start : </td>
+	              <td>{{ bike.type.engine_start }}</td>
+	           </tr>
+	        </tbody>
+	     </table>
+	  </span>
+	</div>
+	<div class="specifications">
+	  <h3>chassis &amp; suspension</h3>
+	  <span id="cphContent_spComChasis">
+	     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	        <tbody>
+	           <tr>
+	              <td>Type : </td>
+	              <td>{{ bike.type.body_type }}</td>
+	           </tr>
+	           <tr>
+	              <td>Front suspension : </td>
+	              <td>{{ bike.type.front_suspension }}</td>
+	           </tr>
+	           <tr>
+	              <td>Rear suspension : </td>
+	              <td>{{ bike.type.rear_suspension }}</td>
+	           </tr>
+	        </tbody>
+	     </table>
+	  </span>
+	</div>
+	<div class="specifications">
+	  <h3>dimensions</h3>
+	  <span id="cphContent_spComDimesions">
+	     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	        <tbody>
+	           <tr>
+	              <td>Wheelbase : </td>
+	              <td>{{ bike.type.wheelbase }}</td>
+	           </tr>
+	           <tr>
+	              <td>Ground Clearance : </td>
+	              <td>{{ bike.type.ground_clearance }}</td>
+	           </tr>
+	           <tr>
+	              <td>Length : </td>
+	              <td>{{ bike.type.length }}</td>
+	           </tr>
+	           <tr>
+	              <td>Width : </td>
+	              <td>{{ bike.type.width }}</td>
+	           </tr>
+	           <tr>
+	              <td>Height : </td>
+	              <td>{{ bike.type.height }}</td>
+	           </tr>
+	           <tr>
+	              <td>Seat Height : </td>
+	              <td>{{ bike.type.seat_height }}</td>
+	           </tr>
+	           <tr>
+	              <td>Kerb Weight : </td>
+	              <td>{{ bike.type.kerb_weight }}</td>
+	           </tr>
+	           <tr>
+	              <td>Fuel Capacity : </td>
+	              <td>{{ bike.type.fuel_capacity }}</td>
+	           </tr>
+	        </tbody>
+	     </table>
+	  </span>
+	</div>
+	<div class="specifications">
+	  <h3>brakes &amp; tyres</h3>
+	  <span id="cphContent_spComBrakes">
+	     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	        <tbody>
+	           <tr>
+	              <td>Tyres Fr. : </td>
+	              <td>{{ bike.type.types_front }}</td>
+	           </tr>
+	           <tr>
+	              <td>Tyres Rr. : </td>
+	              <td>{{ bike.type.tyres_rear }}</td>
+	           </tr>
+	           <tr>
+	              <td>Brakes Front : </td>
+	              <td>{{ bike.type.brakes_front }}</td>
+	           </tr>
+	           <tr>
+	              <td>Brakes Rear : </td>
+	              <td>{{ bike.type.breaks_rear }}</td>
+	           </tr>
+	        </tbody>
+	     </table>
+	  </span>
+	</div>
+	<div class="specifications">
+	  <h3>electricals</h3>
+	  <span id="cphContent_spComElectricals">
+	     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	        <tbody>
+	           <tr>
+	              <td>Electrical System : </td>
+	              <td>{{ bike.type.electrical_system }}</td>
+	           </tr>
+	           <tr>
+	              <td>Battery : </td>
+	              <td>{{ bike.type.battery }}</td>
+	           </tr>
+	           <tr>
+	              <td>Head Lamp : </td>
+	              <td>{{ bike.type.head_lamp }}</td>
+	           </tr>
+	           <tr>
+	              <td>Tail Lamp : </td>
+	              <td>{{ bike.type.tail_lamp }}</td>
+	           </tr>
+	           <tr>
+	              <td>Turn Signal Lamp : </td>
+	              <td>{{ bike.type.turn_signal_lamp }}</td>
+	           </tr>
+	        </tbody>
+	     </table>
+	  </span>
+	</div>
+
+
+
+
+
+
+    
+
+
+<button class="btn btn-primary rent-it">Rent This Bike Now!</button>
+</div> <!-- end Bike wrapper -->

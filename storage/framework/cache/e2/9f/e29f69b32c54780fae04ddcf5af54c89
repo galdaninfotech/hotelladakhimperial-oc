@@ -1,0 +1,63 @@
+1517890205a:1:{s:18:"ladakh/history.htm";a:16:{s:8:"fileName";s:18:"ladakh/history.htm";s:7:"content";s:4041:"title = "History of Ladakh"
+url = "/ladakh/history"
+layout = "default"
+meta_title = "History of Ladakh"
+meta_description = "History of Ladakh"
+is_hidden = 0
+seo_keywords = "History of Ladakh"
+robot_index = "index"
+robot_follow = "follow"
+
+[tourCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "tours/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blog-category"
+==
+<div class="container" id="main-content-wrapper">
+  <div class="row">
+    <div class="col-md-9 main-content">
+        <h1>{{ this.page.title }}</h1>
+        <img src="{{'assets/images/history.jpg'|theme}}" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;">
+        <p>Rock carvings found in many parts of Ladakh show that the area has been inhabited from Neolithic times. Ladakh's earliest inhabitants consisted of a mixed Indo-Aryan population of Mons and Dards. Around the 1st century, Ladakh was a part of theKushana empire. Buddhism spread into western Ladakh from Kashmir in the 2nd century when much of eastern Ladakh and western Tibet was still practising the Bon religion. <br />
+        In the 8th century, Ladakh was involved in the clash between Tibetan expansion. In 842 Nyima-Gon, a Tibetan royal representative annexed Ladakh for himself after the break-up of the Tibetan empire, and founded a separate Ladakhi dynasty. During this period Ladakh acquired a predominantly Tibetan population. The dynasty spearheaded the second spreading of Buddhism, importing religious ideas from north-west India, particularly from Kashmir</p>
+        <p>Faced with the Islamic conquest of South Asia in the 13th century, Ladakh chose to seek and accept guidance in religious matters from Tibet. For nearly two centuries till about 1600, Ladakh was subject to raids and invasions from neighbouring Muslim states, which led to the partial conversion of Ladakhis to Noorbakshi Islam. King Bhagan reunited and strengthened Ladakh and founded the Namgyal dynasty  which survives to today.Despite a defeat of Ladakh by the Mughals, who had already annexed Kashmir and Baltistan, Ladakh retained its independence.</p>
+        <p>In 1949, China closed the border between Nubra and Xinjiang, blocking old trade routes. In 1955 China began to build roads connecting Xinjiang and Tibet through this area. It also built theKarakoram highway jointly with Pakistan. India built the Srinagar-Leh Highway during this period, cutting the journey time between Srinagar and Leh from 16 days to two. The route, however, remains closed during the winter months due to heavy snowfall. <br />
+          The Kargil War of 1999, codenamed &quot;Operation Vijay&quot; by the Indian Army, saw infiltration by Pakistani troops into parts of Western Ladakh. Extensive operations were launched in high altitudes by the Indian Army with considerable artillery and air force support. Pakistani troops were evicted from the Indian side of the Line of Control which the Indian Government ordered was to be respected and which was not crossed by Indian troops. <br />
+          The Ladakh region was bifurcated into the Kargil and Leh districts in 1979. In 1989, there were violent riots between Buddhists and Muslims. Following demands for autonomy from the Kashmiridominated state government, the Ladakh Autonomous Hill Development Council was created in the 1990s. Leh and Kargil Districts now each have their own locally elected Hill Councils with some control over local policy and development funds.</p>
+    </div><!-- Main Content -->
+
+    <div class="col-md-3">
+        <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        {% partial 'site/right1' %}
+    </div>
+    </div>
+</div>";s:5:"mtime";i:1517601486;s:6:"markup";s:3580:"<div class="container" id="main-content-wrapper">
+  <div class="row">
+    <div class="col-md-9 main-content">
+        <h1>{{ this.page.title }}</h1>
+        <img src="{{'assets/images/history.jpg'|theme}}" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;">
+        <p>Rock carvings found in many parts of Ladakh show that the area has been inhabited from Neolithic times. Ladakh's earliest inhabitants consisted of a mixed Indo-Aryan population of Mons and Dards. Around the 1st century, Ladakh was a part of theKushana empire. Buddhism spread into western Ladakh from Kashmir in the 2nd century when much of eastern Ladakh and western Tibet was still practising the Bon religion. <br />
+        In the 8th century, Ladakh was involved in the clash between Tibetan expansion. In 842 Nyima-Gon, a Tibetan royal representative annexed Ladakh for himself after the break-up of the Tibetan empire, and founded a separate Ladakhi dynasty. During this period Ladakh acquired a predominantly Tibetan population. The dynasty spearheaded the second spreading of Buddhism, importing religious ideas from north-west India, particularly from Kashmir</p>
+        <p>Faced with the Islamic conquest of South Asia in the 13th century, Ladakh chose to seek and accept guidance in religious matters from Tibet. For nearly two centuries till about 1600, Ladakh was subject to raids and invasions from neighbouring Muslim states, which led to the partial conversion of Ladakhis to Noorbakshi Islam. King Bhagan reunited and strengthened Ladakh and founded the Namgyal dynasty  which survives to today.Despite a defeat of Ladakh by the Mughals, who had already annexed Kashmir and Baltistan, Ladakh retained its independence.</p>
+        <p>In 1949, China closed the border between Nubra and Xinjiang, blocking old trade routes. In 1955 China began to build roads connecting Xinjiang and Tibet through this area. It also built theKarakoram highway jointly with Pakistan. India built the Srinagar-Leh Highway during this period, cutting the journey time between Srinagar and Leh from 16 days to two. The route, however, remains closed during the winter months due to heavy snowfall. <br />
+          The Kargil War of 1999, codenamed &quot;Operation Vijay&quot; by the Indian Army, saw infiltration by Pakistani troops into parts of Western Ladakh. Extensive operations were launched in high altitudes by the Indian Army with considerable artillery and air force support. Pakistani troops were evicted from the Indian side of the Line of Control which the Indian Government ordered was to be respected and which was not crossed by Indian troops. <br />
+          The Ladakh region was bifurcated into the Kargil and Leh districts in 1979. In 1989, there were violent riots between Buddhists and Muslims. Following demands for autonomy from the Kashmiridominated state government, the Ladakh Autonomous Hill Development Council was created in the 1990s. Leh and Kargil Districts now each have their own locally elected Hill Councils with some control over local policy and development funds.</p>
+    </div><!-- Main Content -->
+
+    <div class="col-md-3">
+        <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        {% partial 'site/right1' %}
+    </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:17:"History of Ladakh";s:3:"url";s:15:"/ladakh/history";s:6:"layout";s:7:"default";s:10:"meta_title";s:17:"History of Ladakh";s:16:"meta_description";s:17:"History of Ladakh";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:17:"History of Ladakh";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:14:"tourCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:14:"tours/category";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:18:"blog/blog-category";}}}

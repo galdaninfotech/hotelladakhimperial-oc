@@ -1,0 +1,35 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+# category:
+#     label: Days
+#     view:
+#         list: $/galdan/tour/models/category/columns.yaml
+#         toolbarButtons: create|delete
+#     manage:
+#         form: $/galdan/tour/models/category/fields.yaml
+bookings:
+    label: Bookings
+    view:
+        list: $/galdan/bookings/models/booking/columns.yaml
+        toolbarButtons: create|add|remove
+    manage:
+        form: $/galdan/bookings/models/booking/fields.yaml
+
+clients:
+    label: Clients
+    view:
+        list: $/galdan/clients/models/client/columns.yaml
+        toolbarButtons: create|add|remove
+    manage:
+        form: $/galdan/clients/models/client/fields.yaml
+
+tasks:
+    label: Tasks
+    view:
+        list: $/galdan/tour/models/task/columns.yaml
+        toolbarButtons: create|add|remove
+    manage:
+        form: $/galdan/tour/models/task/fields.yaml
+

@@ -1,0 +1,170 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Name
+        searchable: true
+
+    description:
+      label: Description
+      searchable: true
+
+    vendor:
+      label: Vendor
+      searchable: true
+
+    engine_type:
+        label: Engine Type
+        searchable: true
+
+    displacement:
+      label: Displacement
+      searchable: true
+
+    bore_stroke:
+      label: Bore x Stroke
+      searchable: true
+
+    compression_ratio:
+      label: Compression Ratio
+      searchable: true
+
+    maximum_power:
+      label: Maximum Power
+      searchable: true
+
+    maximum_torque:
+      label: Maximum Torque
+      searchable: true
+
+    ignition_system:
+      label: Ignition System
+      searchable: true
+
+    clutch:
+      label: Clutch
+      searchable: true
+
+    gearbox:
+      label: Gearbox
+      searchable: true
+
+    lubrication:
+      label: Lubrication
+      searchable: true
+
+    engine_oil:
+      label: Engine Oil
+      searchable: true
+
+    fuel_supply:
+      label: Fuel Supply
+      searchable: true
+
+    air_cleaner:
+      label: Air Cleaner
+      searchable: true
+
+    engine_start:
+      label: Engine Start
+      searchable: true
+
+
+
+    body_type:
+      label: Body Type
+      searchable: true
+
+    front_suspension:
+      label: Front Suspension
+      searchable: true
+
+    rear_suspension:
+      label: Rear Suspension
+      searchable: true
+
+
+    wheelbase:
+      label: Wheelbase
+      searchable: true
+
+    ground_clearance:
+      label: Ground Cclearance
+      searchable: true
+
+    length:
+      label: Length
+      searchable: true
+
+    width:
+      label: Width
+      searchable: true
+
+    height:
+      label: Height
+      searchable: true
+
+    seat_height:
+      label: Seat Height
+      searchable: true
+
+    kerb_weight:
+      label: Kerb Weight
+      searchable: true
+
+    fuel_capacity:
+      label: Fuel Capacity
+      searchable: true
+
+
+
+    tyres_front:
+      label: Tyres Front
+      searchable: true
+
+    tyres_rear:
+      label: Tyres Rear
+      searchable: true
+
+    brakes_front:
+      label: Break Front
+      searchable: true
+
+    brakes_rear:
+      label: Break Rear
+      searchable: true
+
+
+
+    electrical_system:
+      label: Electrical System
+      searchable: true
+
+    battery:
+      label: Battery
+      searchable: true
+
+    head_lamp:
+      label: Head Lamp
+      searchable: true
+
+    tail_lamp:
+      label: Tail Lamp
+      searchable: true
+
+    turn_signal_lamp:
+      label: Turn Signal Lamp
+      searchable: true
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: galdan.testimonials::lang.form.name
+        span: auto
+
+    country:
+        label: Country
+        span: auto
+
+    email:
+        label: galdan.testimonials::lang.form.email
+        span: auto
+
+    message:
+        label: galdan.testimonials::lang.form.message
+        type: textarea
+        size: small
+        span: auto
+
+    status:
+        label: galdan.testimonials::lang.form.status
+        required: true
+        type: radio
+        options:
+            1: galdan.testimonials::lang.form.status_active
+            2: galdan.testimonials::lang.form.status_unsubscribed
+        default: 1
+        span: auto

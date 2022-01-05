@@ -1,0 +1,22 @@
+<form id="send-itinerary" 
+	data-request="onEmailSend" 
+    data-load-indicator="Sending Itinerary..."
+    onclick="
+	$('td.select-mail>input:checked').each(function(){
+		mailIds[count] = $(this).attr('value');
+		// console.log($(this).attr('value'));
+	});
+	$(this).data('request-data', {
+        itinerary_id: $('tr.selected td:first').text()
+    })"
+    >
+
+	<select name="client">
+		<option selected="selected">Select Client</option>
+		<?php foreach ($clients as $client): ?>
+		    <option value="<?= $client->id ?>"><?= $client->name ?></option>
+		<?php endforeach ?>
+	</select>
+	<input type="hidden" name="itinerary_id" value="">
+	<button>Send</button>
+</form>

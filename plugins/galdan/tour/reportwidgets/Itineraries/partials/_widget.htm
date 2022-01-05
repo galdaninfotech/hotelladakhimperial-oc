@@ -1,0 +1,25 @@
+<div class="report-widget">
+    <h3 style="margin-bottom:5px;"><?= e(trans($this->property('title'))) ?></h3>
+<?php if (!isset($error)): ?>
+
+<?php 
+
+$output = '<table class="table"><thead><tr><td>ID</td><td>Name</td><td>Published At</td></tr></thead><tbody>';
+foreach($itineraries as $itinerary) {
+    $output .= '<tr>'
+                    .'<td>'.$itinerary->ud.'</td>'
+                    .'<td>'.$itinerary->name.'</td>'
+                    .'<td>'.$itinerary->published_at.'</td>'
+            .'</tr>';
+} 
+$output .= '</tbody></table>';
+
+echo $output;
+
+?>
+
+<div style="clear:both;"></div>
+<?php else: ?>
+    <p class="flash-message static warning"><?= e($error) ?></p>
+<?php endif ?>
+</div>

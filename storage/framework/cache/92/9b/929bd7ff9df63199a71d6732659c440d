@@ -1,0 +1,155 @@
+1640578545a:1:{s:17:"site/mainmenu.htm";a:6:{s:8:"fileName";s:17:"site/mainmenu.htm";s:7:"content";s:2167:"[menu]
+
+start = "id-1"
+
+activeNode = 0
+
+listItemClasses = "item"
+
+primaryClasses = "nav navbar-nav"
+
+secondaryClasses = "dropdown-menu multi-level"
+
+numberOfLevels = 2
+
+==
+
+<div class="nav-wrapper">
+
+    <div class="container">
+
+        <div class="row">
+
+                <!-- Main Navigation -->
+
+            <nav class="navbar navbar-default">
+
+                <div class="col-md-10 col-xs-5">
+
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                            <span class="icon-bar"></span>
+
+                            <span class="icon-bar"></span>
+
+                            <span class="icon-bar"></span>
+
+                        </button>
+
+                    </div>
+
+                    <div id="navbar" class="navbar-collapse collapse text-center">
+
+                        {% component 'menu' %}
+
+                    </div>
+
+                </div>
+
+                <div class="visible-xs col-xs-3">
+
+                    <div id="site-logo" class="btn-outline "></div> <!-- #site-logo  -->
+
+                </div>
+
+                <div class="col-md-1 col-xs-2">
+
+                    <a href="javascript:void(0);" id="triggerToggle"><i class="fab fa-mixcloud" aria-hidden="true"></i></a>
+
+                </div>
+
+                <div class="col-md-1 col-xs-2">
+
+                    <a id="trigger-call" href="tel:+8899289888"><i class="fas fa-phone-volume" aria-hidden="true"></i></a>
+
+                    <div id="div1" style="display:none;">
+
+                        <div><iframe style="overflow:hidden;border:none" allowtransparency="true" width="398" height="140" src="http://www.weather-forecast.com/locations/Leh/forecasts/latest/threedayfree" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe> </div>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+            <!-- End Main Navigation -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+";s:5:"mtime";i:1546712660;s:6:"markup";s:1966:"<div class="nav-wrapper">
+
+    <div class="container">
+
+        <div class="row">
+
+                <!-- Main Navigation -->
+
+            <nav class="navbar navbar-default">
+
+                <div class="col-md-10 col-xs-5">
+
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                            <span class="icon-bar"></span>
+
+                            <span class="icon-bar"></span>
+
+                            <span class="icon-bar"></span>
+
+                        </button>
+
+                    </div>
+
+                    <div id="navbar" class="navbar-collapse collapse text-center">
+
+                        {% component 'menu' %}
+
+                    </div>
+
+                </div>
+
+                <div class="visible-xs col-xs-3">
+
+                    <div id="site-logo" class="btn-outline "></div> <!-- #site-logo  -->
+
+                </div>
+
+                <div class="col-md-1 col-xs-2">
+
+                    <a href="javascript:void(0);" id="triggerToggle"><i class="fab fa-mixcloud" aria-hidden="true"></i></a>
+
+                </div>
+
+                <div class="col-md-1 col-xs-2">
+
+                    <a id="trigger-call" href="tel:+8899289888"><i class="fas fa-phone-volume" aria-hidden="true"></i></a>
+
+                    <div id="div1" style="display:none;">
+
+                        <div><iframe style="overflow:hidden;border:none" allowtransparency="true" width="398" height="140" src="http://www.weather-forecast.com/locations/Leh/forecasts/latest/threedayfree" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe> </div>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+            <!-- End Main Navigation -->
+
+        </div>
+
+    </div>
+
+</div>";s:4:"code";N;s:4:"menu";a:6:{s:5:"start";s:4:"id-1";s:10:"activeNode";s:1:"0";s:15:"listItemClasses";s:4:"item";s:14:"primaryClasses";s:14:"nav navbar-nav";s:16:"secondaryClasses";s:25:"dropdown-menu multi-level";s:14:"numberOfLevels";s:1:"2";}}}

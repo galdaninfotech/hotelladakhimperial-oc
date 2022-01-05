@@ -1,0 +1,39 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: galdan.testimonials::lang.form.id
+        invisible: true
+
+    name:
+        label: galdan.testimonials::lang.form.name
+        searchable: true
+
+    country:
+        label: galdan.testimonials::lang.form.country
+        searchable: true
+
+    email:
+        label: galdan.testimonials::lang.form.email
+        searchable: true
+        invisible: false
+
+
+    message:
+        label: galdan.testimonials::lang.form.message
+        searchable: true
+
+    # status:
+    #     label: galdan.testimonials::lang.form.status
+    #     searchable: true
+    #     type: partial
+    #     path: ~/plugins/galdan/testimonials/models/testimonials/_status.htm
+
+    # updated_at:
+    #     label: galdan.testimonials::lang.form.updated
+    #     searchable: true
+    #     invisible: true
+    #     type: datetime

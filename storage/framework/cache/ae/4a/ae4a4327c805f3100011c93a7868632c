@@ -1,0 +1,53 @@
+1514089539a:1:{s:17:"site/mainmenu.htm";a:6:{s:8:"fileName";s:17:"site/mainmenu.htm";s:7:"content";s:1116:"[menu]
+start = "id-1"
+activeNode = 0
+listItemClasses = "item"
+primaryClasses = "nav navbar-nav"
+secondaryClasses = "dropdown-menu multi-level"
+numberOfLevels = 2
+==
+<div class="nav-wrapper">
+    <div class="container">
+        <div class="row">
+                <!-- Main Navigation -->
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="col-md-12z col-sm-12z">
+                    <div id="navbar" class="navbar-collapse collapse text-center">
+                        {% component 'menu' %}
+                    </div>
+                </div>
+            </nav>
+            <!-- End Main Navigation -->
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1511230725;s:6:"markup";s:943:"<div class="nav-wrapper">
+    <div class="container">
+        <div class="row">
+                <!-- Main Navigation -->
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="col-md-12z col-sm-12z">
+                    <div id="navbar" class="navbar-collapse collapse text-center">
+                        {% component 'menu' %}
+                    </div>
+                </div>
+            </nav>
+            <!-- End Main Navigation -->
+        </div>
+    </div>
+</div>";s:4:"code";N;s:4:"menu";a:6:{s:5:"start";s:4:"id-1";s:10:"activeNode";s:1:"0";s:15:"listItemClasses";s:4:"item";s:14:"primaryClasses";s:14:"nav navbar-nav";s:16:"secondaryClasses";s:25:"dropdown-menu multi-level";s:14:"numberOfLevels";s:1:"2";}}}

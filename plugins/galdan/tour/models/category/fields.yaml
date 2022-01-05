@@ -1,0 +1,23 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: galdan.tour::lang.category.name
+        placeholder: galdan.tour::lang.category.name_placeholder
+        span: left
+
+    slug:
+        label: galdan.tour::lang.category.slug
+        span: right
+        placeholder: galdan.tour::lang.category.slug_placeholder
+        preset: name
+
+    description:
+        label: 'galdan.tour::lang.category.description'
+        size: large
+        oc.commentPosition: ''
+        span: full
+        type: textarea

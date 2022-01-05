@@ -1,0 +1,183 @@
+1514089541a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:4502:"[newsSubscribe Subscribe]
+==
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-xs-6 col-sm-4">
+                <h4>about us</h4>
+                <ul class="footer-ul-link">
+                    <li><a href="{{ url('/') }}">home</a></li>
+                    <li><a href="{{ url('/') }}">about company</a></li>
+                    <li><a href="{{ url('/') }}">Our Services</a></li>
+                    <li><a href="{{ url('/') }}">Photo Gallery</a></li>
+                    <li><a href="{{ url('/') }}">Testimonials</a></li>
+                    <li><a href="{{ url('/') }}">Contact Us</a></li>
+                    <li><a href="{{ url('/') }}">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-6 col-sm-4">
+                <h4>about ladakh</h4>
+                <ul class="footer-ul-link">
+                    <li><a href="{{ url('/') }}">about ladakh</a></li>
+                    <li><a href="{{ url('/') }}">history</a></li>
+                    <li><a href="{{ url('/') }}">art & culture</a></li>
+                    <li><a href="{{ url('/') }}">geography</a></li>
+                    <li><a href="{{ url('/') }}">wildlife</a></li>
+                    <li><a href="{{ url('/') }}">how to reach</a></li>
+                    <li><a href="{{ url('/') }}">Ladakh Festivals</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-6 col-sm-4">
+                <h4>our packages</h4>
+                <ul class="footer-ul-link">
+                    <li><a href="{{ url('/') }}">Ecstactic Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Pride Of Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Mighty Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Classic Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Treasures of Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Amazing Ladakh</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-6 col-sm-4">
+                <h4>Places to See</h4>
+                <ul class="footer-ul-link">
+                    <li><a href="{{ url('/') }}">Ancient Monasteries</a></li>
+                    <li><a href="{{ url('/') }}">Changthang Highland</a></li>
+                    <li><a href="{{ url('/') }}">Indus Valley (ladakh)</a></li>
+                    <li><a href="{{ url('/') }}">Markha Valley</a></li>
+                    <li><a href="{{ url('/') }}">Nubra Valley</a></li>
+                    <li><a href="{{ url('/') }}">Sham Valley</a></li>
+                    <li><a href="{{ url('/') }}">Zanskar Valley</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-xs-6 col-sm-4">
+                <h4>Subscribe to Our Newsletter</h4>
+                {% component 'Subscribe' %}
+            </div>
+            <div class="clearfix"></div>
+        </div>   <!-- row -->   
+
+        <div class="col-md-12"><div class="dash-line gray"></div></div>
+
+        <div class="foot_bot row">
+            <div class="col-md-4">
+                <div id="payment-options"><h5>We Accept:</h5><br>
+                    <div id="googleckout"></div>
+                    <div id="discover"></div>
+                    <div id="mastercard"></div>
+                    <div id="americanexpress"></div>
+                    <div id="visa"></div>
+                    <div id="pay1"></div>
+                    <div id="paypal"></div>
+                    <div class="clearfix"></div>
+<!--                     <img src="{{'assets/images/generic_1.png'|theme}}">
+                    <img src="{{'assets/images/googleckout.png'|theme}}">
+                    <img src="{{'assets/images/mastercard.png'|theme}}">
+                    <img src="{{'assets/images/pay1.png'|theme}}">
+                    <img src="{{'assets/images/pay3.png'|theme}}">
+                    <img src="{{'assets/images/pay6.png'|theme}}">
+                    <img src="{{'assets/images/paypal.png'|theme}}"> -->
+                  </div><br>
+                {% partial 'site/copyright' %}
+            </div>
+            <div class="col-md-4">
+                <div id="affiliates"></div>
+            </div>
+            <div class="col-md-4">
+                {% partial 'site/address' %}
+            </div>
+        </div>  
+    </div> <!-- container --> 
+
+ 
+</footer>";s:5:"mtime";i:1499138964;s:6:"markup";s:4471:"<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-xs-6 col-sm-4">
+                <h4>about us</h4>
+                <ul class="footer-ul-link">
+                    <li><a href="{{ url('/') }}">home</a></li>
+                    <li><a href="{{ url('/') }}">about company</a></li>
+                    <li><a href="{{ url('/') }}">Our Services</a></li>
+                    <li><a href="{{ url('/') }}">Photo Gallery</a></li>
+                    <li><a href="{{ url('/') }}">Testimonials</a></li>
+                    <li><a href="{{ url('/') }}">Contact Us</a></li>
+                    <li><a href="{{ url('/') }}">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-6 col-sm-4">
+                <h4>about ladakh</h4>
+                <ul class="footer-ul-link">
+                    <li><a href="{{ url('/') }}">about ladakh</a></li>
+                    <li><a href="{{ url('/') }}">history</a></li>
+                    <li><a href="{{ url('/') }}">art & culture</a></li>
+                    <li><a href="{{ url('/') }}">geography</a></li>
+                    <li><a href="{{ url('/') }}">wildlife</a></li>
+                    <li><a href="{{ url('/') }}">how to reach</a></li>
+                    <li><a href="{{ url('/') }}">Ladakh Festivals</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-6 col-sm-4">
+                <h4>our packages</h4>
+                <ul class="footer-ul-link">
+                    <li><a href="{{ url('/') }}">Ecstactic Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Pride Of Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Mighty Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Classic Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Treasures of Ladakh</a></li>
+                    <li><a href="{{ url('/') }}">Amazing Ladakh</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-6 col-sm-4">
+                <h4>Places to See</h4>
+                <ul class="footer-ul-link">
+                    <li><a href="{{ url('/') }}">Ancient Monasteries</a></li>
+                    <li><a href="{{ url('/') }}">Changthang Highland</a></li>
+                    <li><a href="{{ url('/') }}">Indus Valley (ladakh)</a></li>
+                    <li><a href="{{ url('/') }}">Markha Valley</a></li>
+                    <li><a href="{{ url('/') }}">Nubra Valley</a></li>
+                    <li><a href="{{ url('/') }}">Sham Valley</a></li>
+                    <li><a href="{{ url('/') }}">Zanskar Valley</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-xs-6 col-sm-4">
+                <h4>Subscribe to Our Newsletter</h4>
+                {% component 'Subscribe' %}
+            </div>
+            <div class="clearfix"></div>
+        </div>   <!-- row -->   
+
+        <div class="col-md-12"><div class="dash-line gray"></div></div>
+
+        <div class="foot_bot row">
+            <div class="col-md-4">
+                <div id="payment-options"><h5>We Accept:</h5><br>
+                    <div id="googleckout"></div>
+                    <div id="discover"></div>
+                    <div id="mastercard"></div>
+                    <div id="americanexpress"></div>
+                    <div id="visa"></div>
+                    <div id="pay1"></div>
+                    <div id="paypal"></div>
+                    <div class="clearfix"></div>
+<!--                     <img src="{{'assets/images/generic_1.png'|theme}}">
+                    <img src="{{'assets/images/googleckout.png'|theme}}">
+                    <img src="{{'assets/images/mastercard.png'|theme}}">
+                    <img src="{{'assets/images/pay1.png'|theme}}">
+                    <img src="{{'assets/images/pay3.png'|theme}}">
+                    <img src="{{'assets/images/pay6.png'|theme}}">
+                    <img src="{{'assets/images/paypal.png'|theme}}"> -->
+                  </div><br>
+                {% partial 'site/copyright' %}
+            </div>
+            <div class="col-md-4">
+                <div id="affiliates"></div>
+            </div>
+            <div class="col-md-4">
+                {% partial 'site/address' %}
+            </div>
+        </div>  
+    </div> <!-- container --> 
+
+ 
+</footer>";s:4:"code";N;s:23:"newsSubscribe Subscribe";a:0:{}}}

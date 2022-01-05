@@ -1,0 +1,210 @@
+1514089538a:1:{s:11:"default.htm";a:9:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:3609:"description = "Default layout"
+
+[SeoCmsPage]
+
+[session]
+security = "all"
+
+[homeslideshow]
+==
+<?php
+function onStart() {
+    $config = App::make('config');
+    $this['company'] = $config->get('site.company', 'Company Name');
+    $this['slogan'] = $config->get('site.slogan', 'Company Slogan');
+    $this['mobile1'] = $config->get('site.mobile1');
+    $this['mobile2'] = $config->get('site.mobile2');
+    $this['phone'] = $config->get('site.phone');
+    $this['email1'] = $config->get('site.email1');
+    $this['addressline1'] = $config->get('site.addressline1');
+    $this['addressline2'] = $config->get('site.addressline2');
+}
+?>
+==
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+{% placeholder meta %}
+{% component 'SeoCmsPage' %}
+<link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+<link href='http://fonts.googleapis.com/css?family=BenchNine' rel='stylesheet' type='text/css'>
+
+<link href="{{ [
+    'assets/css/font-awesome.css',
+    'assets/css/bootstrap.css',
+    'assets/css/sl2.css',
+    'assets/css/style.css',
+    'assets/css/reservation-panel.css',
+    'assets/scss/_custom.scss'
+]|theme }}" rel="stylesheet">
+
+<!-- <link href="{{'assets/css/font-awesome.css'|theme}}" rel="stylesheet">
+<link href="{{'assets/css/bootstrap.css'|theme}}" rel="stylesheet">
+<link href="{{'assets/css/sl2.css'|theme}}" rel="stylesheet">
+<link href="{{'assets/css/style.css'|theme}}" rel="stylesheet">
+<link href="{{'assets/css/reservation-panel.css'|theme}}" rel="stylesheet"> -->
+
+
+<!-- <link rel="stylesheet" href="{{ [
+    'assets/scss/_custom.scss']|theme }}">
+ -->
+
+
+{% styles %}
+        
+<!-- for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv .googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+</head>
+    
+<body>
+     
+    <!-- Header -->
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+
+    <!-- Slideshow and Reservation Panel-->
+    <header id="layout-slideshow">
+        {% if this.page.title == 'Home' %}
+            {% component 'homeslideshow' %}
+        {% endif %}
+    </header>
+
+    <!-- Content -->
+    <section id="layout-content">
+        {% page %}
+    </section>
+
+    <!-- Footer -->
+    <footer id="layout-footer">
+        {% partial 'site/footer' %}
+    </footer>
+    
+    <div class="container">
+        <p id="footer-bottom-about">Ladakh Bike Safari has been playing host to thousands of visitors to Ladakh. Our goal is to provide complete information about Ladakh, " the land the of endless discoveries" in addition to the best holidays possible whilst benefiting our host communities. We aim to leave the environment in at least as good a state as we find it. We train our staff to be ecological. Despite remoteness of the region we provide best equipments.</p>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="{{ 'assets/javascript/jquery.js'|theme }}"></script>
+    <script src="{{ 'assets/javascript/bootstrap.js'|theme }}"></script> -->
+
+    <script src="{{ [
+        'assets/javascript/jquery.js',
+        'assets/javascript/bootstrap.js',
+        '@framework',
+        '@framework.extras',
+        'assets/javascript/sl2/jquery_009.js',
+        'assets/javascript/sl2/jquery_014.js',
+    ]|theme }}"></script>
+    {% scripts %}
+
+<!--     sl2
+<script type="text/javascript" src="{{ 'assets/javascript/sl2/jquery_009.js'|theme}}"></script>
+<script type="text/javascript" src="{{ 'assets/javascript/sl2/jquery_014.js'|theme}}"></script> -->
+
+</body>
+</html>";s:5:"mtime";i:1511231675;s:6:"markup";s:2953:"<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+{% placeholder meta %}
+{% component 'SeoCmsPage' %}
+<link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+<link href='http://fonts.googleapis.com/css?family=BenchNine' rel='stylesheet' type='text/css'>
+
+<link href="{{ [
+    'assets/css/font-awesome.css',
+    'assets/css/bootstrap.css',
+    'assets/css/sl2.css',
+    'assets/css/style.css',
+    'assets/css/reservation-panel.css',
+    'assets/scss/_custom.scss'
+]|theme }}" rel="stylesheet">
+
+<!-- <link href="{{'assets/css/font-awesome.css'|theme}}" rel="stylesheet">
+<link href="{{'assets/css/bootstrap.css'|theme}}" rel="stylesheet">
+<link href="{{'assets/css/sl2.css'|theme}}" rel="stylesheet">
+<link href="{{'assets/css/style.css'|theme}}" rel="stylesheet">
+<link href="{{'assets/css/reservation-panel.css'|theme}}" rel="stylesheet"> -->
+
+
+<!-- <link rel="stylesheet" href="{{ [
+    'assets/scss/_custom.scss']|theme }}">
+ -->
+
+
+{% styles %}
+        
+<!-- for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv .googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+</head>
+    
+<body>
+     
+    <!-- Header -->
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+
+    <!-- Slideshow and Reservation Panel-->
+    <header id="layout-slideshow">
+        {% if this.page.title == 'Home' %}
+            {% component 'homeslideshow' %}
+        {% endif %}
+    </header>
+
+    <!-- Content -->
+    <section id="layout-content">
+        {% page %}
+    </section>
+
+    <!-- Footer -->
+    <footer id="layout-footer">
+        {% partial 'site/footer' %}
+    </footer>
+    
+    <div class="container">
+        <p id="footer-bottom-about">Ladakh Bike Safari has been playing host to thousands of visitors to Ladakh. Our goal is to provide complete information about Ladakh, " the land the of endless discoveries" in addition to the best holidays possible whilst benefiting our host communities. We aim to leave the environment in at least as good a state as we find it. We train our staff to be ecological. Despite remoteness of the region we provide best equipments.</p>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="{{ 'assets/javascript/jquery.js'|theme }}"></script>
+    <script src="{{ 'assets/javascript/bootstrap.js'|theme }}"></script> -->
+
+    <script src="{{ [
+        'assets/javascript/jquery.js',
+        'assets/javascript/bootstrap.js',
+        '@framework',
+        '@framework.extras',
+        'assets/javascript/sl2/jquery_009.js',
+        'assets/javascript/sl2/jquery_014.js',
+    ]|theme }}"></script>
+    {% scripts %}
+
+<!--     sl2
+<script type="text/javascript" src="{{ 'assets/javascript/sl2/jquery_009.js'|theme}}"></script>
+<script type="text/javascript" src="{{ 'assets/javascript/sl2/jquery_014.js'|theme}}"></script> -->
+
+</body>
+</html>";s:4:"code";s:537:"function onStart() {
+    $config = App::make('config');
+    $this['company'] = $config->get('site.company', 'Company Name');
+    $this['slogan'] = $config->get('site.slogan', 'Company Slogan');
+    $this['mobile1'] = $config->get('site.mobile1');
+    $this['mobile2'] = $config->get('site.mobile2');
+    $this['phone'] = $config->get('site.phone');
+    $this['email1'] = $config->get('site.email1');
+    $this['addressline1'] = $config->get('site.addressline1');
+    $this['addressline2'] = $config->get('site.addressline2');
+}";s:11:"description";s:14:"Default layout";s:10:"SeoCmsPage";a:0:{}s:7:"session";a:1:{s:8:"security";s:3:"all";}s:13:"homeslideshow";a:0:{}}}

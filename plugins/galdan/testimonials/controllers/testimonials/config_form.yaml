@@ -1,0 +1,17 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: galdan.testimonials::lang.title.testimonials
+form: ~/plugins/galdan/testimonials/models/testimonials/fields.yaml
+
+modelClass: Galdan\Testimonials\Models\Testimonials
+defaultRedirect: galdan/testimonials/testimonials
+
+create:
+    redirect: galdan/testimonials/testimonials/update/:id
+    redirectClose: galdan/testimonials/testimonials
+
+update:
+    redirect: galdan/testimonials/testimonials/update/:id
+    redirectClose: galdan/testimonials/testimonials

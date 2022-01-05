@@ -1,0 +1,52 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+tabs:
+    fields:
+        # post:
+        #     label: Select a Tour
+        #     relation: post
+        #     select: name
+        #     tab: Edit
+        #     searchable: true
+        #     sortable: true
+
+        post:
+            tab: Edit
+            type: relation
+            select: title
+
+        arrival:
+            label: Arrival
+            type: datepicker
+            tab: Edit
+
+        numperson:
+            label: Number of Person
+            type: number
+            tab: Edit
+
+        status:
+            label: Status
+            type: relation
+            tab: Edit
+
+        name:
+            label: Name
+            tab: Contact Details
+
+        email:
+            label: Email
+            tab: Contact Details
+
+        contactno:
+            label: Contact No.
+            tab: Contact Details
+
+        requirements:
+            label: Requirements
+            type: textarea
+            tab: Requirements
+
+        
+

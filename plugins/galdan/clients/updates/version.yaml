@@ -1,0 +1,4 @@
+1.0.1:
+    - Initialize plugin.
+    - create_clients_table.php
+    - seed_all_tables.php

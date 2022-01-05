@@ -1,0 +1,31 @@
+1514089541a:1:{s:16:"site/address.htm";a:5:{s:8:"fileName";s:16:"site/address.htm";s:7:"content";s:421:"<div class="foot_head">
+{{ company }}
+<span><small>(Registered under J&amp;K Tourism)</small></span>
+</div>
+<div id="foot_address">
+	<div id="address-building"></div>
+    <span>{{ addressline1 }}<br></span>
+    <span>{{ addressline2 }}<br></span>
+
+
+    Mobile : {{ mobile1 }} {{ mobile2 }}<br>
+    Phone : {{ phone }}<br>
+    E-mail:<a href="mailto: {{email1}}, ">{{email1}}</a></a>
+</div>
+
+<!-- Request::getBaseUrl() -->";s:5:"mtime";i:1499137674;s:6:"markup";s:421:"<div class="foot_head">
+{{ company }}
+<span><small>(Registered under J&amp;K Tourism)</small></span>
+</div>
+<div id="foot_address">
+	<div id="address-building"></div>
+    <span>{{ addressline1 }}<br></span>
+    <span>{{ addressline2 }}<br></span>
+
+
+    Mobile : {{ mobile1 }} {{ mobile2 }}<br>
+    Phone : {{ phone }}<br>
+    E-mail:<a href="mailto: {{email1}}, ">{{email1}}</a></a>
+</div>
+
+<!-- Request::getBaseUrl() -->";s:4:"code";N;}}

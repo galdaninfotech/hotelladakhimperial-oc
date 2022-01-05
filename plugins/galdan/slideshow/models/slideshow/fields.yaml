@@ -1,0 +1,23 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+
+  fields:
+      title:
+        label: Title
+        span: left
+
+      active:
+        label: Active
+        span: right
+
+
+      featured_images:
+        tab: Slides
+        label: Add Slide
+        type: fileupload
+        mode: image
+        imageWidth: 200
+        imageHeight: 200

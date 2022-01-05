@@ -1,0 +1,34 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+  fields:
+      id:
+          label: ID
+          disabled: true
+          tab: Edit
+
+      name:
+          label: Name
+          tab: Edit
+          
+      email:
+          label: Email
+          tab: Edit
+          
+      mobile:
+          label: Mobile
+          tab: Details
+          
+      passport:
+          label: Passport
+          tab: Details
+      
+      visa:
+          label: Visa
+          tab: Details
+
+      country:
+          label: Country
+          tab: Details

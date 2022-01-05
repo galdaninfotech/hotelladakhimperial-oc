@@ -1,0 +1,26 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: Name
+
+    description:
+        label: description
+        type: textarea
+        size: tiny
+
+    start:
+        label: Start Date
+        type: datepicker
+
+    deadline:
+        label: Deadline
+        type: datepicker
+
+    post:
+        label: Tour
+        type: relation
+

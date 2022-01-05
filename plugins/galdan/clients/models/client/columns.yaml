@@ -1,0 +1,40 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Name
+        searchable: true
+
+    email:
+        label: Email
+        searchable: true
+
+    mobile:
+        label: Mobile
+        searchable: true
+
+    passport:
+        label: Passport
+        searchable: true
+
+    visa:
+        label: Visa
+        searchable: true
+
+    country:
+        label: Country
+        searchable: true
+
+    created_at:
+        label: Created On
+        searchable: true
+    
+    updated_at:
+        label: Updated On
+        searchable: true

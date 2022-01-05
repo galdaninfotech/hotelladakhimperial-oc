@@ -1,0 +1,432 @@
+    <?php if(!$this->params[0] = null) {$current_mailbox = $this->vars['current_mailbox'];}; ?>
+                
+<div id="mainscreen">
+
+
+    <h1 class="voice">Mail</h1>
+    <input id="current_mailbox" type="hidden" value="<?php if(!$this->params[0] = null) {echo $this->params[0];}; ?>">
+
+    <!-- toolbar -->
+    <h2 id="aria-label-toolbar" class="voice">Application toolbar</h2>
+    <div id="messagetoolbar" class="toolbar" role="toolbar" aria-labelledby="aria-label-toolbar">
+        <a class="button checkmail" title="Send/Receive All" id="rcmbtn106-1" role="button" tabindex="0" aria-disabled="false" 
+            data-request="onSendReceiveAll"
+            onclick="
+                var count = 0; var mailIds = [];
+                $('td.select-mail>input:checked').each(function(){
+                    mailIds[count] = $(this).attr('value');
+                    count++;
+                });
+                mailIds[count] = $('#current_mailbox').val();
+                $(this).data('request-data', {
+                    mailIds: mailIds
+                })">
+        Send/Receive</a>
+
+        <a class="button" title="Send All" id="send-all" role="button" tabindex="0" aria-disabled="false" 
+            data-request="onSendAll"
+            onclick="
+                var count = 0; var mailIds = [];
+                $('td.select-mail>input:checked').each(function(){
+                    mailIds[count] = $(this).attr('value');
+                    count++;
+                });
+                mailIds[count] = $('#current_mailbox').val();
+                $(this).data('request-data', {
+                    mailIds: mailIds
+                })">
+        Send</a>
+
+        <a class="button" title="Receive All" id="receive-all" role="button" tabindex="0" aria-disabled="false" 
+            data-request="onReceiveAll"
+            onclick="
+                var count = 0; var mailIds = [];
+                $('td.select-mail>input:checked').each(function(){
+                    mailIds[count] = $(this).attr('value');
+                    count++;
+                });
+                mailIds[count] = $('#current_mailbox').val();
+                $(this).data('request-data', {
+                    mailIds: mailIds
+                })">
+        Receive</a>
+
+        <a class="button compose" title="Create a new message" id="rcmbtn107" role="button" tabindex="0" aria-disabled="false" href="<?= Backend::url('galdan/email/emails/compose') ?>" onclick="return rcmail.command('compose','',this,event)">Compose</a>
+        <span class="spacer"></span>
+        <a class="button reply disabled" title="Reply to sender" id="rcmbtn108" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('reply','',this,event)">Reply</a>
+        <span class="dropbutton">
+	<a class="button reply-all disabled" title="Reply to list or to sender and all recipients" id="rcmbtn109" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('reply-all','',this,event)">Reply all</a>
+	<a href="#reply-all" class="dropbuttontip" id="replyallmenulink" onclick="UI.toggle_popup('replyallmenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="replyallmenu-menu" tabindex="0">Reply-all options</a>
+</span>
+        <span class="dropbutton">
+	<a class="button forward disabled" title="Forward the message" id="rcmbtn110" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('forward','',this,event)">Forward</a>
+	<a href="#forward" class="dropbuttontip" id="forwardmenulink" onclick="UI.toggle_popup('forwardmenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="forwardmenu-menu" tabindex="0">Forwarding options</a>
+</span>
+        <a data-request="onDelete" onclick="
+	var count = 0;
+	var mailIds = [];
+	$('td.select-mail>input:checked').each(function(){
+		mailIds[count] = $(this).attr('value');
+		count++;
+	});
+    mailIds[count] = $('#current_mailbox').val();
+	$(this).data('request-data', {
+        mailIds: mailIds
+    })" class="button delete disabled" title="Move message to trash" id="rcmbtn111" role="button" tabindex="-1" aria-disabled="true" href="#">Delete</a>
+
+        <a id="markmessagemenulink" class="button markmessage" title="Mark messages" onclick="UI.toggle_popup('markmessagemenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="markmessagemenu-menu" role="button" href="#">Mark</a>
+        <a id="messagemenulink" class="button more" title="More actions..." onclick="UI.toggle_popup('messagemenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="messagemenu-menu" role="button" href="#">More</a>
+
+        <div id="forwardmenu" class="popupmenu" aria-hidden="true">
+            <h3 id="aria-label-forwardmenu" class="voice">Forwarding options</h3>
+            <ul id="forwardmenu-menu" class="toolbarmenu" role="menu" aria-labelledby="aria-label-forwardmenu">
+                <li role="menuitem"><a class="forwardlink" id="rcmbtn112" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('forward-inline','sub',this,event)">Forward inline</a></li>
+                <li role="menuitem"><a class="forwardattachmentlink" id="rcmbtn113" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('forward-attachment','sub',this,event)">Forward as attachment</a></li>
+
+            </ul>
+        </div>
+
+        <div id="replyallmenu" class="popupmenu" aria-hidden="true">
+            <h3 id="aria-label-replyallmenu" class="voice">Reply-all options</h3>
+            <ul id="replyallmenu-menu" class="toolbarmenu" role="menu" aria-labelledby="aria-label-replyallmenu">
+                <li role="menuitem"><a class="replyalllink" id="rcmbtn114" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('reply-all','sub',this,event)">Reply all</a></li>
+                <li role="menuitem"><a class="replylistlink" id="rcmbtn115" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('reply-list','sub',this,event)">Reply list</a></li>
+
+            </ul>
+        </div>
+
+        <div id="messagemenu" class="popupmenu" aria-hidden="true">
+            <h3 id="aria-label-messagemenu" class="voice">More message actions</h3>
+            <ul id="messagemenu-menu" class="toolbarmenu iconized" role="menu" aria-labelledby="aria-label-messagemenu">
+                <li role="menuitem"><a class="icon" id="rcmbtn116" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('print','',this,event)"><span class="icon print">Print this message</span></a></li>
+                <li role="menuitem"><a class="icon" id="rcmbtn117" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('download','',this,event)"><span class="icon download">Download (.eml)</span></a></li>
+                <li role="menuitem"><a class="icon" id="rcmbtn118" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('edit','new',this,event)"><span class="icon edit">Edit as new</span></a></li>
+                <li role="menuitem"><a class="icon" id="rcmbtn119" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('viewsource','',this,event)"><span class="icon viewsource">Show source</span></a></li>
+                <li role="menuitem"><a class="icon" id="rcmbtn120" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('move','',this,event)"><span class="icon move folder-selector-link">Move to...</span></a></li>
+                <li role="menuitem"><a class="icon" id="rcmbtn121" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('copy','',this,event)"><span class="icon copy folder-selector-link">Copy to...</span></a></li>
+                <li role="menuitem"><a target="_blank" class="icon" id="rcmbtn122" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('open','',this,event)"><span class="icon extwin">Open in new window</span></a></li>
+
+            </ul>
+        </div>
+
+        <div id="markmessagemenu" class="popupmenu" aria-hidden="true">
+            <h3 id="aria-label-markmessagemenu" class="voice">Mark selected messages as...</h3>
+            <ul id="markmessagemenu-menu" class="toolbarmenu iconized" role="menu" aria-labelledby="aria-label-markmessagemenu">
+                <li role="menuitem"><a class="icon" id="rcmbtn123" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('mark','read',this,event)"><span class="icon read">As read</span></a></li>
+                <li role="menuitem"><a class="icon" id="rcmbtn124" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('mark','unread',this,event)"><span class="icon unread">As unread</span></a></li>
+                <li role="menuitem"><a class="icon" id="rcmbtn125" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('mark','flagged',this,event)"><span class="icon flagged">As flagged</span></a></li>
+                <li role="menuitem"><a class="icon" id="rcmbtn126" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('mark','unflagged',this,event)"><span class="icon unflagged">As unflagged</span></a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="messagesearchtools">
+
+        <!-- search filter -->
+        <div id="searchfilter">
+            <label for="messagessearchfilter" class="voice">Email listing filter</label>
+            <select name="searchfilter" class="searchfilter decorated" id="messagessearchfilter" aria-controls="messagelist" onchange="rcmail.filter_mailbox(this.value)" style="width: 109px;">
+                <option value="ALL" selected="selected">All</option>
+                <option value="UNSEEN">Unread</option>
+                <option value="FLAGGED">Flagged</option>
+                <option value="UNANSWERED">Unanswered</option>
+                <option value="DELETED">Deleted</option>
+                <option value="UNDELETED">Not deleted</option>
+                <option value="OR OR OR HEADER Content-Type application/ HEADER Content-Type multipart/m HEADER Content-Type multipart/signed HEADER Content-Type multipart/report">With attachment</option>
+                <option value="HEADER X-PRIORITY 1">Priority: Highest</option>
+                <option value="HEADER X-PRIORITY 2">Priority: High</option>
+                <option value="NOT HEADER X-PRIORITY 1 NOT HEADER X-PRIORITY 2 NOT HEADER X-PRIORITY 4 NOT HEADER X-PRIORITY 5">Priority: Normal</option>
+                <option value="HEADER X-PRIORITY 4">Priority: Low</option>
+                <option value="HEADER X-PRIORITY 5">Priority: Lowest</option>
+            </select><a class="menuselector" tabindex="-1" style="position: absolute; top: 0px; left: 0px;"><span class="handle" style="width: 71px; height: 24px; line-height: 23px;">All</span></a>
+
+        </div>
+
+        <!-- search box -->
+        <div id="quicksearchbar" class="searchbox" role="search" aria-labelledby="aria-label-searchform">
+            <h2 id="aria-label-searchform" class="voice">Email message search form</h2>
+            <label for="quicksearchbox" class="voice">Email search input</label>
+            <a id="searchmenulink" class="iconbutton searchoptions" title="Search modifiers" aria-haspopup="true" aria-expanded="false" aria-owns="searchmenu-menu" role="button" href="#" onclick="return rcmail.command('menu-open','searchmenu',this,event)" tabindex="0" aria-disabled="false">Options</a>
+            <form name="rcmqsearchform" onsubmit="rcmail.command('search'); return false" style="display:inline" action="./?_task=mail" method="get">
+                <input name="_q" id="quicksearchbox" type="text">
+            </form>
+
+            <a id="searchreset" class="iconbutton reset" title="Reset search" role="button" href="#" onclick="return rcmail.command('reset-search','',this,event)" tabindex="0" aria-disabled="false">Reset search</a>
+
+            <div id="searchmenu" class="popupmenu" data-editable="true">
+                <h3 id="aria-label-searchmenu" class="voice">Search modifiers</h3>
+                <ul class="toolbarmenu" id="searchmenu-menu" role="menu" aria-labelledby="aria-label-searchmenu">
+                    <li role="menuitem">
+                        <label>
+                            <input type="checkbox" name="s_mods[]" value="subject" id="s_mod_subject" onclick="UI.set_searchmod(this)"> <span>Subject</span></label>
+                    </li>
+                    <li role="menuitem">
+                        <label>
+                            <input type="checkbox" name="s_mods[]" value="from" id="s_mod_from" onclick="UI.set_searchmod(this)"> <span>From</span></label>
+                    </li>
+                    <li role="menuitem">
+                        <label>
+                            <input type="checkbox" name="s_mods[]" value="to" id="s_mod_to" onclick="UI.set_searchmod(this)"> <span>To</span></label>
+                    </li>
+                    <li role="menuitem">
+                        <label>
+                            <input type="checkbox" name="s_mods[]" value="cc" id="s_mod_cc" onclick="UI.set_searchmod(this)"> <span>Cc</span></label>
+                    </li>
+                    <li role="menuitem">
+                        <label>
+                            <input type="checkbox" name="s_mods[]" value="bcc" id="s_mod_bcc" onclick="UI.set_searchmod(this)"> <span>Bcc</span></label>
+                    </li>
+                    <li role="menuitem">
+                        <label>
+                            <input type="checkbox" name="s_mods[]" value="body" id="s_mod_body" onclick="UI.set_searchmod(this)"> <span>Body</span></label>
+                    </li>
+                    <li role="menuitem">
+                        <label>
+                            <input type="checkbox" name="s_mods[]" value="text" id="s_mod_text" onclick="UI.set_searchmod(this)"> <span>Entire message</span></label>
+                    </li>
+                    <li role="separator" class="separator">
+                        <label>Date</label>
+                    </li>
+                    <li role="menuitem">
+                        <select name="searchinterval" id="s_interval" onchange="rcmail.set_searchinterval($(this).val())">
+                            <option value="" selected="selected"></option>
+                            <option value="1W">younger than a week</option>
+                            <option value="1M">younger than a month</option>
+                            <option value="1Y">younger than a year</option>
+                            <option value="-1W">older than a week</option>
+                            <option value="-1M">older than a month</option>
+                            <option value="-1Y">older than a year</option>
+                        </select>
+                    </li>
+                    <li role="separator" class="separator">
+                        <label>Scope</label>
+                    </li>
+                    <li role="menuitem">
+                        <label>
+                            <input type="radio" name="s_scope" value="base" id="s_scope_base" onclick="UI.set_searchscope(this)"> <span>Current folder</span></label>
+                    </li>
+                    <li role="menuitem">
+                        <label>
+                            <input type="radio" name="s_scope" value="sub" id="s_scope_sub" onclick="UI.set_searchscope(this)"> <span>This and subfolders</span></label>
+                    </li>
+                    <li role="menuitem">
+                        <label>
+                            <input type="radio" name="s_scope" value="all" id="s_scope_all" onclick="UI.set_searchscope(this)"> <span>All folders</span></label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="mainscreencontent">
+        <div id="mailview-left" style="width: 174px;">
+
+            <!-- folders list -->
+            <div id="mailboxcontainer" class="uibox listbox" role="navigation" aria-labelledby="aria-label-folderlist">
+                <h2 id="aria-label-folderlist" class="voice">Email folder selection</h2>
+                <div id="folderlist-content" class="scroller withfooter">
+                    <ul id="mailboxlist" class="treelist listing folderlist" role="tree">
+                        <?php foreach($mailboxes as $mailbox) { 
+            				if(strpos($mailbox["name"], ".")) { 
+            					$mailbox_name = ucwords(substr($mailbox['name'], strpos($mailbox['name'], ".") + 1));
+            				} else {
+            					$mailbox_name = ucwords(strtolower(substr($mailbox['name'], strpos($mailbox['name'], ".") + 0)));
+            				}
+        				?>
+                            <li id="rcmliSU5CT1g" class="mailbox <?php echo strtolower($mailbox_name); ?>" role="treeitem" aria-level="1">
+                                <a href="<?= Backend::url('galdan/email/emails/index/'.$mailbox_name) ?>" rel="INBOX">
+                                    <?php echo $mailbox_name; ?>
+                                </a>
+                                <?php 
+            						if($mailbox['count'] > 0) {
+            							echo '<span class="unreadcount">'.$mailbox['count'].'</span>';
+            						}
+            					 ?>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div id="folderlist-footer" class="boxfooter">
+                    <a id="mailboxmenulink" title="Folder actions..." class="listbutton groupactions" onclick="UI.toggle_popup('mailboxmenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="mailboxoptionsmenu" role="button" href="#"><span class="inner">⚙</span></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mailview-right" role="main" style="left: 186px;">
+
+            <div id="mailview-top" class="uibox fullheight">
+
+                <!-- messagelist -->
+                <div id="messagelistcontainer" class="boxlistcontent">
+                    <h2 id="aria-label-messagelist" class="voice">Email Messages Listing</h2>
+
+                    <table id="messagelist" class="records-table messagelist sortheader fixedheader" aria-labelledby="aria-label-messagelist" tabindex="0">
+                        <thead>
+                            <tr>
+                                <th class="flag" id="select-all-mail" style="">
+                                    <input type="checkbox" name="">
+                                </th>
+                                <th class="threads" id="rcmthreads" style=""><a href="#list-options" class="listmenu" id="listmenulink" title="List options..." tabindex="-1">List options...</a></th>
+                                <th class="subject" id="rcmsubject" style=""><a href="./#sort" class="sortcol" rel="subject" title="Sort by" tabindex="-1">Subject</a></th>
+                                <th class="status" id="rcmstatus" style=""><span class="status">Read status</span></th>
+                                <th class="fromto" id="rcmfromto" rel="fromto" style=""><a href="./#sort" class="sortcol" rel="fromto" title="Sort by" tabindex="-1">From</a></th>
+                                <th class="date" id="rcmdate" style=""><a href="./#sort" class="sortcol" rel="date" title="Sort by" tabindex="-1">Date</a></th>
+                                <th class="size" id="rcmsize" style=""><a href="./#sort" class="sortcol" rel="size" title="Sort by" tabindex="-1">Size</a></th>
+                                <th class="flag" id="rcmflag" style=""><span class="flagged">Flagged</span></th>
+                                <th class="attachment" id="rcmattachment" style=""><span class="attachment">Attachment</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+	                        <?php 
+                                foreach($emails as $email) { 
+                                    if(!$email['Seen'] == 1) {
+    									$status = 'unread';
+    								} else {
+    									$status = '';
+    								}
+							?>
+	                            <tr id="rcmrowMg" class="message <?php echo $status; ?>">
+	                                <td class="select-mail">
+	                                    <input type="checkbox" name="" value="<?php echo $email['IDEmail']; ?>">
+	                                </td>
+	                                <td class="threads"></td>
+	                                <td class="subject">
+                                        <span id="msgicnrcmrowMg" class="msgicon"></span>
+                                        <a href="<?php 
+                                        if($current_mailbox === 'Drafts') {
+                                            echo Backend::url('galdan/email/emails/compose/draft/'.$email['IDEmail']);
+                                        } else if($current_mailbox === 'Inbox'){
+                                            echo Backend::url('galdan/email/emails/preview/'.$email['IDEmail']);
+                                        }
+                                        ?>" tabindex="-1">
+                                            <span><?php echo $email['Subject']; ?></span>
+                                        </a>
+                                    </td>
+	                                <td class="status"><span id="statusicnrcmrowMg" class="msgicon"></span></td>
+	                                <td class="fromto"><span class="adr"><span class="rcmContactAddress"><?php echo $email['EmailFrom']; ?></span></span>
+	                                </td>
+	                                <td class="date">
+	                                    <?php echo date('F jS, Y', strtotime($email['DateE'])); ?>
+	                                </td>
+	                                <td class="size">
+	                                    <?php echo $email['MsgSize']; ?>
+	                                </td>
+	                                <td class="flag"><span id="flagicnrcmrowMg" class="unflagged" title="Not Flagged" aria-label="Not Flagged"></span></td>
+	                                <td class="attachment"><span class="attachment" title="With attachment"></span></td>
+	                            </tr>
+	                            <?php  } ?>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="voice" role="note">
+                    <h3>List keyboard navigation</h3>
+                    <pre>Arrows up/down: Move row focus/selection.
+Space: Select focused row.
+Shift + up/down: Select additional row above/below.
+Ctrl + Space: Add focused row to selection/remove from selection.
+Arrows right/left: expand/collapse message thread (in threads mode only).
+Enter: Open the selected/focused message.
+Delete: Move selected messages to Trash.
+</pre>
+                </div>
+
+                <!-- list footer -->
+                <div id="messagelistfooter">
+                    <div id="listcontrols">
+                        <a href="#list" class="iconbutton listmode disabled selected" id="maillistmode" title="List" role="button" tabindex="-1" aria-disabled="true" onclick="return rcmail.command('set-listmode','list',this,event)">List</a>
+                        <a href="#threads" class="iconbutton threadmode disabled" id="mailthreadmode" title="Threads" role="button" tabindex="0" aria-disabled="false" onclick="return rcmail.command('set-listmode','threads',this,event)">Threads</a>
+                    </div>
+
+                    <div id="listselectors">
+                        <a href="#select" id="listselectmenulink" class="menuselector" onclick="UI.toggle_popup('listselectmenu', event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="listselectmenu-menu"><span class="handle">Select</span></a>
+                    </div>
+
+                    <div id="countcontrols" class="pagenav dark">
+                        <span class="countdisplay" aria-live="polite" aria-relevant="text" id="rcmcountdisplay">Messages 1 to 2 of 2</span>
+                        <span class="pagenavbuttons">
+                    		<a class="button firstpage disabled" title="Show first page" id="rcmbtn127" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('firstpage','',this,event)"><span class="inner">First</span></a>
+                            <a class="button prevpage disabled" title="Show previous page" id="rcmbtn128" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('previouspage','',this,event)"><span class="inner">Previous</span></a>
+
+                            <input id="pagejumper" class="pagejumper rcpagejumper" type="text" size="3" title="Current page" value="<?php echo $emails['currentPage'] ?>">
+
+                            <a class="button nextpage disabled" title="Show next page" id="rcmbtn129" role="button" tabindex="-1" aria-disabled="true" href="<?= $emails['path'].'/'.$emails['pageName'] ?>" onclick="return rcmail.command('nextpage','',this,event)"><span class="inner">Next</span></a>
+                            <a class="button lastpage disabled" title="Show last page" id="rcmbtn130" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('lastpage','',this,event)"><span class="inner">Last</span></a>
+                        </span>
+                    </div>
+
+                    <a href="#preview" id="mailpreviewtoggle" class="iconbutton closed" title="Show preview pane" role="button" tabindex="0" aria-expanded="false">Show preview pane</a>
+                </div>
+
+            </div>
+            <!-- end mailview-top -->
+
+            <div id="mailview-bottom" class="uibox">
+                <div id="mailpreviewframe" class="iframeboxz" role="complementary" aria-labelledby="aria-label-mailpreviewframe">
+
+                    <h2 id="aria-label-mailpreviewframe" class="voice">Message preview</h2>
+                    <iframe name="messagecontframe" id="messagecontframe" 
+                            style="width:100%; height:100%" frameborder="0" src="skins/larry/watermark.html" title="Message preview">
+                        <!DOCTYPE>
+                        <html><head>
+                        <title></title>
+                        <style type="text/css">
+
+                        html, body {
+                             height: 95%;
+                        }
+
+                        body {
+                            background: url(images/watermark.jpg?v=e784.5000) center no-repeat #fff;
+                        }
+
+                        </style>
+                        </head>
+                        <body>
+
+
+                        </body></html>
+                    </iframe>
+                </div>
+
+            </div>
+            <!-- end mailview-bottom -->
+            <div id="mailviewsplitter" unselectable="on" role="presentation" class="splitter splitter-h" style="left: 0px; top: 148px;"></div>
+        </div>
+        <!-- end mailview-right -->
+
+        <div id="mailviewsplitterv" unselectable="on" role="presentation" class="splitter splitter-v" style="left: 177px; top: 0px;"></div>
+    </div>
+    <!-- end mainscreencontent -->
+
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $('#messagelist tr.message').on('click', function(){
+        $('#messagelist tr.selected').removeClass('selected');
+        $(this).addClass('focused'); 
+        $(this).addClass('selected');
+    });
+
+    $('#mailpreviewtoggle').on('click', function(){
+        alert('ddddddddd');
+        $('#mailview-bottom').css('display', 'block');
+        $('#mailpreviewframe').css('display', 'block');
+    });
+
+
+
+
+
+});
+</script>

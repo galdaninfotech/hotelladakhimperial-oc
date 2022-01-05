@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Booking
+
+# Model Form Field configuration
+form: $/galdan/bookings/models/booking/fields.yaml
+
+# Model Class name
+modelClass: Galdan\Bookings\Models\Booking
+
+# Default redirect location
+defaultRedirect: galdan/bookings/bookings
+
+# Create page
+create:
+    title: Create Booking
+    redirect: galdan/bookings/bookings/update/:id
+    redirectClose: galdan/bookings/bookings
+
+# Update page
+update:
+    title: Edit Booking
+    redirect: galdan/bookings/bookings
+    redirectClose: galdan/bookings/bookings
+
+# Preview page
+preview:
+    title: Preview Booking

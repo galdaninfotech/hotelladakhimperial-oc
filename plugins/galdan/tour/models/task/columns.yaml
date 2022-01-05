@@ -1,0 +1,29 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    name:
+        label: Name
+        searchable: true
+
+    description:
+        label: description
+        searchable: true
+
+    post:
+        label: Tour
+        relation: post
+        select: name
+        searchable: true
+        sortable: true
+
+    start:
+        label: Start Date
+        searchable: true
+
+    deadline:
+        label: Deadline
+        searchable: true
+

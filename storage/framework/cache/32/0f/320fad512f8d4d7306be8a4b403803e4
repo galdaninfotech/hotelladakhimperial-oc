@@ -1,0 +1,19 @@
+1514182256a:1:{s:31:"site/header-right-top-links.htm";a:5:{s:8:"fileName";s:31:"site/header-right-top-links.htm";s:7:"content";s:370:"<ul class="header-top-left">
+	{% if user %}
+	    <li><a href="{{ url('client-bookings') }}">Dashboard</a></li>
+	    <li><a href="{{ url('account') }}">Account</a></li>
+	    <li><a href="#" data-request="onLogout">Logout</a></li>
+	{% else %}
+	    <li><a href="{{ url('account')}}">Login</a></li>
+	    <li><a href="{{ url('account')}}">Register</a></li>
+	{% endif %}
+</ul>";s:5:"mtime";i:1499129688;s:6:"markup";s:370:"<ul class="header-top-left">
+	{% if user %}
+	    <li><a href="{{ url('client-bookings') }}">Dashboard</a></li>
+	    <li><a href="{{ url('account') }}">Account</a></li>
+	    <li><a href="#" data-request="onLogout">Logout</a></li>
+	{% else %}
+	    <li><a href="{{ url('account')}}">Login</a></li>
+	    <li><a href="{{ url('account')}}">Register</a></li>
+	{% endif %}
+</ul>";s:4:"code";N;}}

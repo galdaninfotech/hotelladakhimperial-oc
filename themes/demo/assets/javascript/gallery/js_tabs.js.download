@@ -1,0 +1,76 @@
+jQuery(document).ready(function(){ 
+	var ii = jQuery('.tabs .current_tab .space').size();	
+	jQuery('.tab_menu li').click(function(){	
+		var place = jQuery(this).attr('rel');	
+		jQuery('.tab_menu li').removeClass('current');
+		jQuery(this).addClass('current');	
+		jQuery('.current_tab .space').hide();	
+		jQuery('.current_tab .space_' + place).show();	
+		jQuery('#map_canvas').show();	
+	});
+	
+	var widthWrap = jQuery('.jv-wrapper').width()-40;
+	var liCols = jQuery('.tabs .tab_menu ul li').length;
+	var widthLi = Math.round(widthWrap/liCols);
+	jQuery('.tabs .tab_menu ul li label').css({width: widthLi+'px'});
+	
+
+	jQuery(".template_image_link, .template_shadow, .template_image_link, .template_image img, .template_free_wrapper").hover(function() {
+		jQuery(this).parent('div').find('.template_image_link').css('visibility', 'visible');
+	}, function() {
+		jQuery(this).parent('div').find('.template_image_link').css('visibility', 'hidden');
+	});
+
+
+   jQuery(' .imageTemplate').hover(
+    function() { 
+      jQuery(this).find('.main_img_inp').stop().animate({opacity:0.3});
+      jQuery(this).find('.view_demo_inp').stop().animate({opacity:1});    
+      },
+    function(){ 
+      jQuery(this).find('.main_img_inp').stop().animate({opacity:1});
+      jQuery(this).find('.view_demo_inp').stop().animate({opacity:0});   
+  }); 
+ 
+
+	jQuery('#loginLogout').click(function() {
+		jQuery('#lightbox').fadeIn(300);
+	});
+	jQuery('#lightbox .close').live('click', function() {
+		jQuery('#lightbox').fadeOut(300);
+	});
+
+	
+	jQuery("#asKaccordion h3").eq(0).addClass("active");
+	jQuery("#asKaccordion div.acrBody").eq(0).show();
+
+	jQuery("#asKaccordion h3").click(function(){
+		jQuery(this).next("div.acrBody").slideToggle(200).siblings("div.acrBody:visible").slideUp(100);
+		jQuery(this).toggleClass("active");
+		jQuery(this).siblings("h3").removeClass("active");
+	});
+
+});
+
+//demo page slide down examples
+
+function click1(){
+
+      if (jQuery('#demo_logos').height()=="196"){
+	  jQuery('.demo_view_a').html('Hide Examples');
+      }
+if (jQuery('#demo_logos').height()=="294"){
+	jQuery('#demo_logos').animate({height:"-=196px"}, "fast");
+	  jQuery('.demo_view_a').html('View more Examples');
+      } else{
+	  jQuery('#demo_logos').animate({height:"+=98px"}, "fast");
+      }
+}
+
+//demo page bounce words
+jQuery().ready(function() {
+setInterval(function() {
+jQuery('.demo_view_a').effect( "bounce", {times:3}, 300 );
+},1000);
+	 
+});

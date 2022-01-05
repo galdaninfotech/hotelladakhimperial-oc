@@ -1,0 +1,25 @@
+{
+    "name": "galdan/tour-plugin",
+    "type": "october-plugin",
+    "description": "Tour plugin for October CMS",
+    "homepage": "https://octobercms.com/plugin/rainlab-tour",
+    "keywords": ["october", "octobercms", "tour"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Bobkov",
+            "email": "aleksey.bobkov@gmail.com",
+            "role": "Co-founder"
+        },
+        {
+            "name": "Samuel Georges",
+            "email": "daftspunky@gmail.com",
+            "role": "Co-founder"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "composer/installers": "~1.0"
+    },
+    "minimum-stability": "dev"
+}

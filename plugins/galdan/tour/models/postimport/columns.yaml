@@ -1,0 +1,25 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id: ID
+    user_id: User_ID
+    category_id: Category_ID
+    itinerary_id: Itinerary_ID
+    title: galdan.tour::lang.post.title
+    slug: galdan.tour::lang.post.slug
+    intro: Intro
+    description: Description
+    description_html: Description_html
+    start: Start
+    end: End
+    grade: Grade
+    includes: Includes
+    excludes: Excludes
+    deleted: Deleted
+    published: Published
+    created_at: galdan.tour::lang.post.created_date
+    updated_at: galdan.tour::lang.post.updated_date
+    published_at: galdan.tour::lang.post.published_date

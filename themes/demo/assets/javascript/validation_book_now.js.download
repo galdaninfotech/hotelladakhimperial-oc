@@ -1,0 +1,81 @@
+// JavaScript Document
+
+function valid()
+{
+	/*if(document.booking.package.value=="")
+	{
+	alert("Please select Package");
+	document.booking.package.focus();
+	return false;
+	}*/
+	if(document.booking.name.value=="")
+	{
+	alert("Please enter your Name");
+	document.booking.name.focus();
+	return false;
+	}
+
+	if(document.booking.email.value == "" ) {
+	alert("Please enter your Email ID.");
+	document.booking.email.focus();
+	return false;
+	}
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(booking.email.value))
+	{
+		//return true; 
+	}
+	else
+	{
+		alert("Please enter valid Email ID");
+		booking.email.focus();
+		return false;
+	}
+	
+	
+	if( document.booking.phone.value=="")
+	{
+	alert("Please enter your Contact No.");
+	document.booking.phone.focus();
+	return false;
+	}
+	
+	if (isNaN(parseInt(document.booking.phone.value))) 
+	{
+	alert("Contact No. should be in Digits Only");
+	document.booking.phone.focus();
+	return false;
+	}
+	
+	
+	
+	
+	/*if(document.booking.checkin.value=="")
+	{
+	alert("Please select your Date of Arrival");
+	document.booking.checkin.focus();
+	return false;
+	}
+	
+	if(document.booking.departure_date.value=="")
+	{
+		alert("Please select your Date of Departure");
+		document.booking.departure_date.focus();
+		return false;
+	}*/
+	
+	if(document.booking.comments.value=="")
+	{
+	alert("Please enter Any Special Requests/ Details you would like to provide us");
+	document.booking.comments.focus();
+	return false;
+	}
+	
+	if( document.booking.key.value=="")
+	{
+	alert("Please enter Security Code.");
+	document.booking.key.focus();
+	return false;
+	}
+
+return true;
+}

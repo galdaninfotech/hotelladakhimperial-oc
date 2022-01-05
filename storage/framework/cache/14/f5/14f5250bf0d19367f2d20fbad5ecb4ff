@@ -1,0 +1,77 @@
+1517890205a:1:{s:19:"ladakh/wildlife.htm";a:16:{s:8:"fileName";s:19:"ladakh/wildlife.htm";s:7:"content";s:4684:"title = "Wildlife of Ladakh"
+url = "/ladakh/wildlife"
+layout = "default"
+meta_title = "Wildlife of Ladakh"
+meta_description = "Wildlife of Ladakh"
+is_hidden = 0
+seo_keywords = "Wildlife of Ladakh"
+robot_index = "index"
+robot_follow = "follow"
+
+[tourCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "tours/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blog-category"
+==
+<div class="container" id="main-content-wrapper">
+  <div class="row">
+    <div class="col-md-9 main-content">
+        <h1>{{ this.page.title }}</h1>
+        <img src="{{'assets/images/wildlife_img.jpg'|theme}}" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;">
+        <p>Ladakh is a mystetious land shrouded in myths and legends. The fauna of Ladakh have much in common with that of Central Asia generally and especially with those of the Tibetan Plateau. An exception to this area are the birds , many of which migrate from warmer parts of India to spend the summer in Ladakh.</p>
+                <p>Ladakh posses virtually no natural forests, though along river banks and valleys some greenery does exist.The lower mountain slopes are sparse but higher up near the snow line Wild Rose, Will and Herbacious plants have successfully colonized the slopes. Because of decrease in temperature ,vegetation becomes more sparse and stunted as one ascends the slopes .Several hardy animals and birds thrive together here in an exquisite equilibrium.</p>
+                <p>Animals which have adapted to the rigorous condition however live on the minimal vegetation, poor shelter, rocky terrain and bitter cold. Nevertheless most creatures notably the Ungulates do migrate to lower region in winters while others like the Brown Bear choose to hibernate.</p>
+                <p>The largest animal of this cold desert is Yak(Dong), a wild ox. The Ibex is found on higher craggy terrain and numbers thousand. Trekkers often spot them.The Bharal or Blue Sheep ia a rare goat found at lower elevations, mostly in river valleys. The Tibetan Argali Sheep is a relative of the Marco Polo Sheep of the Pamirs.</p>
+                <p><img src="images/wildlife2.jpg" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;" /> The habitat of the extremely rare Tibetan Gazelle (Gowa) is near the Tibetan border in South-Eastern Ladakh. The Tibetan Antelope is also endangered. Tibetan Wild Ass is one animal that visitors can expect to see from the comfort of a vehicle,if they take a jeep safari.</p>
+                <p>Snow Leopards reside at an elevation from 1800m to 5400m.They are extremely shy and hard to spot. Other cats in Ladakh are even rarer than the snow leopards like the <?php echo $company; ?> and Palla’s cat which looks like somewhat house cat.</p>
+                <p>The Tibetan wolf and Red fox is common and Tibetan San fox has recently been discovered. There are also a very brown Bears in the Suru Valley and the area around Drass. The wild horse unique to Ladakh.</p>
+                <p>Ladakh has great density of birds , a total 225 species have been recorded.The Black-neck crane is one of the most charismatic birds of Ladakh. Many species of Finches, Robins, Redstarts and Hoopoe are common in summer.The Brown-headed gull is seen in summer on the river Indus.</p>
+                <p>Resident water birds includethe Brahminy duck and the Bar-headed goose. Other birds include Red-billed cough, Raven, Tibetan Snowcock and Chukar.The Lammergier and the Golden Eagle are common raptors here.</p>
+                <p>Among smaller animals marmots are common.There are also plenty of Hares and several types of Voles and Pika.<br />
+                Urail, one of the smallest sheep in the world ,lives at the most grassy slopes.</p>
+                <p>Overall Ladakh has a fascinating and most unique ecosystem.Most of the species are considered endangered or rare.<br />
+                <?php echo $company; ?>  take you on an eco-and animal-friendly tour in their natural habitat.Expertly led and passionately constructed, our tour aims to deliver the ultimate eco-tour.</p>
+    </div><!-- Main Content -->
+
+    <div class="col-md-3">
+        <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        {% partial 'site/right1' %}
+    </div>
+    </div>
+</div>";s:5:"mtime";i:1517601485;s:6:"markup";s:4218:"<div class="container" id="main-content-wrapper">
+  <div class="row">
+    <div class="col-md-9 main-content">
+        <h1>{{ this.page.title }}</h1>
+        <img src="{{'assets/images/wildlife_img.jpg'|theme}}" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;">
+        <p>Ladakh is a mystetious land shrouded in myths and legends. The fauna of Ladakh have much in common with that of Central Asia generally and especially with those of the Tibetan Plateau. An exception to this area are the birds , many of which migrate from warmer parts of India to spend the summer in Ladakh.</p>
+                <p>Ladakh posses virtually no natural forests, though along river banks and valleys some greenery does exist.The lower mountain slopes are sparse but higher up near the snow line Wild Rose, Will and Herbacious plants have successfully colonized the slopes. Because of decrease in temperature ,vegetation becomes more sparse and stunted as one ascends the slopes .Several hardy animals and birds thrive together here in an exquisite equilibrium.</p>
+                <p>Animals which have adapted to the rigorous condition however live on the minimal vegetation, poor shelter, rocky terrain and bitter cold. Nevertheless most creatures notably the Ungulates do migrate to lower region in winters while others like the Brown Bear choose to hibernate.</p>
+                <p>The largest animal of this cold desert is Yak(Dong), a wild ox. The Ibex is found on higher craggy terrain and numbers thousand. Trekkers often spot them.The Bharal or Blue Sheep ia a rare goat found at lower elevations, mostly in river valleys. The Tibetan Argali Sheep is a relative of the Marco Polo Sheep of the Pamirs.</p>
+                <p><img src="images/wildlife2.jpg" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;" /> The habitat of the extremely rare Tibetan Gazelle (Gowa) is near the Tibetan border in South-Eastern Ladakh. The Tibetan Antelope is also endangered. Tibetan Wild Ass is one animal that visitors can expect to see from the comfort of a vehicle,if they take a jeep safari.</p>
+                <p>Snow Leopards reside at an elevation from 1800m to 5400m.They are extremely shy and hard to spot. Other cats in Ladakh are even rarer than the snow leopards like the <?php echo $company; ?> and Palla’s cat which looks like somewhat house cat.</p>
+                <p>The Tibetan wolf and Red fox is common and Tibetan San fox has recently been discovered. There are also a very brown Bears in the Suru Valley and the area around Drass. The wild horse unique to Ladakh.</p>
+                <p>Ladakh has great density of birds , a total 225 species have been recorded.The Black-neck crane is one of the most charismatic birds of Ladakh. Many species of Finches, Robins, Redstarts and Hoopoe are common in summer.The Brown-headed gull is seen in summer on the river Indus.</p>
+                <p>Resident water birds includethe Brahminy duck and the Bar-headed goose. Other birds include Red-billed cough, Raven, Tibetan Snowcock and Chukar.The Lammergier and the Golden Eagle are common raptors here.</p>
+                <p>Among smaller animals marmots are common.There are also plenty of Hares and several types of Voles and Pika.<br />
+                Urail, one of the smallest sheep in the world ,lives at the most grassy slopes.</p>
+                <p>Overall Ladakh has a fascinating and most unique ecosystem.Most of the species are considered endangered or rare.<br />
+                <?php echo $company; ?>  take you on an eco-and animal-friendly tour in their natural habitat.Expertly led and passionately constructed, our tour aims to deliver the ultimate eco-tour.</p>
+    </div><!-- Main Content -->
+
+    <div class="col-md-3">
+        <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        {% partial 'site/right1' %}
+    </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:18:"Wildlife of Ladakh";s:3:"url";s:16:"/ladakh/wildlife";s:6:"layout";s:7:"default";s:10:"meta_title";s:18:"Wildlife of Ladakh";s:16:"meta_description";s:18:"Wildlife of Ladakh";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:18:"Wildlife of Ladakh";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:14:"tourCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:14:"tours/category";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:18:"blog/blog-category";}}}

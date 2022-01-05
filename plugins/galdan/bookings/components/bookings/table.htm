@@ -1,0 +1,45 @@
+<table class="table data">
+    <thead>
+        <tr>
+            <th>#Ref</th>
+            <th>Tour</th>
+            <th>Pax</th>
+            <th>Arrival</th>
+            <th>Booking Date</th>
+            <th>Status</th>
+            <th colspan="3">Actions</th>
+        </tr>
+    </thead>
+    {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.id }}</td>
+            <td>{{ booking.post.title }}</td>
+            <td>{{ booking.numperson }}</td>
+            <td>{{ booking.arrival }}</td>
+            <td>{{ booking.created_at }}</td>
+            <td>{{ booking.status.name }}</td>
+
+            {% if booking.status.name == 'Confirmed' %}
+                <td class="action"><a href="client-preview/{{booking.id}}">View</a></td>
+                <td class="action"><a href="client-details/{{booking.id}}">Details</a></td>
+            {% elseif booking.status.name == 'Cancelled' %}
+
+            {% else %}
+                <td class="action"><a href="client-preview/{{booking.id}}">View</a></td>
+                <td class="action"><a href="client-modify/{{booking.id}}">Modify</a></td>
+                <td class="action">
+                    <button 
+                    	data-request="{{ __SELF__ }}::onCancel"
+						onmouseover="
+			                var id = $(this).parent().siblings('td:first').text();
+			                $(this).data('request-data', {
+			                    id: id
+			                })"
+		                title="Cancel this booking"
+                	>Cancel</button>
+                </td>
+            {% endif %}
+
+        </tr>
+    {% endfor %}
+</table>

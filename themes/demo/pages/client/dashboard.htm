@@ -1,0 +1,25 @@
+title = "Dashboard"
+url = "/dashboard"
+layout = "default"
+description = "Frontend user dashboard"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+public function onStart()
+{    
+    use Galdan\Bookings\Models\Booking;
+    
+    if($this->user) {
+        $this['bookings'] = Booking::where('email', $this->user->email)->where('name', $this->user->name)->orderBy('created_at', 'desc')->get();
+    } else {
+	    return Redirect::to('/account');
+    }
+    
+}
+
+
+
+?>
+==

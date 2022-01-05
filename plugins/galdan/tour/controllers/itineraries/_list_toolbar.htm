@@ -1,0 +1,40 @@
+<div data-control="toolbar">
+    <a
+        href="<?= Backend::url('galdan/tour/itineraries/create') ?>"
+        class="btn btn-primary oc-icon-plus">
+        New Itinerary
+    </a>
+
+    <?php if ($this->user->hasAnyAccess(['galdan.tour.access_import_export'])): ?>
+        <div class="btn-group">
+            <a
+                href="<?= Backend::url('galdan/tour/itineraries/export') ?>"
+                class="btn btn-default oc-icon-upload">
+                Export Itineraries
+            </a>
+            <a
+                href="<?= Backend::url('galdan/tour/itineraries/import') ?>"
+                class="btn btn-default oc-icon-download">
+                Import Itineraries
+            </a>
+        </div>
+    <?php endif ?>
+
+
+    <?php if ($this->user->hasAnyAccess(['galdan.tour.access_import_export'])): ?>
+        <div class="btn-group">
+            <a
+                href="<?= Backend::url('galdan/tour/days/export') ?>"
+                class="btn btn-default oc-icon-upload">
+                Export Days
+            </a>
+            <a
+                href="<?= Backend::url('galdan/tour/days/import') ?>"
+                class="btn btn-default oc-icon-download">
+                Import Days
+            </a>
+        </div>
+    <?php endif ?>
+
+
+</div>

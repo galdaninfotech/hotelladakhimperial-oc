@@ -1,0 +1,60 @@
+1546667821a:1:{s:24:"company/testimonials.htm";a:12:{s:8:"fileName";s:24:"company/testimonials.htm";s:7:"content";s:2072:"title = "Testimonials"
+url = "/company/testimonials"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[testimonial]
+
+==
+
+
+<div id="hli-content-wrapper-testimonials">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h1>{{ this.page.title }}</h1>
+                    <blockquote>
+                        <p><span class="apostrophy">"</span>Good: I love Hotel Ladakh Imperial's location, yet your a 5 minute drive from Waikiki. Food is superb in all of Hotel Ladakh Imperial's. I wouldn't stay anywhere else in Leh and always look forward to returning to the Hotel Ladakh Imperial.<span class="apostrophy">"</span></p>
+                        <span><small>Navin Reddy - Andhra Pradesh, India</small></span>
+                    </blockquote>
+                    <blockquote>
+                        <p><span class="apostrophy">"</span>Clean comfortable rooms and excellent hospitality. Dining here is delightful and I was pleased with the gluten free choices. Their staff are very friendly and professional.<span class="apostrophy">"</span></p>
+                        <span><small>Sumit - Maharashtra, India</small></span>
+                    </blockquote>
+                    <blockquote>
+                        <p><span class="apostrophy">"</span>Thank you to the Hotel Ladakh Imperial for sharing with us a piece of paradise, it was just what our family needed. Everything was breathtakingly beautiful. Each morning sunrise was a beautiful blessing. The staff showed us so much kindness from the moment we drove up to the hotel.<span class="apostrophy">"</span></p>
+                        <span><small>Sumitra - West Bengal, India</small></span>
+                    </blockquote>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-testimonials  -->
+";s:5:"mtime";i:1517601479;s:6:"markup";s:1892:"<div id="hli-content-wrapper-testimonials">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h1>{{ this.page.title }}</h1>
+                    <blockquote>
+                        <p><span class="apostrophy">"</span>Good: I love Hotel Ladakh Imperial's location, yet your a 5 minute drive from Waikiki. Food is superb in all of Hotel Ladakh Imperial's. I wouldn't stay anywhere else in Leh and always look forward to returning to the Hotel Ladakh Imperial.<span class="apostrophy">"</span></p>
+                        <span><small>Navin Reddy - Andhra Pradesh, India</small></span>
+                    </blockquote>
+                    <blockquote>
+                        <p><span class="apostrophy">"</span>Clean comfortable rooms and excellent hospitality. Dining here is delightful and I was pleased with the gluten free choices. Their staff are very friendly and professional.<span class="apostrophy">"</span></p>
+                        <span><small>Sumit - Maharashtra, India</small></span>
+                    </blockquote>
+                    <blockquote>
+                        <p><span class="apostrophy">"</span>Thank you to the Hotel Ladakh Imperial for sharing with us a piece of paradise, it was just what our family needed. Everything was breathtakingly beautiful. Each morning sunrise was a beautiful blessing. The staff showed us so much kindness from the moment we drove up to the hotel.<span class="apostrophy">"</span></p>
+                        <span><small>Sumitra - West Bengal, India</small></span>
+                    </blockquote>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-testimonials  -->";s:4:"code";N;s:5:"title";s:12:"Testimonials";s:3:"url";s:21:"/company/testimonials";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:11:"testimonial";a:0:{}}}

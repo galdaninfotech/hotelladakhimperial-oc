@@ -1,0 +1,19 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id: ID
+    itinerary_id: Itinerary ID
+    day: Day
+    intro: Intro
+    description: Description
+    breakfast: Breakfast
+    lunch: Lunch
+    dinner: Dinner
+    accommodation: Accommodation
+    airline : Airline
+    train: Train
+    bus: Bus
+

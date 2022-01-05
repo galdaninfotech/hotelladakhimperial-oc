@@ -1,0 +1,23 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+tabs:
+  fields:
+      id:
+          label: ID
+          disabled: true
+          tab: Edit
+
+      name:
+          label: Title
+          tab: Edit
+
+      days:
+          type: partial
+          path: field_days
+          tab: Itinerary Days
+
+      posts:
+          type: partial
+          path: field_posts
+          tab: Tours

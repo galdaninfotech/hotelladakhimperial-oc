@@ -1,0 +1,15 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    day:
+        label: Day
+
+    intro:
+        label: Intro
+
+    description:
+        label: description
+        type: textarea

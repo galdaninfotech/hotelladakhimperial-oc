@@ -1,0 +1,69 @@
+1514089537a:1:{s:24:"company/our-services.htm";a:16:{s:8:"fileName";s:24:"company/our-services.htm";s:7:"content";s:2058:"title = "Our Services"
+url = "/company/our-services"
+layout = "default"
+meta_title = "Our Services"
+meta_description = "Our Services"
+is_hidden = 0
+seo_keywords = "Our Services"
+robot_index = "index"
+robot_follow = "follow"
+
+[tourCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "tours/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blog-category"
+==
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>Our Services</h1>
+            <p>{{company}}  with the&nbsp;10 years of experience brings you all kinds of biking tour itinerary and biking tour related scope for its esteemed clients. We sell uniquely programmed biking tour packages. We have positioned ourselves as a niche service provider within the biking tour and packages and various guaranteed departures biking tours. Our services include<br>
+              </p>
+            <ul class="bullet">
+              <li>Biking Package</li>
+              <li>Family/Group biking tour packages</li>
+              <li>Cultural biking tour packages</li>
+              <li>Adventure Biking packages</li>
+          	</ul>	
+
+            <p> Choose any biking activity that suits and pleases you, and travel in the company of experienced local guides and like-minded biking companions. We strive to provide you a service that goes beyond your expectations – journeys that will truly redefine your travel experience. </p>
+            <p> Please feel free to ask for further information about Ladakh and give us a chance to let you experience Himalayas and Ladakh. Tashi Deleks, Julley! </p>
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+          <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        	{% partial 'site/right1' %}
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1500167106;s:6:"markup";s:1631:"<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>Our Services</h1>
+            <p>{{company}}  with the&nbsp;10 years of experience brings you all kinds of biking tour itinerary and biking tour related scope for its esteemed clients. We sell uniquely programmed biking tour packages. We have positioned ourselves as a niche service provider within the biking tour and packages and various guaranteed departures biking tours. Our services include<br>
+              </p>
+            <ul class="bullet">
+              <li>Biking Package</li>
+              <li>Family/Group biking tour packages</li>
+              <li>Cultural biking tour packages</li>
+              <li>Adventure Biking packages</li>
+          	</ul>	
+
+            <p> Choose any biking activity that suits and pleases you, and travel in the company of experienced local guides and like-minded biking companions. We strive to provide you a service that goes beyond your expectations – journeys that will truly redefine your travel experience. </p>
+            <p> Please feel free to ask for further information about Ladakh and give us a chance to let you experience Himalayas and Ladakh. Tashi Deleks, Julley! </p>
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+          <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        	{% partial 'site/right1' %}
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:12:"Our Services";s:3:"url";s:21:"/company/our-services";s:6:"layout";s:7:"default";s:10:"meta_title";s:12:"Our Services";s:16:"meta_description";s:12:"Our Services";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:12:"Our Services";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:14:"tourCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:14:"tours/category";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:18:"blog/blog-category";}}}

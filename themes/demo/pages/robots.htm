@@ -1,0 +1,19 @@
+title = "Robots"
+url = "/robots.txt"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onStart(){
+    $content = "User-agent: 
+        Disallow: /cgi-bin/
+        Disallow: /config/
+        Disallow: /modules/
+        Disallow: /plugins/
+        Disallow: /storage/
+        Disallow: /vendor/";
+    return Response::make($content)->header('Content-Type', 'text/plain');
+}
+?>
+==

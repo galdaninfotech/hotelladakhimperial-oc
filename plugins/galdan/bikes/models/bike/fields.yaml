@@ -1,0 +1,51 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+tabs:
+  fields:
+
+      name:
+        label: Name
+        span: left
+        tab: Edit
+
+      slug:
+        label: galdan.tour::lang.post.slug
+        span: right
+        placeholder: galdan.tour::lang.post.slug_placeholder
+        tab: Edit
+        preset:
+            field: name
+            type: slug
+
+      registration:
+        label: Registration No.
+        tab: Edit
+        span: left
+
+
+      manufacture:
+        label: Date of Manufacture
+        tab: Edit
+        type: datepicker
+        span: right
+
+      type:
+            tab: Details
+            type: relation
+            span: left
+            commentAbove: galdan.tour::lang.post.categories_comment
+            placeholder: Bike Type
+
+      featured_images:
+            tab: Details
+            label: galdan.tour::lang.post.featured_images
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200
+
+
+      
+
+

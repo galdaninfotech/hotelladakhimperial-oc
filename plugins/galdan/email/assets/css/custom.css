@@ -1,0 +1,30 @@
+#current_mailbox {
+	display: block;
+}
+
+
+#receive-all {
+	background: url(../images/receive_all.png) 0 0 no-repeat;
+}
+#send-all {
+	background: url(../images/send_all.png) 0 0 no-repeat;
+}
+
+#send-mail {
+	border: none;
+	background: url(../images/buttons.png) 0 0 no-repeat;
+	background-position: center -1660px;
+	width: 45px;
+    height: 45px;
+    margin-top: -30px;
+}
+span#send-text {
+    margin-left: -43px;
+    margin-right: 28px;
+    font-size: 10px;
+}
+
+.pagenav a.button {
+	height: 21px;
+	padding: 2px 3px;
+}

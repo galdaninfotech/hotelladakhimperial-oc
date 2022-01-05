@@ -1,0 +1,10 @@
+<form data-request="{{ __SELF__ }}::onSubscription1" data-request-success="alert('{{ text_messages }}')">
+	<div class="form-group"><input name="name" type="text" class="form-control newsletter" placeholder="Full Name"  id="subscribersName" required></div>
+    <div class="form-group"><input name="email" type="text" class="form-control newsletter" placeholder="Your Email"  id="subscribersEmail" required></div>
+    <button class="button medium orange pull-right" type="submit">Subscribe Now!</button>
+</form>
+<div class="row">
+    <div class="col-md-12">
+        <p class="subscribe-intro">Please subscribe to our periodic newsletter to get latest updates about ongoing tours and other offers from {{ company }}.</p>
+    </div>
+</div>

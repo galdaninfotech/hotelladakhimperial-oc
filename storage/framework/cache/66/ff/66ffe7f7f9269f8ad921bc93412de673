@@ -1,0 +1,65 @@
+1517890205a:1:{s:20:"ladakh/geography.htm";a:16:{s:8:"fileName";s:20:"ladakh/geography.htm";s:7:"content";s:4345:"title = "Geography of Ladakh"
+url = "/ladakh/geography"
+layout = "default"
+meta_title = "Geography of Ladakh"
+meta_description = "Geography of Ladakh"
+is_hidden = 0
+seo_keywords = "Geography of Ladakh"
+robot_index = "index"
+robot_follow = "follow"
+
+[tourCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "tours/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blog-category"
+==
+<div class="container" id="main-content-wrapper">
+  <div class="row">
+    <div class="col-md-9 main-content">
+        <h1>{{ this.page.title }}</h1>
+        <img src="{{'assets/images/geography.jpg'|theme}}" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;">
+        <p>Ladakh is the highest plateau of state of Kashmir with much of it being over 3,000 m (9,800 ft).] It spans the Himalayan and Karakoram mountain ranges and the upper Indus River valley.</p>
+        <p> The mountain ranges in this region were formed over a period of 45 million years by the folding of the Indian plate into the more stationary Eurasian Plate. The drift continues, causing frequent earthquakes in the Himalayan region.The peaks in the Ladakh range are at a medium altitude close to the Zoji-la (5,000–5,500 m or 16,000–18,050 ft), and increase towards south-east, culminating in the twin summits of Nun-Kun (7000 m or 23,000 ft).</p>
+        <p>The Indus river is the backbone of Ladakh. The Siachan Glacier is located in the eastern Karakoram range in the Himalaya Mountains along the disputed India-Pakistan border. The Karakoram range forms a great watershed that separates China from the Indian subcontinent and is sometimes called the "Third Pole." The glacier lies between the Saltoro Ridge immediately to the west and the main Karakoram range to the east. At 70 km long, it is the longest glacier in the Karakoram and second-longest in the world's non-polar areas. It falls from an altitude of 5,753 m (18,875 ft) above sea level at its source at Indira Col on the China border down to 3,620 m (11,875 ft) at its snout. The passes and some dominating heights on the Saltoro ridge, which has a crestline with heights from 5,450 to 7,720 m (17,880 to 25,330 feet), are occupied by troops on both sides.<br>
+        Saser Kangri is the highest peak in the Saser Muztagh, the easternmost subrange of the Karakoram range in India, Saser Kangri I having an altitude of 7,672 m (25,171 ft).</p>
+        <p> The Ladakh range has no major peaks; its average height is a little less than 6,000 m (19,700 ft), and few of its passes are less than 5,000 m (16,400 ft). North of the Karakoram lies the Kunlun. Thus, between Leh and eastern Central Asia there is a triple barrier - the Ladakh range, Karakoram range, and Kunlun. Nevertheless, a major trade route was established between Leh and Yarkand.</p>
+        <p> Ladakh is a high altitude desert as the Himalayas create a rain shadow, denying entry to monsoon clouds. The main source of water is the winter snowfall on the mountains. Recent flooding in the region (e.g., the 2010 floods) has been attributed to abnormal rain patterns and retreating glaciers, both of which might be linked to global warming. The Leh Nutrition Project, headed by Chewang Norphel, also known as the 'Glacier Man', currently creates artificial glaciers as one solution for retreating glaciers.<br>
+        The regions on the north flank of the Himalayas - Dras, the Suru valley and Zangskar - experience heavy snowfall and remain cut off from the rest of the region for several months in the year, as the whole region remains cut off by road from the rest of the country. Summers are short, though they are long enough to grow crops. The summer weather is dry and pleasant. Temperature ranges are from 3 to 35  °C in summer and minimums range from -20 to -35 °C in winter.</p>
+    </div><!-- Main Content -->
+
+    <div class="col-md-3">
+        <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        {% partial 'site/right1' %}
+    </div>
+    </div>
+</div>";s:5:"mtime";i:1517601486;s:6:"markup";s:3874:"<div class="container" id="main-content-wrapper">
+  <div class="row">
+    <div class="col-md-9 main-content">
+        <h1>{{ this.page.title }}</h1>
+        <img src="{{'assets/images/geography.jpg'|theme}}" style="float:right; padding:4px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:10px;">
+        <p>Ladakh is the highest plateau of state of Kashmir with much of it being over 3,000 m (9,800 ft).] It spans the Himalayan and Karakoram mountain ranges and the upper Indus River valley.</p>
+        <p> The mountain ranges in this region were formed over a period of 45 million years by the folding of the Indian plate into the more stationary Eurasian Plate. The drift continues, causing frequent earthquakes in the Himalayan region.The peaks in the Ladakh range are at a medium altitude close to the Zoji-la (5,000–5,500 m or 16,000–18,050 ft), and increase towards south-east, culminating in the twin summits of Nun-Kun (7000 m or 23,000 ft).</p>
+        <p>The Indus river is the backbone of Ladakh. The Siachan Glacier is located in the eastern Karakoram range in the Himalaya Mountains along the disputed India-Pakistan border. The Karakoram range forms a great watershed that separates China from the Indian subcontinent and is sometimes called the "Third Pole." The glacier lies between the Saltoro Ridge immediately to the west and the main Karakoram range to the east. At 70 km long, it is the longest glacier in the Karakoram and second-longest in the world's non-polar areas. It falls from an altitude of 5,753 m (18,875 ft) above sea level at its source at Indira Col on the China border down to 3,620 m (11,875 ft) at its snout. The passes and some dominating heights on the Saltoro ridge, which has a crestline with heights from 5,450 to 7,720 m (17,880 to 25,330 feet), are occupied by troops on both sides.<br>
+        Saser Kangri is the highest peak in the Saser Muztagh, the easternmost subrange of the Karakoram range in India, Saser Kangri I having an altitude of 7,672 m (25,171 ft).</p>
+        <p> The Ladakh range has no major peaks; its average height is a little less than 6,000 m (19,700 ft), and few of its passes are less than 5,000 m (16,400 ft). North of the Karakoram lies the Kunlun. Thus, between Leh and eastern Central Asia there is a triple barrier - the Ladakh range, Karakoram range, and Kunlun. Nevertheless, a major trade route was established between Leh and Yarkand.</p>
+        <p> Ladakh is a high altitude desert as the Himalayas create a rain shadow, denying entry to monsoon clouds. The main source of water is the winter snowfall on the mountains. Recent flooding in the region (e.g., the 2010 floods) has been attributed to abnormal rain patterns and retreating glaciers, both of which might be linked to global warming. The Leh Nutrition Project, headed by Chewang Norphel, also known as the 'Glacier Man', currently creates artificial glaciers as one solution for retreating glaciers.<br>
+        The regions on the north flank of the Himalayas - Dras, the Suru valley and Zangskar - experience heavy snowfall and remain cut off from the rest of the region for several months in the year, as the whole region remains cut off by road from the rest of the country. Summers are short, though they are long enough to grow crops. The summer weather is dry and pleasant. Temperature ranges are from 3 to 35  °C in summer and minimums range from -20 to -35 °C in winter.</p>
+    </div><!-- Main Content -->
+
+    <div class="col-md-3">
+        <div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+        <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        {% partial 'site/right1' %}
+    </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:19:"Geography of Ladakh";s:3:"url";s:17:"/ladakh/geography";s:6:"layout";s:7:"default";s:10:"meta_title";s:19:"Geography of Ladakh";s:16:"meta_description";s:19:"Geography of Ladakh";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:19:"Geography of Ladakh";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:14:"tourCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:14:"tours/category";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:18:"blog/blog-category";}}}

@@ -1,0 +1,27 @@
+subject = "Itinerary"
+==
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>Dear {{ name }},</p>
+<p>News from Ladakh Bike Safari:</p>
+<br>
+<p><em>{{ title }}</em><br>
+<p>www.hotelladakhimperial.com/news/{{ slug }}</p>
+<br>
+
+
+{% for day in days %}
+    <h6>{{ day.intro }}</h6>
+    <p>{{ day.description }}</p>
+{% endfor %}
+
+<br>
+<br>
+<br>
+<p>Best regards,<br>
+The Team</p>

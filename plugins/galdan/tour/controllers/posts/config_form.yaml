@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: galdan.tour::lang.tour.create_post
+form: ~/plugins/galdan/tour/models/post/fields.yaml
+modelClass: Galdan\Tour\Models\Post
+defaultRedirect: galdan/tour/posts
+
+create:
+    redirect: galdan/tour/posts/update/:id
+    redirectClose: galdan/tour/posts
+
+update:
+    redirect: galdan/tour/posts
+    redirectClose: galdan/tour/posts

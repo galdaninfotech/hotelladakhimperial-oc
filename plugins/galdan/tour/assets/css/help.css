@@ -1,0 +1,235 @@
+ ===================================================================
+ Styles Switcher
+ ======================================================================
+ 
+/* General Backend Custom Style */
+table.table.data .list-checkbox .custom-checkbox {
+    position: relative;
+    top: -3px;
+    left: -2px;
+}
+table.table.data tbody tr td.list-checkbox {
+  padding-top: 10px;
+}
+ table.table.data tbody td, table.table.data tbody th {
+  padding: 5px;
+  vertical-align: middle;
+ }
+
+
+
+/* Gantt */
+#gantt {
+  background-color: #002B36;
+}
+input#gantt-start, input#gantt-end, input#category {
+    background: #888;
+    border: none;
+    height: 28px;
+    margin-right: 2px;
+}
+div#gantt-range {
+  background-color: #002B36;
+}
+div#gantt-range span {
+  color: #CDCDCD;
+}
+td.tour-title {
+  padding: 2.999em;
+}
+
+
+
+
+
+/* Help Style */
+#help {
+  border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    -o-border-radius: 0 0 5px 0;
+    -ms-border-radius: 0 0 5px 0;
+    -webkit-border-radius: 0 0 5px 0;
+  background: #000;
+  width:100%;
+  position:fixed;
+  z-index:9999;
+  top: -500px;
+  border-radius: 0 0 3px 0;
+  height: 500px;
+}
+#help .container {
+  margin: 0 auto;
+}
+#help h2 {
+  font-family: "Open Sans", Arial, sans-serif;
+  border-bottom: 1px solid #252424;
+  color: #222222;
+  font-weight: 600;
+  padding: 0;
+  line-height: 44px;
+  font-size: 16px;
+  padding: 0 24px;
+  text-transform: uppercase;
+}
+#help h3 {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color:#999999;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#help > div {
+  padding: 26px 24px;
+}
+
+#help h2 a {
+    background: url(switcher.png) no-repeat scroll center center #fff;
+    border: 1px solid #dadada;
+    border-top: none;
+    display: block;
+    height: 20px;
+    position: absolute;
+    right: -1px;
+    text-indent: -9999px;
+    top: 513px;
+    width: 20px;
+}
+  
+help h4 {
+  color: #fff;
+  font-weight: bold; 
+  padding: 0 4px;
+  }
+
+.help-ul-link {
+  list-style-image: url(../images/help-link-arrow.png);
+}
+
+.help-ul-link a {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: Arial,Helvetica,'san serif';
+  font-size: 9px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #0E0E0E;
+ }
+
+help .container .row .col-md-3 h4 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #4f4f4f;
+  padding-bottom: 15px; }
+
+help .container .row .col-md-3 a {
+  color: #AAA;
+  font-size: 12px;
+  display: inline-block;
+  padding: 1px 35px 1px 3px; }
+
+help .container .row .col-md-3 a:hover {
+  background-color: #fff;
+  color: #3c1212; }
+  
+#close-help {
+  margin-top: -82px;
+}
+
+
+  /*  HTML Content
+<!-- help starts -->
+    <div id="help">
+        <div class="container">
+            <div class="row">
+                <div><h2>Help Content <a href="javascript:void(0);">Help</a></h2></div>
+                <div class="col-md-1 pull-right"><img id="close-help" src="<?= URL::asset('themes/demo/assets/images/close.png') ?>"></div>
+            </div>
+        </div>
+        <help>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-xs-6 col-sm-4">
+                        <h4>Tour</h4>
+                        <ul class="help-ul-link">
+                            <li><a href="index.php">home</a></li>
+                            <li><a href="index.php?c=company&m=about-company">about company</a></li>
+                            <li><a href="index.php?c=company&m=our-services">Our Services</a></li>
+                            <li><a href="index.php?m=photo-gallery">Photo Gallery</a></li>
+                            <li><a href="index.php?c=company&m=testimonials">Testimonials</a></li>
+                            <li><a href="index.php?c=company&m=contact">Contact Us</a></li>
+                            <li><a href="index.php?m=sitemap">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-xs-6 col-sm-4">
+                        <h4>Itinerary</h4>
+                        <ul class="help-ul-link">
+                            <li><a href="index.php?c=ladakh&m=about-ladakh">about ladakh</a></li>
+                            <li><a href="index.php?c=ladakh&m=history">history</a></li>
+                            <li><a href="index.php?c=ladakh&m=art-culture">art & culture</a></li>
+                            <li><a href="index.php?c=ladakh&m=geography">geography</a></li>
+                            <li><a href="index.php?c=ladakh&m=wildlife">wildlife</a></li>
+                            <li><a href="index.php?c=ladakh&m=how-to-reach">how to reach</a></li>
+                            <li><a href="index.php?c=ladakh&m=ladakh-festival">Ladakh Festivals</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-xs-6 col-sm-4">
+                        <h4>Client</h4>
+                        <ul class="help-ul-link">
+                            <li><a href="index.php?c=packages&m=ecstactic-ladakh">Ecstactic Ladakh</a></li>
+                            <li><a href="index.php?c=packages&m=pride-of-ladakh">Pride Of Ladakh</a></li>
+                            <li><a href="index.php?c=packages&m=mighty-ladakh">Mighty Ladakh</a></li>
+                            <li><a href="index.php?c=packages&m=classic-ladakh">Classic Ladakh</a></li>
+                            <li><a href="index.php?c=packages&m=treasures-of-ladakh">Treasures of Ladakh</a></li>
+                            <li><a href="index.php?c=packages&m=amazing-ladakh">Amazing Ladakh</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-xs-6 col-sm-4">
+                        <h4>Bookings</h4>
+                        <ul class="help-ul-link">
+                            <li><a href="index.php?c=places&m=ancient-monasteries">Ancient Monasteries</a></li>
+                            <li><a href="index.php?c=places&m=changthang-nomadic-highland">Changthang Highland</a></li>
+                            <li><a href="index.php?c=places&m=indus-valley">Indus Valley (ladakh)</a></li>
+                            <li><a href="index.php?c=places&m=markha-valley">Markha Valley</a></li>
+                            <li><a href="index.php?c=places&m=nubra-valley">Nubra Valley</a></li>
+                            <li><a href="index.php?c=places&m=sham-valley">Sham Valley</a></li>
+                            <li><a href="index.php?c=places&m=zanskar-valley">Zanskar Valley</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-xs-6 col-sm-4">
+                        <h4>Email</h4>
+                        <ul class="help-ul-link">
+                            <li><a href="index.php?c=places&m=ancient-monasteries">Ancient Monasteries</a></li>
+                            <li><a href="index.php?c=places&m=changthang-nomadic-highland">Changthang Highland</a></li>
+                            <li><a href="index.php?c=places&m=indus-valley">Indus Valley (ladakh)</a></li>
+                            <li><a href="index.php?c=places&m=markha-valley">Markha Valley</a></li>
+                            <li><a href="index.php?c=places&m=nubra-valley">Nubra Valley</a></li>
+                            <li><a href="index.php?c=places&m=sham-valley">Sham Valley</a></li>
+                            <li><a href="index.php?c=places&m=zanskar-valley">Zanskar Valley</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-xs-6 col-sm-4">
+                        <h4>SEO</h4>
+                        <ul class="help-ul-link">
+                            <li><a href="index.php?c=places&m=ancient-monasteries">Ancient Monasteries</a></li>
+                            <li><a href="index.php?c=places&m=changthang-nomadic-highland">Changthang Highland</a></li>
+                            <li><a href="index.php?c=places&m=indus-valley">Indus Valley (ladakh)</a></li>
+                            <li><a href="index.php?c=places&m=markha-valley">Markha Valley</a></li>
+                            <li><a href="index.php?c=places&m=nubra-valley">Nubra Valley</a></li>
+                            <li><a href="index.php?c=places&m=sham-valley">Sham Valley</a></li>
+                            <li><a href="index.php?c=places&m=zanskar-valley">Zanskar Valley</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>   <!-- row -->     
+            </div> <!-- container --> 
+
+         
+        </help>
+    </div>  
+    <!-- help ends -->

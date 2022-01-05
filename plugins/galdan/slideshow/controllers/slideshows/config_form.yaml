@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Slideshow
+
+# Model Form Field configuration
+form: $/galdan/slideshow/models/slideshow/fields.yaml
+
+# Model Class name
+modelClass: Galdan\Slideshow\Models\Slideshow
+
+# Default redirect location
+defaultRedirect: galdan/slideshow/slideshows
+
+# Create page
+create:
+    title: Create Slideshow
+    redirect: galdan/slideshow/slideshows/update/:id
+    redirectClose: galdan/slideshow/slideshows
+
+# Update page
+update:
+    title: Edit Slideshow
+    redirect: galdan/slideshow/slideshows
+    redirectClose: galdan/slideshow/slideshows
+
+# Preview page
+preview:
+    title: Preview Slideshow

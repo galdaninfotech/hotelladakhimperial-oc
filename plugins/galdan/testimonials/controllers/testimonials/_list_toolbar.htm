@@ -1,0 +1,37 @@
+<div data-control="toolbar">
+    <a
+        href="<?= Backend::url('galdan/testimonials/testimonials/create') ?>"
+        class="btn btn-primary oc-icon-plus">
+        <?= e(trans('galdan.testimonials::lang.new.testimonials')) ?>
+    </a>
+    <?php if (Galdan\Testimonials\Models\Testimonials::count() > 0): ?>
+    <button
+        class="btn btn-default oc-icon-trash-o"
+        disabled="disabled"
+        onclick="$(this).data('request-data', {
+            checked: $('.control-list').listWidget('getChecked')
+        })"
+        data-request="onRemoveTestimonials"
+        data-request-confirm="<?= e(trans('galdan.testimonials::lang.flash.delete')) ?>"
+        data-trigger-action="enable"
+        data-trigger=".control-list input[type=checkbox]"
+        data-trigger-condition="checked"
+        data-stripe-load-indicator>
+        <?= e(trans('system::lang.plugins.remove')) ?>
+    </button>
+    <?php endif ?>
+    <?php if ($this->user->hasAccess('galdan.testimonials.import_export')): ?>
+    <div class="btn-group">
+        <a
+            href="<?= Backend::url('galdan/testimonials/testimonials/export') ?>"
+            class="btn btn-default oc-icon-download">
+            <?= e(trans('galdan.testimonials::lang.button.export')) ?>
+        </a>
+        <a
+            href="<?= Backend::url('galdan/testimonials/testimonials/import') ?>"
+            class="btn btn-default oc-icon-upload">
+            <?= e(trans('galdan.testimonials::lang.button.import')) ?>
+        </a>
+    </div>
+    <?php endif ?>
+</div>

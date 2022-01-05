@@ -1,0 +1,19 @@
+<form 
+	id="contact-form" 
+	data-request="onContact" 
+	data-request-success="
+		$('#contact-form').fadeOut();
+		$('.contact h1').html('Thank You!');
+		$('.contact').append('<p>Hi '+$('#name').val()+'!</p>');
+		$('.contact').append('<p>Your message has been sent. You will be shortly contacted by our customer support.</p>');
+		console.log('{{ text_messages }}');
+	">
+    <div class="form-group"> <input type="text" id="name" name="name" placeholder="Name" class="form-control" required> </div>
+    <div class="form-group"><input type="text" name="email" placeholder="Email" class="form-control" required></div>
+	<div class="form-group"><textarea name="message" placeholder="Your Message" rows="12" class="form-control" required></textarea></div>
+	<div class="form-group">
+		<input type="submit" name="submit_book_now_form" value="Submit" class="button medium orange">
+        <input type="hidden" name="Submit" value="Submit">
+	</div>
+
+</form>

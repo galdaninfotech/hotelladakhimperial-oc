@@ -1,0 +1,107 @@
+
+{% set post = __SELF__.post %}
+
+
+<h1>{{ post.title }}</h1>
+
+
+
+<!-- <br><br>
+<p class="info">
+    Published
+    {% if post.categories.count %} in
+        {% for category in post.categories %}
+            <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    {% endif %}
+    on {{ post.published_at|date('M d, Y') }}
+</p> -->
+
+{% partial 'site/tour_slideshow' image_count=1 %}
+
+<br>
+<a href="{{ url('company-booking/') }}/{{ post.id }}" target="_new" class="button medium orange pull-right">Book Now!</a>
+<br>
+<br>
+<br>
+<table id="tour-header" class="table">
+    <tbody>
+        <tr>
+            <td><strong><img 
+                src="{{'assets/images/durations_icon.png'|theme}}" 
+                alt="{{this.page.title}}" /> Duration :</strong>
+                {{ post.itinerary.days.count -1 }} Nights / {{ post.itinerary.days.count }} Days
+            </td>
+            <td><strong><img src="{{'assets/images/calendar_icon.png'|theme}}" alt="{{this.page.title}}" /> Start Date : </strong>{{post.start}}</td>
+            <td><strong><img src="{{'assets/images/calendar_icon.png'|theme}}" alt="{{this.page.title}}" /> End Date : </strong>{{post.start}}</td>
+        </tr>
+        <tr>
+            <td><strong><img src="{{'assets/images/route_icon.png'|theme}}" alt="{{this.page.title}}" /> Places :</strong>Leh / Hemis National park / Leh</td>
+            <td><strong><img src="{{'assets/images/grade_icon.png'|theme}}" alt="{{this.page.title}}" /> Grade :</strong>{{ post.grade }}</td>
+             <td><strong><img 
+                src="{{'assets/images/durations_icon.png'|theme}}" 
+                alt="{{this.page.title}}" /> On Trek :</strong>
+                {{ post.itinerary.days.count }} Nights / {{ post.itinerary.days.count + 1 }} Days
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p>{{ post.description }}</p>
+
+<div class="tabbable">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+        <li><a href="#details" data-toggle="tab">Tour Details</a></li>
+        <li><a href="#includes" data-toggle="tab">Includes</a></li>
+        <li><a href="#excludes" data-toggle="tab">Excludes</a></li>
+        <li><a href="#departure" data-toggle="tab">Tour Departure</a></li>
+        <li><a href="#cost" data-toggle="tab">Cost</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <h4>Overview</h4>
+            <p>{{ post.excerpt }}</p>
+            {% if post.itinerary.days.count %}
+                {% for day in post.itinerary.days %}
+                    <h6><span>Day {{day.day}} - </span>{{ day.intro }}</h6>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="tab-pane" id="details">
+            <h4>Details</h4>
+            <p>{{ post.content }}</p>
+            {% if post.itinerary.days.count %}
+                {% for day in post.itinerary.days %}
+                    <h6><span>Day {{day.day}} - </span>{{ day.intro }}</h6>
+                    <p>{{ day.description }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="tab-pane" id="includes">
+            <h4>Includes</h4>
+            {{ post.includes|raw }}
+        </div>
+
+        <div class="tab-pane" id="excludes">
+            <h4>Excludes</h4>
+            {{ post.excludes|raw }}
+        </div>
+
+        <div class="tab-pane" id="departure">
+            <h4>Departure</h4>
+        </div>
+
+        <div class="tab-pane" id="cost">
+            <h4>Tour Cost</h4>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<a href="{{ url('company-booking/') }}/{{ post.id }}" target="_new" class="button medium orange pull-right">Book Now!</a>
+
+<div class="fb-like" data-href="http://localhost/hotelladakhimperial-oc/tour/post/amazing-ladakh-01" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>

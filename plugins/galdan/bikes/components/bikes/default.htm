@@ -1,0 +1,61 @@
+{% set bikes = __SELF__.bikes %}
+
+<br>
+<br>
+<ul class="bike-list">
+    <div class="row">
+    {% for bike in bikes %}
+        <li>
+            <div class="col-md-9">
+                <h3><a href="bike/{{ bike.slug }}">{{ bike.name }}</a></h3>
+                <p class="info">
+                    Posted
+                    {% if bike.categories.count %} in {% endif %}
+                    on {{ bike.published_at|date('M d, Y') }}
+                </p>            
+                <p class="excerpt">{{ html_limit(bike.type.description, 250)|raw}}<a class="read-more" href="bike/{{ bike.slug }}">... read more</a></p>
+            </div>
+
+            <!-- image -->
+            <div class="col-md-3">
+                {% if bike.featured_images.count %}
+                    {% set firstItem = bike.featured_images|first %}
+                    <div class="featured-images text-center">
+                        <br>
+                        <p>
+                            <img
+                                data-src="{{ firstItem.filename }}"
+                                src="{{ firstItem.path | resize(120,120,{ mode: 'crop', quality: '80', extension: 'jpg' })}}"
+                                alt="{{ firstItem.description }}" />
+                        </p>
+                    </div>
+                {% endif %}
+            </div>
+
+        </li>
+    {% else %}
+        <li class="no-data">{{ noPostsMessage }}</li>
+    {% endfor %}
+    </div>
+</ul>
+
+
+
+<!-- Pagination -->
+{% if bikes.lastPage > 1 %}
+    <ul class="pagination">
+        {% if bikes.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (bikes.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..bikes.lastPage %}
+            <li class="{{ bikes.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if bikes.lastPage > bikes.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (bikes.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

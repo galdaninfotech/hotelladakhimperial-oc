@@ -1,0 +1,123 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: galdan.tour::lang.post.title
+        span: left
+        placeholder: galdan.tour::lang.post.title_placeholder
+
+    slug:
+        label: galdan.tour::lang.post.slug
+        span: right
+        placeholder: galdan.tour::lang.post.slug_placeholder
+        preset:
+            field: title
+            type: slug
+
+    toolbar:
+        type: partial
+        path: post_toolbar
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        # content:
+        #     label: Intro
+        #     tab: galdan.tour::lang.post.tab_edit
+        #     type: textarea
+        #     cssClass: field-slim tour-post-preview
+        #     stretch: true
+        #     mode: split
+        
+        category:
+            tab: galdan.tour::lang.post.tab_edit
+            type: relation
+            commentAbove: galdan.tour::lang.post.categories_comment
+            placeholder: galdan.tour::lang.post.categories_placeholder
+            span: left
+        
+        itinerary:
+            tab: galdan.tour::lang.post.tab_edit
+            type: relation
+            commentAbove: galdan.tour::lang.post.itinerary_comment
+            placeholder: galdan.tour::lang.post.itinerary_placeholder
+            span: right
+        
+        grade:
+            tab: galdan.tour::lang.post.tab_edit
+            label: 'Tour Grade'
+            span: left
+
+        start:
+            tab: galdan.tour::lang.post.tab_edit
+            label: 'Start'
+            type: datepicker
+            span: right
+
+        description:
+            label: Description
+            tab: galdan.tour::lang.post.tab_edit
+            type: textarea
+            size: small
+
+
+
+        published:
+            tab: galdan.tour::lang.post.tab_manage
+            label: galdan.tour::lang.post.published
+            span: left
+            type: checkbox
+
+        published_at:
+            tab: galdan.tour::lang.post.tab_manage
+            label: galdan.tour::lang.post.published_on
+            span: left
+            cssClass: checkbox-align
+            type: datepicker
+            mode: datetime
+            trigger:
+                action: enable
+                field: published
+                condition: checked
+
+        featured_images:
+            tab: galdan.tour::lang.post.tab_manage
+            label: galdan.tour::lang.post.featured_images
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200
+            
+
+        includes:
+            label: Includes
+            type: richeditor
+            tab: Includes/Excludes
+            span: left
+        
+        excludes:
+            label: Excludes
+            type: richeditor
+            tab: Includes/Excludes
+            span: right
+
+
+            
+        bookings:
+            type: partial
+            path: field_bookings
+            tab: Bookings
+
+        clients:
+            type: partial
+            path: field_clients
+            tab: Clients
+
+        tasks:
+            type: partial
+            path: field_tasks
+            tab: Tasks

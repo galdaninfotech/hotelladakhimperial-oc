@@ -1,0 +1,151 @@
+<?php 
+
+if(post('start')) {
+    // dd(post('start'));
+    $s = post('start');
+    $e = post('end');
+} else {
+    $s = date('Y').'-'.date('m').'-1';
+    $e = date('Y-m-d', strtotime('+3 months', strtotime($s)));;
+}
+
+
+
+$gantt_start = new DateTime($s);
+$gantt_end = new DateTime($e);
+
+$output = '';
+$output .= '<aside>';
+$output .= '<table>';
+$output .= '<tr><td class="tour-title">Tour</td></tr>';
+foreach ($tours as $row) { 
+    $output .= '<tr>';
+        $output .= '<td class="tour-name">'.$row['title'].'</td>';
+    $output .= '</tr>';
+}
+$output .= '</table>';
+$output .= '</aside>';
+echo $output;
+
+
+$days = $gantt_end->diff($gantt_start)->format("%a");
+?>
+
+<div id="gantt-range">
+    <form id="gantt-form" method="post" action="<?= Backend::url('galdan/tour/posts/gantt') ?>">
+        <span>Date Range </span> <input id="gantt-start" type="date" name="start">
+        <input id="gantt-end" type="date" name="end" >
+        <input id="category" type="text" placeholder="Category" >
+        <input type="submit" value="Submit" >
+    </form>
+</div>
+
+<?php
+$output = '';
+$output .= '<div id="gantt">';
+$output .= '<table id="gantt-table">';
+
+//Month Headings
+$output .= '<tr class="month">';
+for ($i=0; $i < $days; $i++) { 
+    $next_day = date('Y-m-d H:i:s', strtotime('+'.$i.' days', strtotime($s)));
+    $d = substr($next_day, 8, 2);
+    $m = substr($next_day, 5, 2);
+    $y = substr($next_day, 0, 4);
+    $today = getdate( mktime(1,20,40,$m,$d,$y));
+
+    if($today['mday'] < 14 || $today['mday'] > 16) {
+        $output .= '<td class="month-header"><div class="days" style="width:12px; height: 30px;"></div></td>';
+    } else {
+        $output .= '<td colspan="3" class="month-header"><div class="days" style="width:12px; height: 30px;">'.substr($today['month'], 0, 3).' '.$today['year'].'</div></td>';
+        $i++;
+        $i++;
+    }
+
+
+    
+}
+$output .= '</tr>';
+
+
+//Day Headings
+$output .= '<tr>';
+for ($i=0; $i < $days; $i++) { 
+    $next_day = date('Y-m-d H:i:s', strtotime('+'.$i.' days', strtotime($s)));
+    $d = substr($next_day, 8, 2);
+    $m = substr($next_day, 5, 2);
+    $y = substr($next_day, 0, 4);
+    $today = getdate( mktime(1,20,40,$m,$d,$y));
+    if( $today['wday'] == 6 ) {
+        $output .=                       '<td class="weekend-day">'.$today['mday'].'<span>'.substr($today['weekday'], 0, 1).'</span></td>';
+    } else {
+        if( $today['wday'] == 0 ) {
+            $output .=                       '<td class="weekend-day">'.$today['mday'].'<span>'.substr($today['weekday'], 0, 1).'</span></td>';
+        } else {
+            $output .= '<td class="days-header">'.$today['mday'].'<span>'.substr($today['weekday'], 0, 1).'</span></td>';
+        }
+    }
+
+
+    
+}
+$output .= '</tr>';
+
+
+foreach ($tours as $row) { 
+$output .= '<tr>';
+    for ($i=0; $i < $days; $i++) { 
+        $next_day2 = date('Y-m-d H:i:s', strtotime('+'.$i.' days', strtotime($s)));
+        $d = substr($next_day2, 8, 2);
+        $m = substr($next_day2, 5, 2);
+        $y = substr($next_day2, 0, 4);
+        $today = getdate( mktime(1,20,40,$m,$d,$y));
+        $today_str = $today['year'].'-'.$today['mon'].'-'.$today['mday'];
+        $d1 = new DateTime($today_str);
+        $d2 = new DateTime($row['start']);
+        $d3 = new DateTime($row['end']);
+        if($d1 >= $d2 && $d1 <= $d3) {$output .= '<td class="gantt-day-in"><span class="days">'.$today['mday'].'</span></td>';} 
+        else {
+            if( $today['wday'] == 6 ) {
+                $output .=                       '<td class="weekend-day style="width:12px; height: 30px;"></td>';
+            } else {
+                if( $today['wday'] == 0 ) {
+                    $output .=                       '<td class="weekend-day style="width:12px; height: 30px;"></td>';
+                } else {
+                    $output .=                       '<td class="gantt-day style="width:12px; height: 30px;"></td>';
+                }
+            }
+        }
+        
+    }
+$output .= '</tr>';
+}
+
+$output .= '</table>';
+$output .= '</div>';
+
+echo $output;
+
+
+
+function inTourDate($row) {
+
+}
+
+
+
+
+?>
+<br>
+<br>
+<br>
+<div class="gantt-wrapper"> <div class="days" style="width:11px; height: 11px; background-color: #777"></div></div>  
+
+<style type="text/css">
+    .layout-row {
+    background-color: #252525;
+}
+#layout-body {
+    padding: 0;
+}
+</style>

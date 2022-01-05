@@ -1,0 +1,65 @@
+1514089537a:1:{s:17:"company/about.htm";a:16:{s:8:"fileName";s:17:"company/about.htm";s:7:"content";s:2893:"title = "About"
+url = "/company-about"
+layout = "default"
+meta_title = "About Us"
+meta_description = "About Us"
+is_hidden = 0
+seo_keywords = "About Us"
+robot_index = "index"
+robot_follow = "follow"
+
+[tourCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "tours/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blog-category"
+==
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>About Us</h1>
+            <p>
+                  <strong>If you travel, it must be to seek difference. This difference is made by {{company}} .</strong></p>
+                  <img src="{{ url('/assets/images/about-ladakh_img.jpg'|theme) }}" style="float:right; padding:4px; margin-top:5px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:5px;">
+                  <p>                   The Company is run by Tsewang Norboo and Thinles Gyatso, motivated and experienced Ladakhis, who has guided biking tour throughout Ladakh for several years before starting his own company. He is registered (Reg No. TRM/TRL-670/2014) as a travel agent and biking tour operator under the Tourism Department Jammu &amp; Kashmir, Government of India, with its main office in Leh / Ladakh and also associated with All Ladakh Tour Operators Association (ALTOA). <br>
+                  </p>
+                  <p>Plan your perfect trip to the mesmerising Ladakh with {{company}}. The thrill of finding oneself in the midst of snowy peaks, glaciers, unparalleled slopes, crystal clear river and lust green fields of wild flowers is an unmatched experience. <br>
+                    Ladakh is liked by all, whether it is an eager traveler, a fun visitor, an adventure lover, an environmentalist, a wildlife researcher, a photographer or a monk in search of peace. Great care and concern is shown for Nature during in our biking tours! <br>
+                    Count on us to provide all the elements of an exciting adventure, vacation getaway while balancing yours schedule, budget and interests.</p>
+                  <p><strong>{{company}}</strong> warmly invites you explore Ladakh and discover your ideas travel-experience. Experience that is uniquely yours own. We are glad to have served our valued guests from Spain, Italy, France, Germany, Russia, United States of America, Canada, Argentina, Chile, Brazil, Mexico, Israel, Thailand, Singapore, India and other countries. So don’t miss your chance.</p>
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+          <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        	{% partial 'site/right1' %}
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1500166962;s:6:"markup";s:2492:"<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>About Us</h1>
+            <p>
+                  <strong>If you travel, it must be to seek difference. This difference is made by {{company}} .</strong></p>
+                  <img src="{{ url('/assets/images/about-ladakh_img.jpg'|theme) }}" style="float:right; padding:4px; margin-top:5px; border:1px solid #e1e1e1; margin-left:15px; margin-bottom:5px;">
+                  <p>                   The Company is run by Tsewang Norboo and Thinles Gyatso, motivated and experienced Ladakhis, who has guided biking tour throughout Ladakh for several years before starting his own company. He is registered (Reg No. TRM/TRL-670/2014) as a travel agent and biking tour operator under the Tourism Department Jammu &amp; Kashmir, Government of India, with its main office in Leh / Ladakh and also associated with All Ladakh Tour Operators Association (ALTOA). <br>
+                  </p>
+                  <p>Plan your perfect trip to the mesmerising Ladakh with {{company}}. The thrill of finding oneself in the midst of snowy peaks, glaciers, unparalleled slopes, crystal clear river and lust green fields of wild flowers is an unmatched experience. <br>
+                    Ladakh is liked by all, whether it is an eager traveler, a fun visitor, an adventure lover, an environmentalist, a wildlife researcher, a photographer or a monk in search of peace. Great care and concern is shown for Nature during in our biking tours! <br>
+                    Count on us to provide all the elements of an exciting adventure, vacation getaway while balancing yours schedule, budget and interests.</p>
+                  <p><strong>{{company}}</strong> warmly invites you explore Ladakh and discover your ideas travel-experience. Experience that is uniquely yours own. We are glad to have served our valued guests from Spain, Italy, France, Germany, Russia, United States of America, Canada, Argentina, Chile, Brazil, Mexico, Israel, Thailand, Singapore, India and other countries. So don’t miss your chance.</p>
+        </div>
+        <div class="col-md-3">
+        	<div class="widget-lbg"><div class="widget-title">Tour Categories</div></div>
+            {% component 'tourCategories' %}
+          <div class="widget-lbg"><div class="widget-title">Blog Categories</div></div>
+            {% component 'blogCategories' %}
+        	{% partial 'site/right1' %}
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:5:"About";s:3:"url";s:14:"/company-about";s:6:"layout";s:7:"default";s:10:"meta_title";s:8:"About Us";s:16:"meta_description";s:8:"About Us";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:8:"About Us";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:14:"tourCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:14:"tours/category";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:18:"blog/blog-category";}}}

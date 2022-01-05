@@ -1,0 +1,41 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    # Page title
+    title: galdan.tour::lang.posts.import_post
+
+    # Import List Column configuration
+    list: $/galdan/tour/models/postimport/columns.yaml
+
+    # Import Form Field configuration
+    form: $/galdan/tour/models/postimport/fields.yaml
+
+    # Import Model class
+    modelClass: Galdan\Tour\Models\PostImport
+
+    # Redirect when finished
+    redirect: galdan/tour/posts
+
+    # Required permissions
+    permissions: galdan.tour.access_import_export
+
+export:
+    # Page title
+    title: galdan.tour::lang.posts.export_post
+
+    # Output file name
+    fileName: tours.csv
+
+    # Export List Column configuration
+    list: $/galdan/tour/models/postexport/columns.yaml
+
+    # Export Model class
+    modelClass: Galdan\Tour\Models\PostExport
+
+    # Redirect when finished
+    redirect: galdan/tour/posts
+
+    # Required permissions
+    permissions: galdan.tour.access_import_export

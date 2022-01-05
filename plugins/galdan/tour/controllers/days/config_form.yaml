@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Day
+
+# Model Form Field configuration
+form: $/galdan/tour/models/day/fields.yaml
+
+# Model Class name
+modelClass: Galdan\Tour\Models\Day
+
+# Default redirect location
+defaultRedirect: galdan/tour/days
+
+# Create page
+create:
+    title: Create Day
+    redirect: galdan/tour/days/update/:id
+    redirectClose: galdan/tour/days
+
+# Update page
+update:
+    title: Edit Day
+    redirect: galdan/tour/days
+    redirectClose: galdan/tour/days
+
+# Preview page
+preview:
+    title: Preview Day

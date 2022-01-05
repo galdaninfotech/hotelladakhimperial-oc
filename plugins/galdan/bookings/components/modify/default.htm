@@ -1,0 +1,30 @@
+<h1>Booking #Ref : {{ client_booking['id'] }}</h1><span class="pull-right">Hi <a href="account">{{user.name}}!</a></span>
+<a class="back-to-bookings" href="client-bookings">Back</a>
+<table id="preview-booking">
+    <tbody>
+        <tr>
+            <td>#Ref : </td>
+            <td><input type="text" name="email" value="{{ client_booking['id'] }}" class="form-control" disabled></td>
+        </tr>
+        <tr>
+            <td>Contact No. : </td>
+            <td><input type="text" name="email" value="{{ client_booking['contactno'] }}" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Tour : </td>
+            <td><input type="text" name="email" value="{{ client_booking['post'].title }}" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Pax : </td>
+            <td><input type="text" name="email" value="{{ client_booking['numperson'] }}" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Arrival : </td>
+            <td><input type="text" name="email" value="{{ client_booking['arrival'] }}" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Requirements : </td>
+            <td><textarea rows="10" cols="20" class="form-control">{{ client_booking['requirements'] }}</textarea></td>
+        </tr>
+    </tbody>
+</table>

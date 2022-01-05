@@ -1,0 +1,41 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    # Page title
+    title: Import Itineraries
+
+    # Import List Column configuration
+    list: $/galdan/tour/models/itineraryimport/columns.yaml
+
+    # Import Form Field configuration
+    form: $/galdan/tour/models/itineraryimport/fields.yaml
+
+    # Import Model class
+    modelClass: Galdan\Tour\Models\ItineraryImport
+
+    # Redirect when finished
+    redirect: galdan/tour/itineraries
+
+    # Required permissions
+    permissions: galdan.tour.access_import_export
+
+export:
+    # Page title
+    title: Export Itineraries
+
+    # Output file name
+    fileName: itineraries.csv
+
+    # Export List Column configuration
+    list: $/galdan/tour/models/itineraryexport/columns.yaml
+
+    # Export Model class
+    modelClass: Galdan\Tour\Models\ItineraryExport
+
+    # Redirect when finished
+    redirect: galdan/tour/itineraries
+
+    # Required permissions
+    permissions: galdan.tour.access_import_export

@@ -1,0 +1,57 @@
+1517890205a:1:{s:8:"home.htm";a:15:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1210:"title = "Home"
+url = "/"
+layout = "default"
+meta_title = "Unmatched staying Experiences"
+meta_description = "Hotel Ladakh Imperial"
+is_hidden = 0
+seo_keywords = "Hotel Ladakh Imperial"
+robot_index = "index"
+robot_follow = "follow"
+
+[quickform]
+==
+
+<div id="hli-content-wrapper-home">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h4 class="center">Imperial Hotel Ladakh</h4>
+					<h4>Experience the highest level of luxury</h4>
+					<p>WELCOME TO HOTEL LADAKH IMPERIAL, a finest hotel located in Skara. Hotel Ladakh Imperial hotel is traditional in design and architecture, with all modern facilities you might look for on your holiday. Located midway between Leh Airport (02 kms) and the old City Centre (02 kms), the distance between the hotel & the old Leh Bazaar is a mere 04-minute-drive or a 20-minute walk amidst the sights & sounds of this quaint town.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-services  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+";s:5:"mtime";i:1517601469;s:6:"markup";s:915:"<div id="hli-content-wrapper-home">
+    <div  id="hli-content-wrapper" class="container 401d3d">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="hli-main-content">
+                    <h4 class="center">Imperial Hotel Ladakh</h4>
+					<h4>Experience the highest level of luxury</h4>
+					<p>WELCOME TO HOTEL LADAKH IMPERIAL, a finest hotel located in Skara. Hotel Ladakh Imperial hotel is traditional in design and architecture, with all modern facilities you might look for on your holiday. Located midway between Leh Airport (02 kms) and the old City Centre (02 kms), the distance between the hotel & the old Leh Bazaar is a mere 04-minute-drive or a 20-minute walk amidst the sights & sounds of this quaint town.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- #hli-content-wrapper-services  -->";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:10:"meta_title";s:29:"Unmatched staying Experiences";s:16:"meta_description";s:21:"Hotel Ladakh Imperial";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:21:"Hotel Ladakh Imperial";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:9:"quickform";a:0:{}}}

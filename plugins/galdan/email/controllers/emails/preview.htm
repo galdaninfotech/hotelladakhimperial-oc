@@ -1,0 +1,350 @@
+<?php if (!$this->fatalError): ?>
+
+    <?php else: ?>
+
+        <!-- <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('galdan/email/emails/index/Inbox') ?>" class="btn btn-default">Return to emails list</a></p> -->
+
+        <?php endif ?>
+
+<div id="mainscreen">
+
+    <h1 class="voice"><?php //dd($email[0]->Subject); //echo $email[0]->Subject; ?></h1>
+
+    <!-- toolbar -->
+    <h2 id="aria-label-toolbar" class="voice">Email toolbar</h2>
+    <div id="messagetoolbar" class="toolbar fullwidth" role="toolbar" aria-labelledby="aria-label-toolbar">
+        <a class="button back" id="rcmbtn106" role="button" tabindex="0" aria-disabled="false" href="<?= Backend::url('galdan/email/emails/index/Inbox') ?>" onclick="return rcmail.command('list','',this,event)">Back</a>
+
+        <a class="button checkmail" title="Send/Receive All" id="rcmbtn106-1" role="button" tabindex="0" aria-disabled="false" 
+            data-request="onSendReceiveAll"
+            onclick="
+                var count = 0; var mailIds = [];
+                $('td.select-mail>input:checked').each(function(){
+                    mailIds[count] = $(this).attr('value');
+                    count++;
+                });
+                mailIds[count] = $('#current_mailbox').val();
+                $(this).data('request-data', {
+                    mailIds: mailIds
+                })">
+        Send/Receive</a>
+
+        <a class="button" title="Send All" id="send-all" role="button" tabindex="0" aria-disabled="false" 
+            data-request="onSendAll"
+            onclick="
+                var count = 0; var mailIds = [];
+                $('td.select-mail>input:checked').each(function(){
+                    mailIds[count] = $(this).attr('value');
+                    count++;
+                });
+                mailIds[count] = $('#current_mailbox').val();
+                $(this).data('request-data', {
+                    mailIds: mailIds
+                })">
+        Send</a>
+
+        <a class="button" title="Receive All" id="receive-all" role="button" tabindex="0" aria-disabled="false" 
+            data-request="onReceiveAll"
+            onclick="
+                var count = 0; var mailIds = [];
+                $('td.select-mail>input:checked').each(function(){
+                    mailIds[count] = $(this).attr('value');
+                    count++;
+                });
+                mailIds[count] = $('#current_mailbox').val();
+                $(this).data('request-data', {
+                    mailIds: mailIds
+                })">
+        Receive</a>
+
+        <a class="button compose" title="Create a new message" id="rcmbtn107" role="button" tabindex="0" aria-disabled="false" href="<?= Backend::url('galdan/email/emails/compose') ?>" onclick="return rcmail.command('compose','',this,event)">Compose</a>
+
+        <span class="spacer"></span>
+
+        <a class="button reply" title="Reply to sender" id="rcmbtn108" role="button" tabindex="0" aria-disabled="false" href="<?= Backend::url('galdan/email/emails/compose/reply/'.$email[0]->IDEmail) ?>" onclick="return rcmail.command('reply','',this,event)">Reply</a>
+        <span class="dropbutton">
+
+	<a class="button reply-all" title="Reply to list or to sender and all recipients" id="rcmbtn109" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('reply-all','',this,event)">Reply all</a>
+	<a href="#reply-all" class="dropbuttontip" id="replyallmenulink" onclick="UI.toggle_popup('replyallmenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="replyallmenu-menu" tabindex="0">Reply-all options</a>
+</span>
+    <span class="dropbutton">
+	   <a class="button forward" title="Forward the message" id="rcmbtn110" role="button" tabindex="0" aria-disabled="false" href="<?= Backend::url('galdan/email/emails/compose/forward/'.$email[0]->IDEmail) ?>" onclick="return rcmail.command('forward','',this,event)">Forward</a>
+
+	   <a href="#forward" class="dropbuttontip" id="forwardmenulink" onclick="UI.toggle_popup('forwardmenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="forwardmenu-menu" tabindex="0">Forwarding options</a>
+</span>
+    <a data-request="onDelete" 
+        onclick="
+        	var count = 0;
+        	var mailId = '';
+        	$(this).data('request-data', {
+                mailIds: $('td.header-title>input').val()
+            })" 
+        class="button delete disabled" 
+        title="Move message to trash" 
+        id="rcmbtn111" role="button" tabindex="-1" aria-disabled="true" 
+        href="#">Delete
+    </a>
+                    <a class="button move" title="Move to..." data-menu-pos="bottom" id="rcmbtn112" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('move','',this,event)">Move</a>
+                    <a class="button print" title="Print this message" id="rcmbtn113" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('print','',this,event)">Print</a>
+
+                    <a id="markmessagemenulink" class="button markmessage" title="Mark messages" onclick="UI.toggle_popup('markmessagemenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="markmessagemenu-menu" role="button" href="#">Mark</a>
+                    <a id="messagemenulink" class="button more" title="More actions..." onclick="UI.toggle_popup('messagemenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="messagemenu-menu" role="button" href="#">More</a>
+
+                    <div id="forwardmenu" class="popupmenu" aria-hidden="true">
+                        <h3 id="aria-label-forwardmenu" class="voice">Forwarding options</h3>
+                        <ul id="forwardmenu-menu" class="toolbarmenu" role="menu" aria-labelledby="aria-label-forwardmenu">
+                            <li role="menuitem"><a class="forwardlink active" id="rcmbtn114" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('forward-inline','sub',this,event)">Forward inline</a></li>
+                            <li role="menuitem"><a class="forwardattachmentlink active" id="rcmbtn115" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('forward-attachment','sub',this,event)">Forward as attachment</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div id="replyallmenu" class="popupmenu" aria-hidden="true">
+                        <h3 id="aria-label-replyallmenu" class="voice">Reply-all options</h3>
+                        <ul id="replyallmenu-menu" class="toolbarmenu" role="menu" aria-labelledby="aria-label-replyallmenu">
+                            <li role="menuitem"><a class="replyalllink active" id="rcmbtn116" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('reply-all','sub',this,event)">Reply all</a></li>
+                            <li role="menuitem"><a class="replylistlink" id="rcmbtn117" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('reply-list','sub',this,event)">Reply list</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div id="messagemenu" class="popupmenu" aria-hidden="true">
+                        <h3 id="aria-label-messagemenu" class="voice">More message actions</h3>
+                        <ul id="messagemenu-menu" class="toolbarmenu iconized" role="menu" aria-labelledby="aria-label-messagemenu">
+                            <li role="menuitem"><a class="icon active" id="rcmbtn118" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('print','',this,event)"><span class="icon print">Print this message</span></a></li>
+                            <li role="menuitem"><a class="icon active" id="rcmbtn119" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('download','',this,event)"><span class="icon download">Download (.eml)</span></a></li>
+                            <li role="menuitem"><a class="icon active" id="rcmbtn120" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('edit','new',this,event)"><span class="icon edit">Edit as new</span></a></li>
+                            <li role="menuitem"><a class="icon active" id="rcmbtn121" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('viewsource','',this,event)"><span class="icon viewsource">Show source</span></a></li>
+                            <li role="menuitem"><a class="icon active" id="rcmbtn122" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('move','',this,event)"><span class="icon move folder-selector-link">Move to...</span></a></li>
+                            <li role="menuitem"><a class="icon active" id="rcmbtn123" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('copy','',this,event)"><span class="icon copy folder-selector-link">Copy to...</span></a></li>
+                            <li role="menuitem"><a target="_blank" class="icon active" id="rcmbtn124" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('open','',this,event)"><span class="icon extwin">Open in new window</span></a></li>
+
+                        </ul>
+                    </div>
+
+                    <div id="markmessagemenu" class="popupmenu" aria-hidden="true">
+                        <h3 id="aria-label-markmessagemenu" class="voice">Mark selected messages as...</h3>
+                        <ul id="markmessagemenu-menu" class="toolbarmenu iconized" role="menu" aria-labelledby="aria-label-markmessagemenu">
+                            <li role="menuitem"><a class="icon active" id="rcmbtn125" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('mark','read',this,event)"><span class="icon read">As read</span></a></li>
+                            <li role="menuitem"><a class="icon active" id="rcmbtn126" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('mark','unread',this,event)"><span class="icon unread">As unread</span></a></li>
+                            <li role="menuitem"><a class="icon active" id="rcmbtn127" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('mark','flagged',this,event)"><span class="icon flagged">As flagged</span></a></li>
+                            <li role="menuitem"><a class="icon active" id="rcmbtn128" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('mark','unflagged',this,event)"><span class="icon unflagged">As unflagged</span></a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div id="mainscreencontent">
+                    <div id="mailview-left" style="width: 174px;">
+                        <!-- folders list -->
+                        <div id="mailboxcontainer" class="uibox listbox" role="navigation" aria-labelledby="aria-label-folderlist">
+                            <h2 id="aria-label-folderlist" class="voice">Email folder selection</h2>
+                            <div id="folderlist-content" class="scroller withfooter">
+                                <ul id="mailboxlist" class="treelist listing folderlist" role="tree">
+                                    <?php foreach($mailboxes as $mailbox) { 
+                                        if(strpos($mailbox["name"], ".")) { 
+                                            $mailbox_name = ucwords(substr($mailbox['name'], strpos($mailbox['name'], ".") + 1));
+                                        } else {
+                                            $mailbox_name = ucwords(strtolower(substr($mailbox['name'], strpos($mailbox['name'], ".") + 0)));
+                                        }
+                                    ?>
+                                        <li id="rcmliSU5CT1g" class="mailbox <?php echo strtolower($mailbox_name); ?>" role="treeitem" aria-level="1">
+                                            <a href="<?= Backend::url('galdan/email/emails/index/'.$mailbox_name) ?>" rel="INBOX">
+                                                <?php echo $mailbox_name; ?>
+                                            </a>
+                                            <?php 
+                                                if($mailbox['count'] > 0) {
+                                                    echo '<span class="unreadcount">'.$mailbox['count'].'</span>';
+                                                }
+                                             ?>
+                                        </li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                            <div id="folderlist-footer" class="boxfooter">
+                                <a id="mailboxmenulink" title="Folder actions..." class="listbutton groupactions" onclick="UI.toggle_popup('mailboxmenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="mailboxoptionsmenu" role="button" href="#"><span class="inner">⚙</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mailview-right" class="uibox" role="main" style="left: 186px;">
+
+                        <div id="messageheader">
+                            <span class="moreheaderstoggle"></span>
+
+                            <!-- record navigation -->
+                            <div id="countcontrols" class="pagenav" role="navigation" aria-labelledby="aria-label-countcontrols">
+                                <h2 id="aria-label-countcontrols" class="voice">Message navigation</h2>
+                                <span class="countdisplay" id="rcmcountdisplay">Message 2 of 103</span>
+                                <a class="button prevpage" title="Show previous message" id="rcmbtn129" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('previousmessage','',this,event)"><span class="inner">Previous</span></a>
+                                <a class="button nextpage" title="Show next message" id="rcmbtn130" role="button" tabindex="0" aria-disabled="false" href="#" onclick="return rcmail.command('nextmessage','',this,event)"><span class="inner">Next</span></a>
+                            </div>
+
+                            <div id="formatcontrols">
+                                <span class="buttongroup">
+		<a class="button first changeformat html selected" title="Display in HTML format" id="rcmbtn131" role="button" href="#" onclick="return rcmail.command('change-format','html',this,event)" tabindex="0" aria-disabled="false"><span class="icon">change-format</span></a><a class="button last changeformat text" title="Display in plain text format" id="rcmbtn132" role="button" href="#" onclick="return rcmail.command('change-format','text',this,event)" tabindex="0" aria-disabled="false"><span class="icon">change-format</span></a>
+                                </span>
+                            </div>
+
+                            <h2 class="subject"><span class="voice">Subject: </span><?php echo $email[0]->Subject; ?></h2>
+                            <div class="message-headers">
+                                <table class="headers-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="header-title">From <input type="hidden" value="<?php echo $email[0]->IDEmail; ?>"></td>
+                                            <td class="header from"><span class="adr"><a href="mailto:noreply@hotelladakhimperial.com" class="rcmContactAddress" onclick="return rcmail.command('compose','HotelLadakhImperial <noreply@hotelladakhimperial.com>',this)" title="noreply@hotelladakhimperial.com"><?php echo $email[0]->EmailFrom; ?></a><a href="#add" title="Add to address book" class="rcmaddcontact" onclick="return rcmail.command('add-contact','HotelLadakhImperial <noreply@hotelladakhimperial.com>',this)"><img src="/addcontact.png" alt="Add contact"></a></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="header-title">To</td>
+                                            <td class="header to"><span class="adr"><a href="mailto:tsewang@localhost.com" class="rcmContactAddress" onclick="return rcmail.command('compose','Tsewang Norboo <tsewang@localhost.com>',this)" title="tsewang@localhost.com"><?php echo $email[0]->EmailTo; ?></a><a href="#add" title="Add to address book" class="rcmaddcontact" onclick="return rcmail.command('add-contact','Tsewang Norboo <tsewang@localhost.com>',this)"><img src="url(../addcontact.png)" alt="Add contact"></a></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="header-title">Date</td>
+                                            <td class="header date"><?php echo date('F jS, Y', strtotime($email[0]->DateE)); ?></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="full-headers">
+                                <div id="all-headers" class="all" style="display:none">
+                                    <div id="headers-source"></div>
+                                </div>
+                                <div class="more-headers show-headers" onclick="return rcmail.command('show-headers','',this)" title="Toggle raw message headers"></div>
+                            </div>
+
+                            <div id="contactphoto"><img src="./?_task=addressbook&amp;_action=photo&amp;_email=noreply%40hotelladakhimperial.com" alt="Contact photo" onerror="this.src = 'program/resources/blank.gif'"></div>
+                        </div>
+
+                        <div id="messagecontent" style="top: 92px;">
+                            <div class="rightcol" role="region" aria-labelledby="aria-label-messageattachments" aria-hidden="true" style="display: none;">
+                                <h2 id="aria-label-messageattachments" class="voice">Attachments</h2>
+
+                            </div>
+                            <div class="leftcol" role="region" aria-labelledby="aria-label-messagebody" style="margin-right: 0px;">
+                                <h2 id="aria-label-messagebody" class="voice">Message Body</h2>
+                                <div id="message-objects">
+                                    <div id="remote-objects-message" class="notice" style="display: none">To protect your privacy, remote images are blocked in this message.&nbsp;<a href="#loadimages" onclick="rcmail.command('load-images')" class="button">Display images</a> <a href="#alwaysload" onclick="rcmail.command('always-load')" style="white-space:nowrap" class="button">Always show images from noreply@hotelladakhimperial.com</a></div>
+                                </div>
+
+                                <div id="messagebody">
+                                    <div class="message-htmlpart" id="message-htmlpart1">
+                                        <!-- html ignored -->
+                                        <!-- head ignored -->
+                                        <!-- meta ignored -->
+
+                                        <!-- meta ignored -->
+
+                                        <!-- meta ignored -->
+                                        <style type="text/css">
+                                            #message-htmlpart1 div.rcmBody #outlook a {
+                                                padding: 0;
+                                            }
+                                            
+                                            #message-htmlpart1 div.rcmBody .ReadMsgBody {
+                                                width: 100%;
+                                            }
+                                            
+                                            #message-htmlpart1 div.rcmBody .ExternalClass {
+                                                width: 100%;
+                                            }
+                                            
+                                            #message-htmlpart1 div.rcmBody .ExternalClass * {
+                                                line-height: 100%;
+                                            }
+                                            
+                                            #message-htmlpart1 div.rcmBody {
+                                                margin: 0;
+                                                padding: 0;
+                                                -webkit-text-size-adjust: 100%;
+                                                -ms-text-size-adjust: 100%;
+                                            }
+                                            
+                                            #message-htmlpart1 div.rcmBody table,
+                                            #message-htmlpart1 div.rcmBody td {
+                                                border-collapse: collapse;
+                                                mso-table-lspace: 0pt;
+                                                mso-table-rspace: 0pt;
+                                            }
+                                            
+                                            #message-htmlpart1 div.rcmBody img {
+                                                border: 0;
+                                                height: auto;
+                                                line-height: 100%;
+                                                outline: none;
+                                                text-decoration: none;
+                                                -ms-interpolation-mode: bicubic;
+                                            }
+                                            
+                                            #message-htmlpart1 div.rcmBody p {
+                                                display: block;
+                                                margin: 13px 0;
+                                            }
+                                        </style>
+
+                                        <style type="text/css">
+                                            @media only screen and (max-width:480px) {
+                                                @-ms-viewport {
+                                                    width: 320px;
+                                                }
+                                                @viewport {
+                                                    width: 320px;
+                                                }
+                                            }
+                                        </style>
+
+                                        <link href="./?_task=utils&amp;_action=modcss&amp;_u=tmp-646943ae8e896da61dc59a31360d3598.css&amp;_c=message-htmlpart1" rel="stylesheet" type="text/css">
+
+                                        <style type="text/css">
+                                            @media only screen and (min-width:480px) {
+                                                #message-htmlpart1 div.rcmBody .mj-column-per-100 {
+                                                    width: 100%!important;
+                                                }
+                                                #message-htmlpart1 div.rcmBody ..mj-column-per-33 {
+                                                    width: 33.333333333333336%!important;
+                                                }
+                                                #message-htmlpart1 div.rcmBody ..mj-column-per-50 {
+                                                    width: 50%!important;
+                                                }
+                                            }
+                                        </style>
+
+                                        <style type="text/css">
+                                            #message-htmlpart1 div.rcmBody {
+                                                padding: 0px;
+                                                font-size: 10px
+                                            }
+                                            
+                                            #message-htmlpart1 div.rcmBody #email-wrapper {
+                                                width: 725px;
+                                                padding: 50px;
+                                                overflow: hidden
+                                            }
+                                            
+                                            #message-htmlpart1 div.rcmBody #address {
+                                                float: right
+                                            }
+                                        </style>
+
+                                        <div class="rcmBody">
+                                            <?php echo $email[0]->Message_html ?>
+
+                                        </div>
+                                        <!-- end rcmBody -->
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end mailview-right -->
+
+                    <div id="mailviewsplitterv" unselectable="on" role="presentation" class="splitter splitter-v" style="left: 177px; top: 0px;"></div>
+                </div>
+                <!-- end mainscreencontent -->
+
+            </div>

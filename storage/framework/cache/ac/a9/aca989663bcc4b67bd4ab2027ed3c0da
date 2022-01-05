@@ -1,0 +1,17 @@
+1640578545a:1:{s:15:"site/social.htm";a:5:{s:8:"fileName";s:15:"site/social.htm";s:7:"content";s:858:"<ul class="header-social">
+    <li><a href="https://www.facebook.com/Hotel-Ladakh-Imperial-208567949716788/" class="facebook"></a></li>
+</ul>
+
+    <!-- <li><span>Get in Touch With Us: </span></li> -->
+    <!-- <li><a href="http://www.facebook.com/<?php echo str_replace(' ', '', mb_convert_case($company, MB_CASE_LOWER, "UTF-8")); ?>" class="facebook"></a></li> -->
+    <!-- <li><a href="http://www.youtube.com/<?php echo str_replace(' ', '', mb_convert_case($company, MB_CASE_LOWER, "UTF-8")); ?>" class="youtube"></a></li> -->
+    <!-- <li><a href="http://www.twitter.com/<?php echo str_replace(' ', '', mb_convert_case($company, MB_CASE_LOWER, "UTF-8")); ?>" class="twitter"></a></li> -->
+    <!-- <li><a href="http://www.gplus.com/<?php echo str_replace(' ', '', mb_convert_case($company, MB_CASE_LOWER, "UTF-8")); ?>" class="gplus"></a></li> -->";s:5:"mtime";i:1517646492;s:6:"markup";s:858:"<ul class="header-social">
+    <li><a href="https://www.facebook.com/Hotel-Ladakh-Imperial-208567949716788/" class="facebook"></a></li>
+</ul>
+
+    <!-- <li><span>Get in Touch With Us: </span></li> -->
+    <!-- <li><a href="http://www.facebook.com/<?php echo str_replace(' ', '', mb_convert_case($company, MB_CASE_LOWER, "UTF-8")); ?>" class="facebook"></a></li> -->
+    <!-- <li><a href="http://www.youtube.com/<?php echo str_replace(' ', '', mb_convert_case($company, MB_CASE_LOWER, "UTF-8")); ?>" class="youtube"></a></li> -->
+    <!-- <li><a href="http://www.twitter.com/<?php echo str_replace(' ', '', mb_convert_case($company, MB_CASE_LOWER, "UTF-8")); ?>" class="twitter"></a></li> -->
+    <!-- <li><a href="http://www.gplus.com/<?php echo str_replace(' ', '', mb_convert_case($company, MB_CASE_LOWER, "UTF-8")); ?>" class="gplus"></a></li> -->";s:4:"code";N;}}

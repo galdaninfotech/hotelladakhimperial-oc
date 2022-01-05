@@ -1,0 +1,44 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Name
+        searchable: true
+
+    email:
+        label: Email
+        searchable: true
+
+    contactno:
+        label: Contact No.
+        searchable: true
+
+    arrival:
+        label: Arrival
+        searchable: true
+
+    numperson:
+        label: Pax
+        searchable: true
+
+    requirements:
+        label: Requirements
+        searchable: true
+
+    status:
+        label: Status
+        relation: status
+        select: name
+
+    post:
+        label: Tour
+        searchable: true
+        relation: post
+        select: title
+
